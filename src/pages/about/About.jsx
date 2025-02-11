@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-
-import kompImg from "../../../assets/img/kompImg.jpg";
-import kompImg2 from "../../../assets/img/kompImg2.jpg";
-import kompImg3 from "../../../assets/img/Logo final-07.png";
+import kompImg from "../../assets/img/kompImg.jpg";
+import kompImg2 from "../../assets/img/kompImg2.jpg";
+import kompImg3 from "../../assets/img/Logo final-07.png";
 // Har bir tab uchun alohida komponentlar
 const Content1 = () => {
   return (

@@ -29,7 +29,7 @@ const Blog = () => {
   return (
     <div className="bg-slate-100">
       <div className="container mx-auto xs:px-0 md:px-[5%] py-8">
-        <div className="text-start mb-8">
+        <div className="text-start mb-8 h-[100vh]">
           <h2 className="text-3xl xs:text-2xl md:text-3xl font-bold text-green-500">
             Блогимизни кузатиб боринг
           </h2>
