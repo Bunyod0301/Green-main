@@ -24,7 +24,7 @@ function PlantProtection() {
   }
 
   if (error) {
-    return <div>Xatolik yuz berdi: {error}</div>;
+    return <div className="text-center min-h-[80vh]">Xatolik yuz berdi: {error}</div>;
   }
 
   return (

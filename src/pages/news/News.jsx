@@ -25,7 +25,7 @@ const News = () => {
     )
   }
   if (error) {
-    return <p>Xatolik: {error}</p>;
+    return <p className="text-center min-h-[80vh]">Xatolik: {error}</p>;
   }
 
   return (
