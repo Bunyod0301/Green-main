@@ -5,15 +5,16 @@ import Products from "../pages/products/Products";
 import agro from "../../assets/img/agro.png";
 import useStore from "../../store/useStore";
 import { useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 // ProductCard komponenti
-const ProductCard = () => {
+const ProductCard = ({ img,title, desc, id }) => {
   return (
-    <div className="bg-white rounded-lg shadow-lg flex flex-col items-center p-4 space-y-4 w-full xs:w-64">
+    <div className="bg-white rounded-lg shadow-lg flex flex-col items-center p-4 space-y-4 w-full">
       {/* Rasm */}
       <div className="relative">
         <img
-          src={agro} // Rasm manzili
+          src={img} // Rasm manzili
           alt="Product Image"
           className="w-full h-48 object-cover rounded-lg"
         />
@@ -26,20 +27,40 @@ const ProductCard = () => {
 
       {/* Mahsulot nomi va tavsifi */}
       <div className="">
-        <h3 className="text-xl font-semibold text-gray-800">Agro-Topshit</h3>
+        <h3 className="text-xl font-semibold text-gray-800">{ title }</h3>
         <p className="text-gray-600 text-sm mt-2">
-          Агро-Топшит (Агро-Топшит 113 г/л) Бегона ўтларга қарши
+          { desc }
         </p>
       </div>
 
       {/* "Batafsil" tugmasi */}
       <div className="flex justify-between w-full mt-4">
-        <a href="#" className="text-green-500 hover:text-green-600">
+        <NavLink to={`/products/plant-protection/view/${id}`} className="text-green-500 hover:text-green-600">
           Батафсил
-        </a>
+        </NavLink>
         <span className="text-green-500 text-lg">&#9733;</span>{" "}
         {/* Yashil barg ikonkasi */}
       </div>
+    </div>
+  );
+};
+
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+
+const NextArrow = (props) => {
+  const { onClick } = props;
+  return (
+    <div className="custom-next absolute top-[50%] right-0 z-10 p-3 bg-teal-500 rounded-[50%] text-white cursor-pointer" onClick={onClick}>
+      <FaArrowRight />
+    </div>
+  );
+};
+
+const PrevArrow = (props) => {
+  const { onClick } = props;
+  return (
+    <div className="custom-prevabsolute absolute top-[50%] left-0 z-10 p-3 bg-teal-500 rounded-[50%] text-white cursor-pointer" onClick={onClick}>
+      <FaArrowLeft />
     </div>
   );
 };
@@ -65,16 +86,18 @@ function LazyLoad() {
     return <div>error...🤷‍♂️</div>;
   }
 
+
+
   const settings = {
-    dots: true,
+    dots: false,
     lazyLoad: "ondemand", // Lazy loadni o‘zgartirdim
     infinite: true,
-    speed: 500,
-    slidesToShow: 3, // 3ta slaydni ko‘rsatish
+    speed: 1500,
+    slidesToShow: 4, // 3ta slaydni ko‘rsatish
     slidesToScroll: 1,
     initialSlide: 0, // initialSlide-ni 0 ga o‘zgartirdim
     autoplay: true,
-    autoplaySpeed: 2000, // autoplay tezligini tuzatdim
+    autoplaySpeed: 3000, // autoplay tezligini tuzatdim
     cssEase: "linear",
     centerMode: true, // O'rtaga joylashtirish
     focusOnSelect: true, // Slayddan tanlashni qo'llash
@@ -91,7 +114,9 @@ function LazyLoad() {
           slidesToShow: 1
         }
       }
-    ]
+    ],
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
   };
 
   return (
@@ -102,19 +127,13 @@ function LazyLoad() {
         </div>
         <div>
           <Slider {...settings}>
-            {/* Har bir slaydda ProductCard */}
-            <div className="px-4">
-              <ProductCard />
-            </div>
-            <div className="px-4">
-              <ProductCard />
-            </div>
-            <div className="px-4">
-              <ProductCard />
-            </div>
-            <div className="px-4">
-              <ProductCard />
-            </div>
+            {
+              productOne?.map((item, index)=> 
+                <div className="px-4" key={index}>
+                  <ProductCard title={item.titleUz} img={item.productPicture} desc={item.desUz} id={item.id}/>
+                </div>
+              )
+            }
           </Slider>
         </div>
       </div>

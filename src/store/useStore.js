@@ -3,7 +3,7 @@ import { create } from "zustand";
 
 // axios instansiyasini yaratish
 const api = axios.create({
-  baseURL: "http://143.198.217.116"
+  baseURL: "http://167.172.69.159"
 });
 
 const useStore = create((set) => ({

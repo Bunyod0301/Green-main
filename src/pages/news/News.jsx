@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import useStore from "../../store/useStore.js";
 import dayjs from "dayjs";
+import Orb from "../../Orb.jsx";
 
 const News = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +13,16 @@ const News = () => {
   }, [fetchNewsS]);
 
   if (loading) {
-    return <p>Yuklanmoqda...</p>;
+    return (
+      <div className="w-[100%] h-[80vh] flex items-center justify-center">
+        <Orb
+          hoverIntensity={0.2}
+          rotateOnHover={true}
+          hue={2}
+          forceHoverState={true}
+        />
+      </div>
+    )
   }
   if (error) {
     return <p>Xatolik: {error}</p>;
@@ -20,7 +30,7 @@ const News = () => {
 
   return (
     <section>
-      <div className="px-[5%] container mx-auto font-medium py-10">
+      <div className="px-[5%] container mx-auto font-medium py-10 min-h-[80vh]">
         <div>
           <h1 className=" text-slate-700 text-[20px] py-5">
             Янгиликларни кузатиб боринг

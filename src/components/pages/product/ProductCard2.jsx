@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useStore from "../../../store/useStore.js"; // ✅ To‘g‘ri import
+import Orb from "../../../Orb.jsx";
 
 function ProductCard({ id, icon, productPicture, title, description, type }) {
   const navigate = useNavigate();
@@ -68,11 +69,20 @@ const Catalog2 = () => {
   }, []);
 
   if (loading) {
-    return <p>Yuklanmoqda...</p>;
+    return(
+      <div className="w-[100%] h-[80vh] flex items-center justify-center">
+        <Orb
+          hoverIntensity={0.2}
+          rotateOnHover={true}
+          hue={2}
+          forceHoverState={true}
+        />
+      </div>
+    )
   }
 
   return (
-    <div className="bg-slate-100">
+    <div className="bg-slate-100 min-h-[80vh]">
       <div className="container mx-auto flex items-center justify-center flex-col px-2 py-8">
         <div className="text-center">
           <h2 className="text-3xl font-bold">

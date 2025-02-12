@@ -76,7 +76,7 @@ const ProductCard = ({
 
   return (
     <div
-      className={`flex relative flex-col xs:justify-between xs:pb-2 md:pb-0 xs:items-center md:h-[200px] xs:w-[300px] text-center md:flex-row w-full xs:h-[320px] md:w-[45%] ${bgColor} shadow-md`}>
+      className={`flex relative flex-col xs:justify-between xs:pb-2 md:pb-0 xs:items-center md:h-[200px] xs:w-[300px] text-center md:flex-row w-full xs:h-[320px] md:w-[40%] ${bgColor} shadow-md`}>
       <div
         ref={glassRef}
         className="absolute w-[180px] h-[180px] bg-white rounded-full border-2 shadow-lg cursor-none"
@@ -85,7 +85,7 @@ const ProductCard = ({
         ref={imgRef}
         src={src}
         alt={title}
-        className="md:w-1/2 xs:h-[70%] h-[200px] xs:w-[200px] md:h-full "
+        className="md:w-1/2 xs:h-[70%] h-[200px] xs:w-[200px] md:h-full object-contain bg-white"
         onMouseEnter={() => {
           const glass = glassRef.current;
           if (glass) glass.style.visibility = "visible";
@@ -122,12 +122,12 @@ const Products = () => {
         <ProductCard
           src={agroVertimaks}
           title="Ўсимликларни химоя қилиш воситалар"
-          catalogLink="/catalog"
+          catalogLink="/products/plant-protection"
         />
         <ProductCard
           src={kalsiyCom}
           title="Ўсимликларни озиқлантириш воситалари"
-          catalogLink="/catalog"
+          catalogLink="/products/plant-nutrition"
           bgColor="bg-green-600"
           textColor="text-white"
         />

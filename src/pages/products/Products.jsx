@@ -1,38 +1,44 @@
-import React from "react";
-import { NavLink, Outlet, Route, Routes } from "react-router-dom";
-
+import React, { useEffect } from "react";
+import { NavLink, Outlet, Route, Routes, useLocation, useNavigate } from "react-router-dom";
+import { Navigate } from 'react-router-dom';
 const TabsWithRouter = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === "/products") {
+      navigate("/products/plant-protection");
+    }
+  }, [navigate]);
   return (
     <div className="p-4">
-      {/* Tab tugmalari */}
       <div className="flex space-x-4 border-b">
         <NavLink
-          to="/products/tab1"
+          to="/products/plant-protection"
           className={({ isActive }) =>
-            `px-4 py-2 font-semibold ${
+            `text-center w-[50%] px-4 py-2 font-semibold ${
               isActive
-                ? "text-blue-600 border-b-2 border-blue-600"
-                : "text-gray-500 hover:text-gray-700"
+                ? "text-teal-600 border-b-2 border-teal-600"
+                : "text-gray-500 hover:text-teal-500"
             }`
           }
         >
-          Tab 1
+          Ўсимликларни химоя қилиш воситалар
         </NavLink>
         <NavLink
-          to="/products/tab2"
+          to="/products/plant-nutrition"
           className={({ isActive }) =>
-            `px-4 py-2 font-semibold ${
+            `text-center w-[50%] px-4 py-2 font-semibold ${
               isActive
-                ? "text-blue-600 border-b-2 border-blue-600"
-                : "text-gray-500 hover:text-gray-700"
+                ? "text-teal-600 border-b-2 border-teal-600"
+                : "text-gray-500 hover:text-teal-500"
             }`
           }
         >
-          Tab 2
+          Ўсимликларни озиқлантириш воситалари
         </NavLink>
       </div>
 
-      {/* Tab kontenti */}
       <div className="mt-4">
         <Outlet />
       </div>
