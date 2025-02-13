@@ -81,12 +81,12 @@ const LetterGlitch = ({
 
   const getRandomChar = () => {
     return lettersAndSymbols[
-      Math.floor(Math.random() * lettersAndSymbols.length)
+      Math.floor(Math.random() * lettersAndSymbols?.length)
     ];
   };
 
   const getRandomColor = () => {
-    return glitchColors[Math.floor(Math.random() * glitchColors.length)];
+    return glitchColors[Math.floor(Math.random() * glitchColors?.length)];
   };
 
   const hexToRgb = (hex) => {
@@ -157,7 +157,7 @@ const LetterGlitch = ({
   };
 
   const drawLetters = () => {
-    if (!context.current || letters.current.length === 0) return;
+    if (!context.current || letters.current?.length === 0) return;
     const ctx = context.current;
     const { width, height } = canvasRef.current.getBoundingClientRect();
     ctx.clearRect(0, 0, width, height);
@@ -173,12 +173,12 @@ const LetterGlitch = ({
   };
 
   const updateLetters = () => {
-    if (!letters.current || letters.current.length === 0) return; // Prevent accessing empty array
+    if (!letters.current || letters.current?.length === 0) return; // Prevent accessing empty array
 
-    const updateCount = Math.max(1, Math.floor(letters.current.length * 0.05));
+    const updateCount = Math.max(1, Math.floor(letters.current?.length * 0.05));
 
     for (let i = 0; i < updateCount; i++) {
-      const index = Math.floor(Math.random() * letters.current.length);
+      const index = Math.floor(Math.random() * letters.current?.length);
       if (!letters.current[index]) continue; // Skip if index is invalid
 
       letters.current[index].char = getRandomChar();

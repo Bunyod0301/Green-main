@@ -51,7 +51,7 @@ const News = () => {
               <div className="flex flex-col justify-center space-y-[2px] h-full w-full">
                 <h3 className="text-[#654848]">{news.titleUz}</h3>
                 <p className="text-slate-700 text-[13px]">
-                  {news.describtionUz.length > 40
+                  {news.describtionUz?.length > 40
                     ? news.describtionUz.slice(0, 40) + "..."
                     : news.describtionUz}
                 </p>

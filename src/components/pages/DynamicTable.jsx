@@ -1,7 +1,7 @@
 import React from "react";
 
 const DynamicTable = ({ data }) => {
-  if (!data || data.length === 0) {
+  if (!data || data?.length === 0) {
     return <p>Ma'lumot mavjud emas!</p>;
   }
 

@@ -1,5 +1,6 @@
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+  "redirects": [
+    { "source": "/products/:path*", "destination": "/index.html", "statusCode": 200 },
+    { "source": "/assets/:path*", "destination": "/assets/:path*", "statusCode": 200 }
   ]
 }

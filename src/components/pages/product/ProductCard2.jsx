@@ -15,7 +15,7 @@ function ProductCard({ id, icon, productPicture, title, description, type }) {
   const [showFullText, setShowFullText] = useState(false);
 
   const maxLength = 60;
-  const isTextLong = description ? description.length > maxLength : false;
+  const isTextLong = description ? description?.length > maxLength : false;
   const displayText = description
     ? showFullText
       ? description
@@ -99,7 +99,7 @@ const Catalog2 = () => {
           </select> */}
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-8">
-          {Array.isArray(productTwo) && productTwo.length > 0 ? (
+          {Array.isArray(productTwo) && productTwo?.length > 0 ? (
             productTwo.map((product) => (
               <ProductCard
                 key={product.id}
