@@ -47,7 +47,7 @@ import { transformImageUrl } from "../../utils/transformImgUrl";
 const NextArrow = (props) => {
   const { onClick } = props;
   return (
-    <div className="custom-next absolute top-[50%] right-0 z-10 p-3 bg-teal-500 rounded-[50%] text-white cursor-pointer" onClick={onClick}>
+    <div className="custom-next absolute top-[40%] right-[-40px] z-10 p-3 bg-teal-500 rounded-[50%] text-white cursor-pointer" onClick={onClick}>
       <FaArrowRight />
     </div>
   );
@@ -56,7 +56,7 @@ const NextArrow = (props) => {
 const PrevArrow = (props) => {
   const { onClick } = props;
   return (
-    <div className="custom-prevabsolute absolute top-[50%] left-0 z-10 p-3 bg-teal-500 rounded-[50%] text-white cursor-pointer" onClick={onClick}>
+    <div className="custom-prevabsolute absolute top-[40%] left-[-40px] z-10 p-3 bg-teal-500 rounded-[50%] text-white cursor-pointer" onClick={onClick}>
       <FaArrowLeft />
     </div>
   );
