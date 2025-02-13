@@ -2,50 +2,46 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Products from "../pages/products/Products";
-import agro from "../../assets/img/agro.png";
 import useStore from "../../store/useStore";
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 // ProductCard komponenti
-const ProductCard = ({ img,title, desc, id }) => {
+const ProductCard = ({ img, title, desc, id }) => {
+  
   return (
-    <div className="bg-white rounded-lg shadow-lg flex flex-col items-center p-4 space-y-4 w-full">
+    <div className="bg-white rounded-lg shadow-lg flex flex-col items-center p-4 space-y-4 h-full md:min-h-[390px]">
       {/* Rasm */}
       <div className="relative">
         <img
-          src={img} // Rasm manzili
+          src={img}
           alt="Product Image"
           className="w-full h-48 object-cover rounded-lg"
         />
-        {/* Ikonka (rasm ustida joylashgan) */}
         <div className="absolute top-2 right-2 bg-white p-2 rounded-full shadow-md">
-          <i className="fas fa-leaf text-green-500"></i>{" "}
-          {/* O‘simlik ikonkasi */}
+          <i className="fas fa-leaf text-green-500"></i>
         </div>
       </div>
 
       {/* Mahsulot nomi va tavsifi */}
-      <div className="">
-        <h3 className="text-xl font-semibold text-gray-800">{ title }</h3>
-        <p className="text-gray-600 text-sm mt-2">
-          { desc }
-        </p>
+      <div className="flex-grow flex flex-col justify-between w-full">
+        <h3 className="text-xl font-semibold text-gray-800">{title}</h3>
+        <p className="text-gray-600 text-sm mt-2">{desc}</p>
       </div>
 
       {/* "Batafsil" tugmasi */}
-      <div className="flex justify-between w-full mt-4">
+      <div className="flex justify-between w-full mt-auto">
         <NavLink to={`/products/plant-protection/view/${id}`} className="text-green-500 hover:text-green-600">
-          Батафсил
+          {t("MoreDetail")}
         </NavLink>
-        <span className="text-green-500 text-lg">&#9733;</span>{" "}
-        {/* Yashil barg ikonkasi */}
+        <span className="text-green-500 text-lg">&#9733;</span>
       </div>
     </div>
   );
 };
 
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { t } from "i18next";
 
 const NextArrow = (props) => {
   const { onClick } = props;
@@ -90,26 +86,32 @@ function LazyLoad() {
 
   const settings = {
     dots: false,
-    lazyLoad: "ondemand", // Lazy loadni o‘zgartirdim
+    lazyLoad: "ondemand",
     infinite: true,
     speed: 1500,
-    slidesToShow: 4, // 3ta slaydni ko‘rsatish
+    slidesToShow: 4,
     slidesToScroll: 1,
-    initialSlide: 0, // initialSlide-ni 0 ga o‘zgartirdim
+    initialSlide: 0,
     autoplay: true,
-    autoplaySpeed: 3000, // autoplay tezligini tuzatdim
+    autoplaySpeed: 4000,
     cssEase: "linear",
-    centerMode: true, // O'rtaga joylashtirish
-    focusOnSelect: true, // Slayddan tanlashni qo'llash
+    centerMode: false,
+    focusOnSelect: false,
     responsive: [
       {
-        breakpoint: 1024, // O'rta ekranlar uchun
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 1024,
         settings: {
           slidesToShow: 2
         }
       },
       {
-        breakpoint: 768, // Kichik ekranlar uchun
+        breakpoint: 768,
         settings: {
           slidesToShow: 1
         }
@@ -126,15 +128,13 @@ function LazyLoad() {
           <Products />
         </div>
         <div>
-          <Slider {...settings}>
-            {
-              productOne?.map((item, index)=> 
-                <div className="px-4" key={index}>
-                  <ProductCard title={item.titleUz} img={item.productPicture} desc={item.desUz} id={item.id}/>
-                </div>
-              )
-            }
-          </Slider>
+        <Slider {...settings}>
+          {productOne?.map((item, index) => (
+            <div className="px-2 my-2 h-full flex" key={index}>
+              <ProductCard title={item.titleUz} img={item.productPicture} desc={item.desUz} id={item.id} />
+            </div>
+          ))}
+        </Slider>
         </div>
       </div>
     </div>

@@ -5,6 +5,7 @@ import { PiTelegramLogo } from "react-icons/pi";
 import logo from "../../assets/img/Logo final-07.png";
 import { NavLink } from "react-router-dom";
 import ModalForm from "../modal/ModalForm";
+import { t } from "i18next";
 
 const Footer = () => {
   const [isOpen, setIsOpen] = useState(false); // Declare state for modal visibility
@@ -37,15 +38,14 @@ const Footer = () => {
           </div>
           {/* Address Section */}
           <div className="font-normal text-white space-y-2 text-center md:text-left">
-            <h3 className="font-bold text-green-700">Манзил</h3>
+            <h3 className="font-bold text-green-700">{t("Address")}</h3>
             <p className="max-w-[300px]">
-              Тошкент Шахар, Мирзо Улуғбек тумани, Сайрам МФЙ, Ясси кўчаси, 38
-              уй
+              {t("Navbar.Address")}
             </p>
           </div>
           {/* Contact Section */}
           <div className="font-normal text-white space-y-2 text-center md:text-left">
-            <h3 className="font-bold text-green-700">Алоқа</h3>
+            <h3 className="font-bold text-green-700">{t("Navbar.Menu.Contact")}</h3>
             <div className="flex items-center gap-3 font-medium text-white justify-center md:justify-start">
               <div className="flex-col flex">
                 <a
@@ -74,7 +74,7 @@ const Footer = () => {
           {/* Social Media Section */}
           <div className="font-normal text-white space-y-2 text-center md:text-left">
             <h3 className="font-bold text-green-700">
-              Бизни ижтимоий тармоқларда
+              {t("UsSocial")}
             </h3>
             <div className="flex items-center justify-center md:justify-start gap-3">
               <a href="https://www.facebook.com/100090505449159/">
@@ -98,7 +98,7 @@ const Footer = () => {
             <button
               onClick={toggleModal} // Open modal when button is clicked
               className="text-green-500 font-medium px-2 py-2 rounded-lg hover:text-green-900 hover:font-bold">
-              КАЙТА АЛОКА УЧУН АРИЗА
+              {t("RequestRecons")}
             </button>
           </div>
           {/* Modal Form */}

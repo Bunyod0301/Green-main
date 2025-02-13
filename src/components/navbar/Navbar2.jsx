@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 import logo from "../../assets/img/Logo final-07.png";
 import { NavLink } from 'react-router-dom';
-
+import { useTranslation } from 'react-i18next';
 const Navbar2 = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { t, i18n } = useTranslation();
+  
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+  };
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -15,8 +20,27 @@ const Navbar2 = () => {
   };
 
   return (
+    <>
+    <div className="bg-green-800">
+      <div className='lg:container mx-auto text-white py-2 px-6 flex justify-center md:justify-between items-center text-sm'>
+        <div className="hidden md:flex items-center gap-2">
+          <span>🌿</span>
+          <p className='font-bold'>{t("Navbar.HarvestFruitful")}</p>
+        </div>
+
+        <div className="flex items-center gap-8">
+          <p className='hidden md:block font-bold'>{t("Navbar.Address")}</p>
+
+          <div className="flex gap-2">
+            <button onClick={() => changeLanguage('uz')} className={`hover:underline font-bold ${i18n.language == 'uz' ? 'underline' : ''}`}>ЎЗ</button>
+            <span>/</span>
+            <button onClick={() => changeLanguage('ru')} className={`hover:underline font-bold ${i18n.language == 'ru' ? 'underline' : ''}`}>РУ</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <nav className="w-full bg-green-600">
-      <div className="md:container flex flex-wrap items-center justify-between mx-auto p-8">
+      <div className="lg:container flex flex-wrap items-center justify-between mx-auto p-8">
         <NavLink to='/' className="flex items-center space-x-3 rtl:space-x-reverse">
           <div className="rounded-sm rounded-tr-[55px] rounded-bl-[30px] bg-white p-1 h-[70px] w-[210px]">
             <div className="flex items-center justify-between gap-2" end>
@@ -49,7 +73,7 @@ const Navbar2 = () => {
             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
           </svg>
         </button>
-        <div className='w-full md:w-[50%] flex flex-col items-end gap-4'>
+        <div className='w-full md:w-[70%] flex flex-col items-end gap-4'>
           <div className="hidden md:flex items-center gap-7">
               <div className="flex items-center gap-3 font-medium text-white">
                 <div className="flex-col flex">
@@ -72,7 +96,7 @@ const Navbar2 = () => {
               </div>
           </div>
           <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} w-full md:block md:w-auto`} id="navbar-dropdown">
-            <ul className="flex flex-col flex-wrap font-medium p-4 md:p-0 mt-4 rounded-lg bg-green-500 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:dark:bg-green-600">
+            <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 rounded-lg bg-green-500 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:dark:bg-green-600">
               <li>
                 <NavLink
                   to="/"
@@ -82,7 +106,7 @@ const Navbar2 = () => {
                     }`
                   }
                 >
-                  Бош саҳифа
+                  {t("Navbar.Menu.Home")}
                 </NavLink>
               </li>
               {/* <li className="relative">
@@ -154,7 +178,7 @@ const Navbar2 = () => {
                     }`
                   }
                 >
-                  Компания
+                  {t("Navbar.Menu.About")}
                 </NavLink>
               </li>
               <li>
@@ -166,7 +190,7 @@ const Navbar2 = () => {
                     }`
                   }
                 >
-                  Махсулотларимиз
+                  {t("Navbar.Menu.Products")}
                 </NavLink>
               </li>
               <li>
@@ -178,7 +202,7 @@ const Navbar2 = () => {
                     }`
                   }
                 >
-                  Блог
+                  {t("Navbar.Menu.Blog")}
                 </NavLink>
               </li>
               <li>
@@ -190,7 +214,7 @@ const Navbar2 = () => {
                     }`
                   }
                 >
-                  Янгиликлар
+                  {t("Navbar.Menu.News")}
                 </NavLink>
               </li>
               <li>
@@ -202,7 +226,7 @@ const Navbar2 = () => {
                     }`
                   }
                 >
-                  Алоқа
+                  {t("Navbar.Menu.Contact")}
                 </NavLink>
               </li>
             </ul>
@@ -210,6 +234,7 @@ const Navbar2 = () => {
         </div>
       </div>
     </nav>
+    </>
   );
 };
 
