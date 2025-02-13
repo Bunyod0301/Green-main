@@ -5,7 +5,7 @@ import OurProducts from "../../components/ourProducts/OurProducts";
 const Home = () => {
   return (
     <div className="">
-      {/* <Hero /> */}
+      <Hero />
       <OurProducts />
       <About />
     </div>

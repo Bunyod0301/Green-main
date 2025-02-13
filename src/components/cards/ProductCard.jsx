@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useStore from "../../store/useStore";
+import { t } from "i18next";
 
 
 function ProductCard({ icon, productPicture, title, description, type, id }) {
@@ -44,7 +45,7 @@ function ProductCard({ icon, productPicture, title, description, type, id }) {
       <button
         onClick={handleDetailsClick}
         className="w-full bg-teal-500  font-medium text-white py-[6px] rounded-lg hover:bg-teal-600">
-        Батафсил
+        {t("MoreDetail")}
       </button>
     </div>
   );

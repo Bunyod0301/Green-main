@@ -1,6 +1,6 @@
+import { t } from "i18next";
 import React, { useEffect } from "react";
-import { NavLink, Outlet, Route, Routes, useLocation, useNavigate } from "react-router-dom";
-import { Navigate } from 'react-router-dom';
+import { NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 const TabsWithRouter = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -23,7 +23,7 @@ const TabsWithRouter = () => {
             }`
           }
         >
-          Ўсимликларни химоя қилиш воситалар
+          {t("Menu.PlantProtection")}
         </NavLink>
         <NavLink
           to="/products/plant-nutrition"
@@ -35,7 +35,7 @@ const TabsWithRouter = () => {
             }`
           }
         >
-          Ўсимликларни озиқлантириш воситалари
+          {t("Menu.PlantNutrition")}
         </NavLink>
       </div>
 

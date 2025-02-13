@@ -16,9 +16,11 @@ import TabsWithRouter from "./pages/products/Products";
 import AgroNurellCard from "./components/cards/Card1";
 import PlantProtection from "./pages/products/plant-protection/PlantProtection";
 import PlantProtectionView from "./pages/products/plant-protection/view/PlantProtectionView";
-
+import { useTranslation } from "react-i18next";
 function App() {
   const containerRef = useRef(null);
+
+  const { t, i18n } = useTranslation();
   return (
     <>
       {/* <Navbar /> */}

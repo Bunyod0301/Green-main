@@ -11,6 +11,7 @@ import yaproq from "../../../assets/img/Icons_GreenYaproq.png";
 import yer from "../../../assets/img/Icons_Green.png";
 import yer2 from "../../../assets/img/Icons_Green2.png";
 import green5 from "../../../assets/img/Icons_Green5.png";
+import { t } from "i18next";
 
 const ProductCard = ({
   src,
@@ -104,7 +105,7 @@ const ProductCard = ({
         <NavLink
           to={catalogLink}
           className={`${textColor} xs:text-[13px] md:text-[16px] font-medium hover:underline`}>
-          Каталогга ўтиш
+          {t("NextCatalog")}
         </NavLink>
       </div>
     </div>
@@ -115,18 +116,18 @@ const Products = () => {
   return (
     <div className="bg-gray-100 py-10">
       <h2 className="text-center text-3xl font-bold mb-10 text-green-500">
-        Маҳсулотларимиз
+        {t("Navbar.Menu.Products")}
       </h2>
 
       <div className="flex flex-wrap text-start justify-between gap-6 mx-auto container px-4">
         <ProductCard
           src={agroVertimaks}
-          title="Ўсимликларни химоя қилиш воситалар"
+          title={t("Menu.PlantProtection")}
           catalogLink="/products/plant-protection"
         />
         <ProductCard
           src={kalsiyCom}
-          title="Ўсимликларни озиқлантириш воситалари"
+          title={t("Menu.PlantNutrition")}
           catalogLink="/products/plant-nutrition"
           bgColor="bg-green-600"
           textColor="text-white"
