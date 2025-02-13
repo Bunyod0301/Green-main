@@ -42,12 +42,12 @@ function PlantProtection() {
 
         {/* Mahsulotlar */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-8">
-          {productOne.map((product, index) => (
+          {productOne?.map((product, index) => (
             <ProductCard
               key={index}
               id={product.id}
-              icon={product.iconUrl || "/default-icon.jpg"}
-              productPicture={transformImageUrl(product.productPicture) || "/default-image.jpg"} // Vaqtincha
+              icon={transformImageUrl(product.iconUrl)}
+              productPicture={transformImageUrl(product.productPicture)} // Vaqtincha
               title={getLocalizedKey(product, 'title')}
               description={getLocalizedKey(product, 'description')}
               type="productOne"
