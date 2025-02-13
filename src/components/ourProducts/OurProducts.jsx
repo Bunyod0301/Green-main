@@ -42,6 +42,7 @@ const ProductCard = ({ img, title, desc, id }) => {
 
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { t } from "i18next";
+import { transformImageUrl } from "../../utils/transformImgUrl";
 
 const NextArrow = (props) => {
   const { onClick } = props;
@@ -131,7 +132,7 @@ function LazyLoad() {
         <Slider {...settings}>
           {productOne?.map((item, index) => (
             <div className="px-2 my-2 h-full flex" key={index}>
-              <ProductCard title={item.titleUz} img={item.productPicture} desc={item.desUz} id={item.id} />
+              <ProductCard title={item.titleUz} img={transformImageUrl(item.productPicture)} desc={item.desUz} id={item.id} /> {/* vaqtincha */}
             </div>
           ))}
         </Slider>

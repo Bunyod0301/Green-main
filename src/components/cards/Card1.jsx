@@ -1,6 +1,7 @@
 import React from "react";
 import agro from '../../../src/assets/img/Agro-Vertimeks.png'
 import { useNavigate } from "react-router-dom";
+import { transformImageUrl } from "../../utils/transformImgUrl";
 const AgroNurellCard = ({data}) => {
   const navigate = useNavigate();
   console.log(data);
@@ -13,7 +14,7 @@ const AgroNurellCard = ({data}) => {
       <div className="mt-10 w-full md:w-[80%]  bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-300">
         <div className="flex flex-col items-center md:flex-row">
           <img
-            src={data?.productOne?.productPicture}
+            src={transformImageUrl(data?.productOne?.productPicture)} // vaqtincha
             alt="Agro-Nurell 55% эм.к."
             className="w-96 h-96 object-contain p-2"
           />

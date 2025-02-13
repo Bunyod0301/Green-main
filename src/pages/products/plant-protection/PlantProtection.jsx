@@ -4,6 +4,7 @@ import Orb from "../../../Orb";
 import ProductCard from "../../../components/cards/ProductCard";
 import { getLocalizedKey } from "../../../utils/translateFormat";
 import { t } from "i18next";
+import { transformImageUrl } from "../../../utils/transformImgUrl";
 
 function PlantProtection() {
   const { productOne, loading, error, fetchProductOne } = useStore();
@@ -44,12 +45,12 @@ function PlantProtection() {
           {productOne.map((product, index) => (
             <ProductCard
               key={index}
-              id={product.id} // ✅ `id` ga qarab yo‘naltiramiz
+              id={product.id}
               icon={product.iconUrl || "/default-icon.jpg"}
-              productPicture={product.productPicture || "/default-image.jpg"}
+              productPicture={transformImageUrl(product.productPicture) || "/default-image.jpg"} // Vaqtincha
               title={getLocalizedKey(product, 'title')}
               description={getLocalizedKey(product, 'description')}
-              type="productOne" // ✅ `productOne` deb turini yuboramiz
+              type="productOne"
             />
           ))}
         </div>
