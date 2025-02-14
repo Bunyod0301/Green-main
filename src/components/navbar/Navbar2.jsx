@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from "../../assets/img/Logo final-07.png";
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 const Navbar2 = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { t, i18n } = useTranslation();
+  const location = useLocation();
   
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
@@ -18,6 +19,10 @@ const Navbar2 = () => {
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+
+  useEffect(()=>{
+    setIsMobileMenuOpen(false);
+  }, [location.pathname])
 
   return (
     <>
@@ -41,9 +46,9 @@ const Navbar2 = () => {
     </div>
     <nav className="w-full bg-green-600">
       <div className="lg:container flex flex-wrap items-center justify-between mx-auto p-8">
-        <NavLink to='/' className="flex items-center space-x-3 rtl:space-x-reverse">
+        <NavLink to='/' className="flex items-center space-x-3 rtl:space-x-reverse" end>
           <div className="rounded-sm rounded-tr-[55px] rounded-bl-[30px] bg-white p-1 h-[70px] w-[210px]">
-            <div className="flex items-center justify-between gap-2" end>
+            <div className="flex items-center justify-between gap-2">
               <img
                 src={logo}
                 alt="logo"
