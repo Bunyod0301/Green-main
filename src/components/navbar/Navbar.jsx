@@ -113,7 +113,7 @@ const Navbar = () => {
                         ? "block px-4 py-2 text-green-900 rounded-lg"
                         : "block px-4 py-2 hover:bg-gray-500 rounded-lg"
                     }
-                    end
+                    // end
                   >
                     Компания ҳақида
                   </NavLink>
