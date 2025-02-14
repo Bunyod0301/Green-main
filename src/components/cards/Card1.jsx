@@ -2,9 +2,9 @@ import React from "react";
 import agro from '../../../src/assets/img/Agro-Vertimeks.png'
 import { useNavigate } from "react-router-dom";
 import { transformImageUrl } from "../../utils/transformImgUrl";
+import { tableType } from "./tableType";
 const AgroNurellCard = ({data}) => {
   const navigate = useNavigate();
-  console.log(data);
   return (
     data && <div className="bg-gray-100 p-0 min-h-screen flex items-center justify-center relative">
       <button
@@ -51,57 +51,33 @@ const AgroNurellCard = ({data}) => {
               <table className="w-full mt-2 text-xs sm:text-sm text-left text-gray-700 border border-gray-300 table p-0">
                 <thead className="bg-green-100">
                   <tr>
-                    <th className="p-1 sm:p-2 border">Экин тури</th>
-                    <th className="p-1 sm:p-2 border">Қайси бегона ўтларга қарши ишлатилади</th>
-                    <th className="p-1 sm:p-2 border">Сарф меъёри (л/га)</th>
-                    <th className="p-1 sm:p-2 border">1 га учун ишлатиладиган суюқлик сарфи, л/га</th>
-                    <th className="p-1 sm:p-2 border">10 л сув учун препарат сарфи ва майдони, мл (сотих)</th>
+                    {tableType[data?.productOne.jadvalType - 1]}
                   </tr>
                 </thead>
                 <tbody>
-                  {data?.tableOnes?.map((data, index) => (
-                    <tr key={index}>
-                      <td className="p-1 sm:p-2 border">{data?.ekinTuriUz}</td>
-                      <td className="p-1 sm:p-2 border">{data?.begonaQarshiUz}</td>
-                      <td className="p-1 sm:p-2 border">{data?.sarfMeyoriUz}</td>
-                      <td className="p-1 sm:p-2 border">{data?.birgaSarfUz}</td>
-                      <td className="p-1 sm:p-2 border">{data?.onlsum}</td>
-                    </tr>
-                  ))}
+                  { 
+                    (data?.productOne?.jadvalType != 5 && data?.productOne?.jadvalType != 4) ?
+                    data?.tableOnes?.map((data, index) => (
+                      <tr key={index}>
+                        <td className="p-1 sm:p-2 border">{data?.ekinTuriUz}</td>
+                        <td className="p-1 sm:p-2 border">{data?.begonaQarshiUz}</td>
+                        <td className="p-1 sm:p-2 border">{data?.sarfMeyoriUz}</td>
+                        <td className="p-1 sm:p-2 border">{data?.birgaSarfUz}</td>
+                        <td className="p-1 sm:p-2 border">{data?.onlsum}</td>
+                      </tr>
+                    )) : 
+                    data?.tableOnes?.map((data, index) => (
+                      <tr key={index}>
+                        <td className="p-1 sm:p-2 border">{data?.ekinTuriUz}</td>
+                        <td className="p-1 sm:p-2 border">{data?.begonaQarshiUz}</td>
+                        <td className="p-1 sm:p-2 border">{data?.sarfMeyoriUz}</td>
+                        <td className="p-1 sm:p-2 border">{data?.birgaSarfUz}</td>
+                      </tr>
+                    ))
+                  }
                 </tbody>
               </table>
             </div>
-            {/* <div className="block md:hidden">
-              {
-                data?.tableOnes?.map((data, index)=>
-                  <div
-                    key={index}
-                    className="border border-gray-300 rounded-md p-3 mb-3 bg-white shadow-sm"
-                  >
-                    <div className="p-1">
-                      <p className="bg-green-100 font-semibold p-2">Экин тури:</p>
-                      <p className="p-2">{data.ekinTuriUz}</p>
-                    </div>
-                    <div className="p-1">
-                      <p className="bg-green-100 font-semibold p-2" >Қайси бегона ўтларга қарши:</p>
-                      <p className="p-2">{data.begonaQarshiUz}</p>
-                    </div>
-                    <div className="p-1">
-                      <p className="bg-green-100 font-semibold p-2">Сарф меъёри (л/га)</p>
-                      <p className="p-2">{data.sarfMeyoriUz}</p>
-                    </div>
-                    <div className="p-1">
-                      <p className=" bg-green-100 font-semibold p-2">1 га учун ишлатиладиган суюқлик сарфи, л/га</p>
-                      <p className="p-2">{data.birgaSarfUz}</p>
-                    </div>
-                    <div className="p-1">
-                      <p className="bg-green-100 font-semibold p-2">10 л сув учун препарат сарфи ва майдони, мл (сотих)</p>
-                      <p className="p-2">{data.onlsum}</p>
-                    </div>
-                  </div>
-                )
-              }
-            </div> */}
           </div>
         </div>
       </div>

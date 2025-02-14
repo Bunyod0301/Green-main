@@ -29,13 +29,13 @@ const PrevArrow = (props) => {
 };
 
 const categories = [
-  { id: 1, name: "Гербицидлар", icon: "/logo/gerbisid.png" },
-  { id: 2, name: "Фунгицидлар", icon: "/logo/fungisid.png" },
-  { id: 3, name: "Инсектицидлар", icon: "/logo/insektisid.png" },
-  { id: 4, name: "Дефолиантлар", icon: "/logo/defoliant.png" },
+  { id: 1, name: "Гербицид", icon: "/logo/gerbisid.png" },
+  { id: 2, name: "Фунгицид", icon: "/logo/fungisid.png" },
+  { id: 3, name: "Инсектицид", icon: "/logo/insektisid.png" },
+  { id: 4, name: "Дефолиант", icon: "/logo/defoliant.png" },
   { id: 5, name: "Сирт фаол модда", icon: "/logo/sirt_faol.png" },
-  { id: 6, name: "Уруғ дорилагичлар", icon: "/logo/urug_pereparat.png" },
-  { id: 7, name: "Ўсимликлар препаратлари", icon: "/logo/usimlik_pereparat.png" },
+  { id: 6, name: "Уруғ дорилагич", icon: "/logo/urug_pereparat.png" },
+  { id: 7, name: "Ўсимликлар препарат", icon: "/logo/usimlik_pereparat.png" },
 ];
 
 
@@ -216,10 +216,24 @@ function PlantProtection() {
           }
         </div>
 
-        {/* {currentProducts?.length ?  */}
           <div className="md:hidden w-full h-full">
-            <Slider {...settings}>
-              {currentProducts?.map((product, index) => (
+            {currentProducts?.length > 1 ? 
+              <Slider {...settings}>
+                {currentProducts?.map((product, index) => (
+                  <div className="px-2 my-2 h-full flex" key={index}>
+                    <ProductCard
+                      key={index}
+                      id={product.id}
+                      icon={transformImageUrl(product.iconUrl)}
+                      productPicture={transformImageUrl(product.productPicture)}
+                      title={getLocalizedKey(product, "title")}
+                      description={getLocalizedKey(product, "description")}
+                      type="productOne"
+                    />
+                  </div>
+                ))}
+              </Slider> :
+              currentProducts?.map((product, index) => (
                 <div className="px-2 my-2 h-full flex" key={index}>
                   <ProductCard
                     key={index}
@@ -231,9 +245,9 @@ function PlantProtection() {
                     type="productOne"
                   />
                 </div>
-              ))}
-            </Slider>
-          </div> 
+              ))
+            }
+          </div>
       </div>
     </div>
   );
