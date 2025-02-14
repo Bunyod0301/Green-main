@@ -168,7 +168,7 @@ const Products = () => {
         />
       </div>
 
-      <div className="flex justify-center flex-wrap gap-6 mt-10">
+      {/* <div className="flex justify-center flex-wrap gap-6 mt-10">
         {[
           {
             title: "Гербицидлар",
@@ -210,7 +210,7 @@ const Products = () => {
             <p className="text-center text-[12px] font-medium">{item.title}</p>
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };
