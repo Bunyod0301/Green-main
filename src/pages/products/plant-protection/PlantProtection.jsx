@@ -29,13 +29,13 @@ const PrevArrow = (props) => {
 };
 
 const categories = [
-  { id: 1, name: "Гербицидлар", icon: "../src/assets/logo/gerbisid.png" },
-  { id: 2, name: "Фунгицидлар", icon: "/src/assets/logo/fungisid.png" },
-  { id: 3, name: "Инсектицидлар", icon: "/src/assets/logo/insektisid.png" },
-  { id: 4, name: "Дефолиантлар", icon: "/src/assets/logo/defoliant.png" },
-  { id: 5, name: "Сирт фаол модда", icon: "/src/assets/logo/sirt_faol.png" },
-  { id: 6, name: "Уруғ дорилагичлар", icon: "/src/assets/logo/urug_pereparat.png" },
-  { id: 7, name: "Ўсимликлар препаратлари", icon: "/src/assets/logo/usimlik_pereparat.png" },
+  { id: 1, name: "Гербицидлар", icon: "/logo/gerbisid.png" },
+  { id: 2, name: "Фунгицидлар", icon: "/logo/fungisid.png" },
+  { id: 3, name: "Инсектицидлар", icon: "/logo/insektisid.png" },
+  { id: 4, name: "Дефолиантлар", icon: "/logo/defoliant.png" },
+  { id: 5, name: "Сирт фаол модда", icon: "/logo/sirt_faol.png" },
+  { id: 6, name: "Уруғ дорилагичлар", icon: "/logo/urug_pereparat.png" },
+  { id: 7, name: "Ўсимликлар препаратлари", icon: "/logo/usimlik_pereparat.png" },
 ];
 
 
