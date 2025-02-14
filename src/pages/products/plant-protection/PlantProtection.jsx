@@ -29,7 +29,7 @@ const PrevArrow = (props) => {
 };
 
 const categories = [
-  { id: 1, name: "Гербицидлар", icon: "/src/assets/logo/gerbisid.png" },
+  { id: 1, name: "Гербицидлар", icon: "../src/assets/logo/gerbisid.png" },
   { id: 2, name: "Фунгицидлар", icon: "/src/assets/logo/fungisid.png" },
   { id: 3, name: "Инсектицидлар", icon: "/src/assets/logo/insektisid.png" },
   { id: 4, name: "Дефолиантлар", icon: "/src/assets/logo/defoliant.png" },
