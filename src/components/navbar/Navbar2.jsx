@@ -101,7 +101,7 @@ const Navbar2 = () => {
               </div>
           </div>
           <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} w-full md:block md:w-auto`} id="navbar-dropdown">
-            <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 rounded-lg bg-green-500 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:dark:bg-green-600">
+            <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 rounded-lg bg-green-600 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0">
               <li>
                 <NavLink
                   to="/"
