@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 const table = [
   {
-    "img": "/public/npk/image.png",
+    "img": "/npk/image.png",
     "nomi": "GreenPlus® NPK",
     "jadval": [
         {
@@ -97,7 +97,7 @@ const table = [
     "saf_meyor": "10 л сувга 20-25 гр."
   },
   {
-    "img": "/public/npk/image.png",
+    "img": "/npk/image.png",
     "nomi": "POLIFERT NPK",
     "jadval": [
         {
