@@ -11,7 +11,13 @@ function ProductCard({ icon, productPicture, title, description, type, id }) {
   const handleDetailsClick = () => {
     setSelectedProduct(id, type);
     // navigate(`/details/${type}/${id}`);
-    navigate(`/products/plant-protection/view/${id}`)
+
+    if(type == 'productOne') {
+      navigate(`/products/plant-protection/view/${id}`)
+    } else {
+      navigate(`/products/plant-nutrition/view/${id}`)
+    }
+
   };
 
   const [showFullText, setShowFullText] = useState(false);

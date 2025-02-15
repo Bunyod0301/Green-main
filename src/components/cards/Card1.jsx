@@ -6,10 +6,10 @@ import { tableType } from "./tableType";
 const AgroNurellCard = ({data}) => {
   const navigate = useNavigate();
   return (
-    data && <div className="bg-gray-100 p-0 min-h-screen flex items-center justify-center relative">
+    data && <div className="bg-gray-100 p-0 min-h-screen flex items-center justify-center relative rounded-lg">
       <button
         onClick={() => navigate(-1)}
-        className="bg-teal-500 font-medium text-white py-2 px-5 rounded-lg hover:bg-teal-600 absolute left-0 top-3"
+        className="bg-teal-500 font-medium text-white py-2 px-5 rounded-lg hover:bg-teal-600 absolute left-0 top-0"
       ><span className="mr-1">←</span>Орқага</button>
       <div className="mt-16 w-full md:w-[80%]  bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-300">
         <div className="flex flex-col items-center md:flex-row">
@@ -26,7 +26,7 @@ const AgroNurellCard = ({data}) => {
         </div>
 
         <div className="px-1 md:px-4 pb-4">
-          <div className="flex gap-2 md:gap-10 flex-wrap items-center">
+          <div className="flex gap-2 md:gap-10 flex-col items-start md:flex-row md:items-center">
             <div className="mt-2">
               <h2 className="font-semibold text-gray-800">Таъсир этувчи модда:</h2>
               <p className="text-gray-700">{ data?.productOne?.tasirModdaUz }</p>
@@ -40,6 +40,10 @@ const AgroNurellCard = ({data}) => {
             <div className="mt-2">
               <h2 className="font-semibold text-gray-800">Препарат шакли:</h2>
               <p className="text-gray-700">{ data?.productOne?.preparatShakliUz }</p>
+            </div>
+            <div className="mt-2">
+              <h2 className="font-semibold text-gray-800">Кадогьи:</h2>
+              <p className="text-gray-700">{ data?.productOne?.qadogiUz }</p>
             </div>
           </div>
 

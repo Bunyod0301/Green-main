@@ -1,4 +1,4 @@
-import React, { useState } from "react"; // Ensure useState is imported
+import React, { useState } from "react";
 import { RxInstagramLogo } from "react-icons/rx";
 import { TbBrandFacebook } from "react-icons/tb";
 import { PiTelegramLogo } from "react-icons/pi";
@@ -8,18 +8,17 @@ import ModalForm from "../modal/ModalForm";
 import { t } from "i18next";
 
 const Footer = () => {
-  const [isOpen, setIsOpen] = useState(false); // Declare state for modal visibility
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleModal = () => {
-    setIsOpen(!isOpen); // Toggle modal visibility on button click
+    setIsOpen(!isOpen);
   };
 
   return (
-    <div className="footer w-full bg-green-600 text-white">
-      <div className="container mx-auto pt-7 px-2 lg:px-10 py-[1%]">
-        <div className="flex flex-wrap  items-start justify-between gap-10 pt-10">
-          {/* Logo Section */}
-          <div className="rounded-sm rounded-tr-[55px] rounded-bl-[30px] bg-white p-1 h-[70px] w-[210px]">
+    <div className="w-full bg-green-600 text-white py-10 px-5">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center md:text-left">
+        {/* Logo Section */}
+        <div className="rounded-sm rounded-tr-[55px] rounded-bl-[30px] bg-white p-1 h-[70px] w-[210px]">
             <NavLink to="/" className="flex items-center justify-between gap-3">
               <img
                 src={logo}
@@ -36,76 +35,40 @@ const Footer = () => {
               </div>
             </NavLink>
           </div>
-          {/* Address Section */}
-          <div className="font-normal text-white space-y-2 text-center md:text-left">
-            <h3 className="font-bold text-green-700">{t("Address")}</h3>
-            <p className="max-w-[300px]">
-              {t("Navbar.Address")}
-            </p>
-          </div>
-          {/* Contact Section */}
-          <div className="font-normal text-white space-y-2 text-center md:text-left">
-            <h3 className="font-bold text-green-700">{t("Navbar.Menu.Contact")}</h3>
-            <div className="flex items-center gap-3 font-medium text-white justify-center md:justify-start">
-              <div className="flex-col flex">
-                <a
-                  href="tel:+998998510018"
-                  className="text-white hover:underline">
-                  +998 99 851 00 18
-                </a>
-                <a
-                  href="tel:+998998210018"
-                  className="text-white hover:underline">
-                  +998 99 821 00 18
-                </a>
-                <a
-                  href="tel:+998772997700"
-                  className="text-white hover:underline">
-                  +998 77 299 77 00
-                </a>
-              </div>
-            </div>
-            <a
-              href="mailto:info@aag-group.uz"
-              className="text-green-500 hover:text-green-950 hover:font-bold">
-              info@aag-group.uz
-            </a>
-          </div>
-          {/* Social Media Section */}
-          <div className="font-normal text-white space-y-2 text-center md:text-left">
-            <h3 className="font-bold text-green-700">
-              {t("UsSocial")}
-            </h3>
-            <div className="flex items-center justify-center md:justify-start gap-3">
-              <a href="https://www.facebook.com/100090505449159/">
-                <div className="w-[35px] h-[35px] flex items-center justify-center hover:bg-green-900 p-1 rounded-md border border-slate-300">
-                  <TbBrandFacebook />
-                </div>
-              </a>
-              <a href="https://www.instagram.com/agrocom_uz?igsh=OXRyOTA3YXo5enhq">
-                <div className="w-[35px] h-[35px] flex items-center justify-center hover:bg-green-900 p-1 rounded-md border border-slate-300">
-                  <RxInstagramLogo />
-                </div>
-              </a>
-              <a href="https://t.me/agrocomguruh">
-                <div className="w-[35px] h-[35px] flex items-center justify-center p-1 hover:bg-green-950 rounded-md border border-slate-300">
-                  <PiTelegramLogo />
-                </div>
-              </a>
-            </div>
 
-            {/* Footer Button to Open Modal */}
-            <button
-              onClick={toggleModal} // Open modal when button is clicked
-              className="text-green-500 font-medium px-2 py-2 rounded-lg hover:text-green-900 hover:font-bold">
-              {t("RequestRecons")}
-            </button>
+        {/* Address Section */}
+        <div>
+          <h3 className="text-lg font-bold text-green-300">{t("Address")}</h3>
+          <p className="max-w-[300px] mt-2">{t("Navbar.Address")}</p>
+        </div>
+
+        {/* Contact Section */}
+        <div>
+          <h3 className="text-lg font-bold text-green-300">{t("Navbar.Menu.Contact")}</h3>
+          <div className="mt-2 space-y-1">
+            <a href="tel:+998998510018" className="block hover:text-green-300">+998 99 851 00 18</a>
+            <a href="tel:+998998210018" className="block hover:text-green-300">+998 99 821 00 18</a>
+            <a href="tel:+998772997700" className="block hover:text-green-300">+998 77 299 77 00</a>
           </div>
-          {/* Modal Form */}
-          {isOpen && <ModalForm toggleModal={toggleModal} />}{" "}
-          {/* Render modal when isOpen is true */}
+          <a href="mailto:info@aag-group.uz" className="text-green-400 hover:text-green-200 mt-2 inline-block">info@aag-group.uz</a>
+        </div>
+
+        {/* Social Media & Modal Button */}
+        <div>
+          <h3 className="text-lg font-bold text-green-300">{t("UsSocial")}</h3>
+          <div className="flex justify-center md:justify-start gap-3 mt-2">
+            <a href="https://www.facebook.com/100090505449159/" className="p-2 bg-white text-green-600 rounded-md hover:bg-green-500 hover:text-white"><TbBrandFacebook size={24} /></a>
+            <a href="https://www.instagram.com/agrocom_uz?igsh=OXRyOTA3YXo5enhq" className="p-2 bg-white text-green-600 rounded-md hover:bg-green-500 hover:text-white"><RxInstagramLogo size={24} /></a>
+            <a href="https://t.me/agrocomguruh" className="p-2 bg-white text-green-600 rounded-md hover:bg-green-500 hover:text-white"><PiTelegramLogo size={24} /></a>
+          </div>
+          <button onClick={toggleModal} className="mt-4 text-green-400 font-medium py-2 px-4 rounded-lg hover:text-green-200">
+            {t("RequestRecons")}
+          </button>
         </div>
       </div>
+
+      {/* Modal */}
+      {isOpen && <ModalForm toggleModal={toggleModal} />} 
     </div>
   );
 };

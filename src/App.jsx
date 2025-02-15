@@ -17,6 +17,8 @@ import AgroNurellCard from "./components/cards/Card1";
 import PlantProtection from "./pages/products/plant-protection/PlantProtection";
 import PlantProtectionView from "./pages/products/plant-protection/view/PlantProtectionView";
 import { useTranslation } from "react-i18next";
+import PlantNutrition from "./pages/products/plant-nutrition/PlantNutrition";
+import PlantNutritionView from "./pages/products/plant-nutrition/view/PlantNutritionView";
 function App() {
   const containerRef = useRef(null);
 
@@ -33,7 +35,8 @@ function App() {
         <Route path="/products/*" element={<TabsWithRouter />}>
           <Route path="plant-protection/view/:id" element={<PlantProtectionView />} />
           <Route path="plant-protection" element={<PlantProtection />} />
-          <Route path="plant-nutrition" element={<Catalog2 />} />
+          <Route path="plant-nutrition" element={<PlantNutrition />} />
+          <Route path="plant-nutrition/view/:id" element={<PlantNutritionView />} />
         </Route>
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
