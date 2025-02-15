@@ -8,7 +8,7 @@ import { transformImageUrl } from "../../../utils/transformImgUrl";
 import { useSearchParams } from "react-router-dom";
 import Slider from "react-slick";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-
+import { NPK_DATA } from "../../../components/cards/tableType"
 const ITEMS_PER_PAGE = 6;
 const NextArrow = (props) => {
   const { onClick } = props;
@@ -82,6 +82,10 @@ function PlantNutrition() {
 
 
   function FilterProduct(type){
+
+    if(type == 4) {
+      return NPK_DATA
+    }
     return productTwo?.filter((product) => product?.productTwoType == type);
   }
 
@@ -184,11 +188,12 @@ function PlantNutrition() {
                 <ProductCard
                   key={index}
                   id={product.id}
-                  icon={transformImageUrl(product.productIcon)}
+                  icon={null}
                   productPicture={transformImageUrl(product.productPicture)}
                   title={getLocalizedKey(product, "title")}
                   description={getLocalizedKey(product, "description")}
                   type="productTwo"
+                  productType={activeTab}
                 />
               ))}
             </div>
@@ -226,11 +231,12 @@ function PlantNutrition() {
                     <ProductCard
                       key={index}
                       id={product.id}
-                      icon={transformImageUrl(product.productIcon)}
+                      icon={null}
                       productPicture={transformImageUrl(product.productPicture)}
                       title={getLocalizedKey(product, "title")}
                       description={getLocalizedKey(product, "description")}
                       type="productTwo"
+                      productType={activeTab}
                     />
                   </div>
                 ))}
@@ -240,11 +246,12 @@ function PlantNutrition() {
                   <ProductCard
                     key={index}
                     id={product.id}
-                    icon={transformImageUrl(product.productIcon)}
+                    icon={null}
                     productPicture={transformImageUrl(product.productPicture)}
                     title={getLocalizedKey(product, "title")}
                     description={getLocalizedKey(product, "description")}
                     type="productTwo"
+                    productType={activeTab}
                   />
                 </div>
               ))

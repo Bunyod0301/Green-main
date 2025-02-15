@@ -29,7 +29,7 @@ const PlantNutritionCard = ({data}) => {
               <table className="w-full mt-2 text-xs sm:text-sm text-left text-gray-700 border border-gray-300 table p-0">
                 <thead className="bg-green-100">
                   <tr>
-                    <th className="p-1 sm:p-2 border">Kafolatlanan tarkibi</th>
+                    <th className="p-1 sm:p-2 border">Кафолатланган таркиби</th>
                     <th className="p-1 sm:p-2 border">%</th>
                   </tr>
                 </thead>

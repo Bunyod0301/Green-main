@@ -4,7 +4,7 @@ import useStore from "../../store/useStore";
 import { t } from "i18next";
 
 
-function ProductCard({ icon, productPicture, title, description, type, id }) {
+function ProductCard({ icon, productPicture, title, description, type, id, productType }) {
   const navigate = useNavigate();
   const { setSelectedProduct } = useStore();
 
@@ -15,7 +15,11 @@ function ProductCard({ icon, productPicture, title, description, type, id }) {
     if(type == 'productOne') {
       navigate(`/products/plant-protection/view/${id}`)
     } else {
+      if(productType == 4) {
+        navigate(`/products/plant-nutrition/npk/${id}`)
+      } else {
       navigate(`/products/plant-nutrition/view/${id}`)
+      }
     }
 
   };
@@ -30,12 +34,12 @@ function ProductCard({ icon, productPicture, title, description, type, id }) {
   return (
     <div className="bg-white rounded-lg transform transition duration-300 hover:scale-105 shadow-lg hover:shadow-2xl p-4 w-full sm:w-60 md:w-72 lg:w-80 space-y-2">
       <div className="flex justify-center items-center mb-4">
-        <img
+        {icon && <img
           src={icon}
           alt={title}
           className="w-[50px] absolute top-1 right-2 object-contain bg-white"
           onError={(e) => (e.target.src = "/default-image.jpg")}
-        />
+        />}
         <img
           src={productPicture}
           alt={title}

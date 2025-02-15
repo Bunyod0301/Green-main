@@ -19,6 +19,7 @@ import PlantProtectionView from "./pages/products/plant-protection/view/PlantPro
 import { useTranslation } from "react-i18next";
 import PlantNutrition from "./pages/products/plant-nutrition/PlantNutrition";
 import PlantNutritionView from "./pages/products/plant-nutrition/view/PlantNutritionView";
+import PlantNutritionNpk from "./pages/products/plant-nutrition/view/NpkView";
 function App() {
   const containerRef = useRef(null);
 
@@ -37,6 +38,7 @@ function App() {
           <Route path="plant-protection" element={<PlantProtection />} />
           <Route path="plant-nutrition" element={<PlantNutrition />} />
           <Route path="plant-nutrition/view/:id" element={<PlantNutritionView />} />
+          <Route path="plant-nutrition/npk/:id" element={<PlantNutritionNpk />} />
         </Route>
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
