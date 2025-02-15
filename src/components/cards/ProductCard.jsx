@@ -38,13 +38,13 @@ function ProductCard({ icon, productPicture, title, description, type, id, produ
           src={icon}
           alt={title}
           className="w-[50px] absolute top-1 right-2 object-contain bg-white"
-          onError={(e) => (e.target.src = "/default-image.jpg")}
+          // onError={(e) => (e.target.src = "/default-image.jpg")}
         />}
         <img
           src={productPicture}
           alt={title}
           className="w-[250px] h-[250px] object-contain bg-white"
-          onError={(e) => (e.target.src = "/default-image.jpg")}
+          // onError={(e) => (e.target.src = "/default-image.jpg")}
         />
       </div>
       <h3 className="text-xl font-semibold text-start mb-2">{title}</h3>
