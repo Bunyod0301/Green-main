@@ -189,7 +189,7 @@ function PlantNutrition() {
                   key={index}
                   id={product.id}
                   icon={null}
-                  productPicture={transformImageUrl(product.productPicture)}
+                  productPicture={activeTab == 4 ? product.productPicture : transformImageUrl(product.productPicture)}
                   title={getLocalizedKey(product, "title")}
                   description={getLocalizedKey(product, "description")}
                   type="productTwo"
@@ -232,7 +232,7 @@ function PlantNutrition() {
                       key={index}
                       id={product.id}
                       icon={null}
-                      productPicture={transformImageUrl(product.productPicture)}
+                      productPicture={activeTab == 4 ? product.productPicture : transformImageUrl(product.productPicture)}
                       title={getLocalizedKey(product, "title")}
                       description={getLocalizedKey(product, "description")}
                       type="productTwo"
@@ -247,7 +247,7 @@ function PlantNutrition() {
                     key={index}
                     id={product.id}
                     icon={null}
-                    productPicture={transformImageUrl(product.productPicture)}
+                    productPicture={activeTab == 4 ? product.productPicture : transformImageUrl(product.productPicture)}
                     title={getLocalizedKey(product, "title")}
                     description={getLocalizedKey(product, "description")}
                     type="productTwo"
