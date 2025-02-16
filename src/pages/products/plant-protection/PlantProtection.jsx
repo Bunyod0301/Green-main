@@ -60,6 +60,7 @@ function PlantProtection() {
 
   useEffect(()=>{
     setSearchParams({ type: activeTab });
+    setCurrentPage(1);
   }, [activeTab])
 
 
