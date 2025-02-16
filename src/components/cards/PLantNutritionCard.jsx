@@ -9,12 +9,12 @@ const PlantNutritionCard = ({data}) => {
     console.log(data);
   },[])
   return (
-    data && <div className="bg-gray-100 p-0 min-h-screen flex items-center justify-center relative rounded-lg">
+    data && <div className="bg-gray-100 p-0 min-h-[70vh] flex justify-center relative rounded-lg">
       <button
         onClick={() => navigate(-1)}
         className="bg-teal-500 font-medium text-white py-2 px-5 rounded-lg hover:bg-teal-600 absolute left-0 top-0"
       ><span className="mr-1">←</span>Орқага</button>
-      <div className="mt-16 w-full md:w-[80%]  bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-300">
+      <div className="mt-16 w-full md:w-[80%] my-auto  bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-300">
         <div className="flex flex-col items-center md:flex-row">
           <img
             src={transformImageUrl(data?.productTwo?.productPicture)} // vaqtincha
