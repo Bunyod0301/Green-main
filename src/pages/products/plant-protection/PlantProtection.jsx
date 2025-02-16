@@ -90,7 +90,7 @@ function PlantProtection() {
   totalPages = Math.ceil(FilterProduct(activeTab)?.length / ITEMS_PER_PAGE);
 
   // Joriy sahifadagi mahsulotlarni olish
-  currentProducts = FilterProduct(activeTab).slice(
+  currentProducts = FilterProduct(activeTab)?.slice(
     (currentPage - 1) * ITEMS_PER_PAGE,
     currentPage * ITEMS_PER_PAGE
   );
