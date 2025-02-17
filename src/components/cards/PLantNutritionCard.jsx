@@ -47,6 +47,7 @@ const PlantNutritionCard = ({data}) => {
               <div>
                 <p className="mt-2">{data?.productTwo?.descriptionUz}</p>
                 <p className="font-bold mt-2">{data?.productTwo?.sarfUz}</p>
+                <p className="font-bold mt-2">Қадоғи - {data?.productTwo?.desUz}</p>
               </div>
             </div>
           </div>
