@@ -57,9 +57,9 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-bold text-green-300">{t("UsSocial")}</h3>
           <div className="flex justify-center md:justify-start gap-3 mt-2">
-            <a href="https://www.facebook.com/100090505449159/" className="p-2 bg-white text-green-600 rounded-md hover:bg-green-500 hover:text-white"><TbBrandFacebook size={24} /></a>
-            <a href="https://www.instagram.com/agrocom_uz?igsh=OXRyOTA3YXo5enhq" className="p-2 bg-white text-green-600 rounded-md hover:bg-green-500 hover:text-white"><RxInstagramLogo size={24} /></a>
-            <a href="https://t.me/agrocomguruh" className="p-2 bg-white text-green-600 rounded-md hover:bg-green-500 hover:text-white"><PiTelegramLogo size={24} /></a>
+            <a target="_blank" href="https://www.facebook.com/100090505449159/" className="p-2 bg-white text-green-600 rounded-md hover:bg-green-500 hover:text-white"><TbBrandFacebook size={24} /></a>
+            <a target="_blank" href="https://www.instagram.com/agrocom_uz?igsh=OXRyOTA3YXo5enhq" className="p-2 bg-white text-green-600 rounded-md hover:bg-green-500 hover:text-white"><RxInstagramLogo size={24} /></a>
+            <a target="_blank" href="https://t.me/agrocomguruh" className="p-2 bg-white text-green-600 rounded-md hover:bg-green-500 hover:text-white"><PiTelegramLogo size={24} /></a>
           </div>
           <button onClick={toggleModal} className="mt-4 text-green-400 font-medium py-2 px-4 rounded-lg hover:text-green-200">
             {t("RequestRecons")}

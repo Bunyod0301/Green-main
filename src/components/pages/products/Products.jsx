@@ -73,43 +73,9 @@ const ProductCard = ({
     };
 
     magnify();
-  }, [zoom]);
+  }, [src]);
 
   return (
-    // <div
-    //   className={`flex relative ${bgColor} shadow-md flex-wrap`}>
-    //   <div
-    //     ref={glassRef}
-    //     className="absolute w-[180px] h-[180px] bg-white rounded-full border-2 shadow-lg cursor-none"
-    //     style={{ visibility: "hidden" }}></div>
-    //   <img
-    //     ref={imgRef}
-    //     src={src}
-    //     alt={title}
-    //     className="md:w-1/2 xs:h-[70%] h-[200px] xs:w-[200px] md:h-full object-contain bg-white"
-    //     onMouseEnter={() => {
-    //       const glass = glassRef.current;
-    //       if (glass) glass.style.visibility = "visible";
-    //     }}
-    //     onMouseLeave={() => {
-    //       const glass = glassRef.current;
-    //       if (glass) glass.style.visibility = "hidden";
-    //     }}
-    //   />
-
-    //   <div className="p-4 flex text-start flex-col justify-between">
-    //     <h3
-    //       className={`text-xl xs:text-[17px] md:text-xl font-semibold mb-4 ${textColor}`}>
-    //       {title}
-    //     </h3>
-    //     <NavLink
-    //       to={catalogLink}
-    //       className={`${textColor} xs:text-[13px] md:text-[16px] font-medium hover:underline`}>
-    //       {t("NextCatalog")}
-    //     </NavLink>
-    //   </div>
-    // </div>
-
     <div className={`relative flex flex-col md:flex-row items-center ${bgColor} shadow-lg rounded-lg p-4`}>
       {/* Magnifying Glass Effect */}
       <div
@@ -119,17 +85,18 @@ const ProductCard = ({
 
       {/* Product Image */}
       <img
+        ref={imgRef}
         src={src}
         alt={title}
         className="md:w-1/2 w-[200px] h-[200px] md:h-full object-contain bg-white rounded-lg shadow-md transition-transform duration-300"
-        // onMouseEnter={() => {
-        //   const glass = glassRef.current;
-        //   if (glass) glass.style.visibility = "visible";
-        // }}
-        // onMouseLeave={() => {
-        //   const glass = glassRef.current;
-        //   if (glass) glass.style.visibility = "hidden";
-        // }}
+        onMouseEnter={() => {
+          const glass = glassRef.current;
+          if (glass) glass.style.visibility = "visible";
+        }}
+        onMouseLeave={() => {
+          const glass = glassRef.current;
+          if (glass) glass.style.visibility = "hidden";
+        }}
       />
 
       {/* Product Info */}

@@ -52,11 +52,12 @@ function PlantNutrition() {
 
   useEffect(() => {
     fetchProductTwo();
-    setActiveTab(type)
+    setActiveTab(type);
   }, []);
 
   useEffect(()=>{
     setSearchParams({ type: activeTab });
+    setCurrentPage(1);
   }, [activeTab])
 
 
