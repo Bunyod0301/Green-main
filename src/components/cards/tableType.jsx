@@ -42,13 +42,14 @@ export const NPK_DATA = [
     titleUz: 'GreenPlus NPK',
     descriptionUz: "Green Plus NPK белгиланган нисбатда барча ўсимликлар ва мевали дарахтларда хавфсиз ишлатиладиган мувозанатли ўғитдир.",
     productPicture: "/npk/image.png",
-    
+    static: true
   },
   {
     id: 2,
     titleUz: 'POLIFERT NPK',
     descriptionUz: "Poly Fert NPK белгиланган нисбатда барча ўсимликлар ва мевали дарахтларда хавфсиз ишлатиладиган мувозанатли ўғитдир. Таркибидаги қўшимча магний ва ферментлар туфайли озиқ моддаларнинг",
-    productPicture: "/npk/image.png"
+    productPicture: "/npk/image.png",
+    static: true
   }
 ]
 

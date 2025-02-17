@@ -4,7 +4,7 @@ import useStore from "../../store/useStore";
 import { t } from "i18next";
 
 
-function ProductCard({ icon, productPicture, title, description, type, id, productType }) {
+function ProductCard({ icon, productPicture, title, description, type, id, productType, static_data }) {
   const navigate = useNavigate();
   const { setSelectedProduct } = useStore();
 
@@ -16,7 +16,11 @@ function ProductCard({ icon, productPicture, title, description, type, id, produ
       navigate(`/products/plant-protection/view/${id}`)
     } else {
       if(productType == 4) {
+        if(static_data){
         navigate(`/products/plant-nutrition/npk/${id}`)
+        } else {
+          navigate(`/products/plant-nutrition/view/${id}`)
+        }
       } else {
       navigate(`/products/plant-nutrition/view/${id}`)
       }

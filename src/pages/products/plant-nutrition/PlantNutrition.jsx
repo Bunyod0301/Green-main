@@ -85,7 +85,7 @@ function PlantNutrition() {
   function FilterProduct(type){
 
     if(type == 4) {
-      return NPK_DATA
+      return [...NPK_DATA, ...productTwo?.filter((product) => product?.productTwoType == type)]
     }
     return productTwo?.filter((product) => product?.productTwoType == type);
   }
@@ -195,6 +195,7 @@ function PlantNutrition() {
                   description={getLocalizedKey(product, "description")}
                   type="productTwo"
                   productType={activeTab}
+                  static_data={product?.static}
                 />
               ))}
             </div>
