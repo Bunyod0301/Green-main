@@ -11,7 +11,7 @@ const ModalForm = ({ toggleModal }) => {
             <span className="text-2xl">&times;</span>
           </button>
         </div>
-        <form>
+        <form className="">
           <div className="mb-4">
             <label
               htmlFor="name"
@@ -22,21 +22,21 @@ const ModalForm = ({ toggleModal }) => {
               id="name"
               type="text"
               required
-              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md"
+              className="mt-1 block w-full px-3 py-2 text-gray-700 border border border-gray-300 rounded-md"
             />
           </div>
 
           <div className="mb-4">
             <label
               htmlFor="phone"
-              className="block text-sm font-medium text-gray-700">
+              className="block text-sm font-medium  text-gray-700">
               Телефон
             </label>
             <input
               id="phone"
               type="text"
               required
-              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md"
+              className="mt-1 block w-full px-3 py-2 text-gray-700 border border-gray-300 rounded-md"
             />
           </div>
 
@@ -50,7 +50,7 @@ const ModalForm = ({ toggleModal }) => {
               id="email"
               type="email"
               required
-              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md"
+              className="mt-1 block w-full px-3 py-2 text-gray-700 border border-gray-300 rounded-md"
             />
           </div>
 
@@ -64,7 +64,7 @@ const ModalForm = ({ toggleModal }) => {
               id="message"
               rows="4"
               required
-              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md"></textarea>
+              className="mt-1 block w-full px-3 py-2 text-gray-700 border border-gray-300 rounded-md"></textarea>
           </div>
 
           <button
