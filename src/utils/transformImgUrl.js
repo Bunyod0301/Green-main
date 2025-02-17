@@ -7,7 +7,7 @@ export const transformImageUrl = (url) => {
     const newPath = urlObj.pathname;
     return `${baseUrl}${newPath}`;
   } catch (error) {
-    // console.error("URL transform qilishda xatolik:", error);
+    console.error("URL transform qilishda xatolik:", error);
     return url;
   }
 };
