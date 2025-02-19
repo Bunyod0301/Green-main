@@ -63,6 +63,19 @@ const useStore = create((set) => ({
     } catch (error) {
       set({ error: error.message, loading: false });
     }
+  },
+
+  fetchCatalog: async () => {
+    set({
+      loading: true,
+      error: null
+    });
+    try {
+      const response = await api.get("/Files");
+      set({ Catalogs: response.data, loading: false });
+    } catch (error) {
+      set({ error: error.message, loading: false });
+    }
   }
 
 
