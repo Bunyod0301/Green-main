@@ -3,6 +3,7 @@
 import React, { useEffect } from 'react';
 import useStore from '../../store/useStore';
 import Orb from '../../Orb';
+import { t } from 'i18next';
 
 const Catalog = () => {
 
@@ -16,7 +17,7 @@ const Catalog = () => {
 
   if (loading) {
     return (
-      <div className="w-[100%] h-[80vh] flex items-center justify-center">
+      <div className="w-[100%] h-[70vh] flex items-center justify-center">
         <Orb
           hoverIntensity={0.2}
           rotateOnHover={true}
@@ -34,7 +35,9 @@ const Catalog = () => {
 
   return (
     <div className='min-h-[70vh] container mx-auto'>
-      <h1 className='text-center text-3xl font-bold mt-5'>Махсулот китоблари</h1>
+      <h1 className="text-slate-700 text-2xl font-semibold text-center my-6">
+        {t("News.Title")}
+      </h1>
 
       <div className='md:w-[70%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-8'>
         {

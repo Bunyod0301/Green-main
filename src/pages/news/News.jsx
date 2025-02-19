@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import useStore from "../../store/useStore.js";
 import dayjs from "dayjs";
 import Orb from "../../Orb.jsx";
+import { t } from "i18next";
 
 const News = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,93 +10,72 @@ const News = () => {
   const { newsS, loading, error, fetchNewsS } = useStore();
 
   useEffect(() => {
-    fetchNewsS(); // TO‘G‘RI chaqirish
+    fetchNewsS();
   }, [fetchNewsS]);
 
   if (loading) {
     return (
-      <div className="w-[100%] h-[80vh] flex items-center justify-center">
-        <Orb
-          hoverIntensity={0.2}
-          rotateOnHover={true}
-          hue={2}
-          forceHoverState={true}
-        />
+      <div className="flex items-center justify-center h-[70vh]">
+        <Orb hoverIntensity={0.2} rotateOnHover={true} hue={2} forceHoverState={true} />
       </div>
-    )
+    );
   }
   if (error) {
-    return <p className="text-center min-h-[80vh]">Xatolik: {error}</p>;
+    return <p className="text-center min-h-screen text-red-500">Xatolik: {error}</p>;
   }
 
   return (
-    <section>
-      <div className="px-[5%] container mx-auto font-medium py-10 min-h-[80vh]">
-        <div>
-          <h1 className=" text-slate-700 text-[20px] py-5">
-            Янгиликларни кузатиб боринг
-          </h1>
-        </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 items-center justify-center">
-          {newsS.map((news) => (
-            <div
-              key={news.id}
-              className="max-w-[450px] md:h-[170px] p-5 md:py-0 rounded-lg flex flex-col md:flex-row items-center justify-between gap-4 bg-slate-100">
-              <div className="p-1">
-                <img
-                  src={news.newPicture}
-                  alt=""
-                  className="h-[130px] rounded-l-lg w-[230px]"
-                />
-              </div>
-              <div className="flex flex-col justify-center space-y-[2px] h-full w-full">
-                <h3 className="text-[#654848]">{news.titleUz}</h3>
-                <p className="text-slate-700 text-[13px]">
-                  {news.describtionUz?.length > 40
-                    ? news.describtionUz.slice(0, 40) + "..."
-                    : news.describtionUz}
-                </p>
-                <p className="text-green-500">
-                  {dayjs(news.date).format("DD.MM.YYYY")}
-                </p>
-                <button
-                  onClick={() => {
-                    setSelectedNews(news);
-                    setIsOpen(true);
-                  }}
-                  className="px-4 py-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600">
-                  Батафсил
-                </button>
-              </div>
+    <section className="min-h-[70vh] px-4 py-6 container lg:max-w-7xl mx-auto">
+      <h1 className="text-slate-700 text-2xl font-semibold text-center mb-6">
+        {t("News.Title")}
+      </h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {newsS.map((news) => (
+          <div
+            key={news.id}
+            className="bg-white shadow-md rounded-lg overflow-hidden transition transform hover:scale-105 hover:shadow-xl">
+            <img src={news.newPicture} alt="" className="w-full h-48 object-contain" />
+            <div className="p-4 space-y-2">
+              <h3 className="text-lg font-semibold text-gray-800">{news.titleUz}</h3>
+              <p className="text-gray-600 text-sm">
+                {news.describtionUz?.length > 60
+                  ? news.describtionUz.slice(0, 60) + "..."
+                  : news.describtionUz}
+              </p>
+              <p className="text-green-500 text-sm">{dayjs(news.date).format("DD.MM.YYYY")}</p>
+              <button
+                onClick={() => {
+                  setSelectedNews(news);
+                  setIsOpen(true);
+                }}
+                className="w-full py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600 transition">
+                {t("MoreDetail")}
+              </button>
             </div>
-          ))}
-          {isOpen && selectedNews && (
+          </div>
+        ))}
+      </div>
+      {isOpen && selectedNews && (
             <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-              <div className="bg-white p-6 rounded-lg shadow-lg w-96">
-                <h2 className="text-xl font-semibold mb-4">
-                  {selectedNews.titleUz}
-                </h2>
-                <img
-                  src={selectedNews.newPicture}
-                  alt=""
-                  className="w-full rounded-md mb-4"
-                />
-                <p className="text-gray-600">{selectedNews.describtionUz}</p>
-                <p className="text-green-500 mt-2">
-                  {dayjs(selectedNews.date).format("DD.MM.YYYY")}
-                </p>
-                <div className="mt-4 flex justify-end">
-                  <button
-                    onClick={() => setIsOpen(false)}
-                    className="px-4 py-2 bg-red-500 text-white rounded-lg shadow-md hover:bg-red-600">
-                    Close
+              <div className="relative bg-white rounded-lg shadow-lg w-full max-w-2xl max-h-[90vh] overflow-y-auto">
+                {/* Modal header */}
+                <div className="sticky top-0 bg-white p-4 md:p-5 border-b border-gray-200 rounded-t flex items-center justify-between z-10">
+                  <h2 className="text-xl font-semibold">{selectedNews.titleUz}</h2>
+                  <button onClick={() => setIsOpen(false)} className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 flex items-center justify-center">
+                    <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                    </svg>
                   </button>
+                </div>
+                {/* Modal body */}
+                <div className="p-4 md:p-5">
+                  <img src={selectedNews.newPicture} alt="" className="w-full rounded-md mb-4" />
+                  <p className="text-gray-600">{selectedNews.describtionUz}</p>
+                  <p className="text-green-500 mt-2">{dayjs(selectedNews.date).format("DD.MM.YYYY")}</p>
                 </div>
               </div>
             </div>
           )}
-        </div>
-      </div>
     </section>
   );
 };
