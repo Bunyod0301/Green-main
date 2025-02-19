@@ -42,7 +42,7 @@ const AgroNurellCard = ({data}) => {
               <p className="text-gray-700">{ data?.productOne?.preparatShakliUz }</p>
             </div>
             <div className="mt-2">
-              <h2 className="font-semibold text-gray-800">Кадогьи:</h2>
+              <h2 className="font-semibold text-gray-800">Қадоғи:</h2>
               <p className="text-gray-700">{ data?.productOne?.qadogiUz }</p>
             </div>
           </div>

@@ -1,17 +1,16 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; // Slick uchun CSS
 import "slick-carousel/slick/slick-theme.css"; // Slick mavzusi uchun CSS
-import axios from "axios";
 
 const Hero = () => {
   const settings = {
-    dots: true, // Pastki nuqtalarni ko'rsatadi
+    dots: false, // Pastki nuqtalarni ko'rsatadi
     infinite: true, // Cheksiz aylanish
-    speed: 500, // Animatsiya tezligi (ms)
+    speed: 1000, // Animatsiya tezligi (ms)
     slidesToShow: 1, // Har safar bitta slayd
-    slidesToScroll: 1 // Har safar bitta slaydni aylantirish
-    // autoplay: true, // Avtomatik aylanish
-    // autoplaySpeed: 3000 // Avtomatik aylanish tezligi (ms)
+    slidesToScroll: 1, // Har safar bitta slaydni aylantirish
+    autoplay: true,
+    autoplaySpeed: 4000
   };
 
   // axios
