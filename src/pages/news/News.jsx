@@ -3,6 +3,7 @@ import useStore from "../../store/useStore.js";
 import dayjs from "dayjs";
 import Orb from "../../Orb.jsx";
 import { t } from "i18next";
+import { transformImageUrl } from "../../utils/transformImgUrl.js";
 
 const News = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,7 +35,7 @@ const News = () => {
           <div
             key={news.id}
             className="bg-white shadow-md rounded-lg overflow-hidden transition transform hover:scale-105 hover:shadow-xl">
-            <img src={news.newPicture} alt="" className="w-full h-48 object-contain" />
+            <img src={transformImageUrl(news.newPicture)} alt="" className="w-full h-48 object-contain" />
             <div className="p-4 space-y-2">
               <h3 className="text-lg font-semibold text-gray-800">{news.titleUz}</h3>
               <p className="text-gray-600 text-sm">
@@ -69,7 +70,7 @@ const News = () => {
                 </div>
                 {/* Modal body */}
                 <div className="p-4 md:p-5">
-                  <img src={selectedNews.newPicture} alt="" className="w-full rounded-md mb-4" />
+                  <img src={transformImageUrl(selectedNews.newPicture)} alt="" className="w-full rounded-md mb-4" />
                   <p className="text-gray-600">{selectedNews.describtionUz}</p>
                   <p className="text-green-500 mt-2">{dayjs(selectedNews.date).format("DD.MM.YYYY")}</p>
                 </div>
