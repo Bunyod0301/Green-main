@@ -1,7 +1,7 @@
 import Navbar from "./components/navbar/Navbar";
 import { Route, Routes } from "react-router-dom";
 import Footer from "./components/footer/Footer";
-import Catalog from "./components/pages/product/ProductCard";
+// import Catalog from "./components/pages/product/ProductCard";
 import Magazine from "./components/magazine/Magazine";
 import ProductDetails from "./components/pages/fullInformation/ProductDetails";
 import Catalog2 from "./components/pages/product/ProductCard2";
@@ -20,6 +20,7 @@ import { useTranslation } from "react-i18next";
 import PlantNutrition from "./pages/products/plant-nutrition/PlantNutrition";
 import PlantNutritionView from "./pages/products/plant-nutrition/view/PlantNutritionView";
 import PlantNutritionNpk from "./pages/products/plant-nutrition/view/NpkView";
+import Catalog from "./pages/catalog/Catalog";
 function App() {
   const containerRef = useRef(null);
 

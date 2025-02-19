@@ -31,11 +31,11 @@ const PrevArrow = (props) => {
 const categories = [
   { id: 1, name: "Гербицид", icon: "/logo/gerbisid.png" },
   { id: 2, name: "Фунгицид", icon: "/logo/fungisid.png" },
-  { id: 3, name: "Инсектицид", icon: "/logo/insektisid.png" },
+  { id: 3, name: "Инсектоакарицид", icon: "/logo/insektisid.png" },
   { id: 4, name: "Дефолиант", icon: "/logo/defoliant.png" },
   { id: 5, name: "Сирт фаол модда", icon: "/logo/sirt_faol.png" },
   { id: 6, name: "Уруғ дорилагич", icon: "/logo/urug_pereparat.png" },
-  { id: 7, name: "Ўсимликлар препарат", icon: "/logo/usimlik_pereparat.png" },
+  { id: 7, name: "Ўсишни бошқарувчи препарат", icon: "/logo/usimlik_pereparat.png" },
 ];
 
 
