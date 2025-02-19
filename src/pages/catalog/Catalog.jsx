@@ -3,6 +3,7 @@
 import React, { useEffect } from 'react';
 import useStore from '../../store/useStore';
 import Orb from '../../Orb';
+import { transformImageUrl } from '../../utils/transformImgUrl';
 
 const Catalog = () => {
 
@@ -43,7 +44,7 @@ const Catalog = () => {
           <div className="bg-white rounded-lg transform transition duration-300 hover:scale-105 shadow-lg hover:shadow-2xl p-4 w-full space-y-2">
               <div className="flex justify-center items-center mb-4">
                 <img
-                  src={item?.filePicture}
+                  src={transformImageUrl(item?.filePicture)}
                   alt={item.fileName}
                   className="w-[250px] h-[250px] object-contain bg-white"
                   // onError={(e) => (e.target.src = "/default-image.jpg")}
