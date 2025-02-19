@@ -19,9 +19,17 @@ i18n
       escapeValue: false,
     },
     detection: {
-      order: ["localStorage", "navigator"],
+      order: ["localStorage", "cookie", "sessionStorage", "navigator"],
       caches: ["localStorage"],
+      lookupLocalStorage: "i18nextLng",
+      checkWhitelist: true,
     },
   });
+
+  const savedLang = localStorage.getItem("i18nextLng");
+  if (!savedLang || !["uz", "ru"].includes(savedLang)) {
+    i18n.changeLanguage("uz");
+    localStorage.setItem("i18nextLng", "uz");
+  }
 
 export default i18n;

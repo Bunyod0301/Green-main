@@ -111,7 +111,6 @@ const Contact = ({ address = "Tashkent, Uzbekistan" }) => {
               <button
                 type="submit"
                 className="w-[230px] h-12 rounded-lg bg-green-600 text-white font-medium rounded-tl-3xl rounded-br-3xl">
-                {" "}
                 Юбориш
               </button>
             </div>
