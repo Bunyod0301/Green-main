@@ -97,7 +97,7 @@ const table = [
     "saf_meyor": "10 л сувга 20-25 гр."
   },
   {
-    "img": "/npk/image.png",
+    "img": "/npk/npk2.jpg",
     "nomi": "POLIFERT NPK",
     "jadval": [
         {

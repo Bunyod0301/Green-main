@@ -239,6 +239,7 @@ function PlantNutrition() {
                       description={getLocalizedKey(product, "description")}
                       type="productTwo"
                       productType={activeTab}
+                      static_data={product?.static}
                     />
                   </div>
                 ))}
@@ -254,6 +255,7 @@ function PlantNutrition() {
                     description={getLocalizedKey(product, "description")}
                     type="productTwo"
                     productType={activeTab}
+                    static_data={product?.static}
                   />
                 </div>
               ))

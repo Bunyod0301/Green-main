@@ -48,7 +48,7 @@ export const NPK_DATA = [
     id: 2,
     titleUz: 'POLIFERT NPK',
     descriptionUz: "Poly Fert NPK белгиланган нисбатда барча ўсимликлар ва мевали дарахтларда хавфсиз ишлатиладиган мувозанатли ўғитдир. Таркибидаги қўшимча магний ва ферментлар туфайли озиқ моддаларнинг",
-    productPicture: "/npk/image.png",
+    productPicture: "/npk/npk2.jpg",
     static: true
   }
 ]
