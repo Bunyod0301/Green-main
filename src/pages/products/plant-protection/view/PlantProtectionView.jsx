@@ -2,7 +2,6 @@
 import React, { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import useStore from "../../../../store/useStore";
-import DynamicTable from "../../../../components/pages/DynamicTable";
 import AgroNurellCard from "../../../../components/cards/Card1";
 import Orb from "../../../../Orb";
 

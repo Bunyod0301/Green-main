@@ -1,6 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
+import { api } from "../../store/useStore";
 
 const ModalForm = ({ toggleModal }) => {
+  const [formData, setFormData] = useState({
+      name: '',
+      phone: '',
+      email: '',
+      message: ''
+    })
+  
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [message, setMessage] = useState({
+      message: '',
+      success: true
+    })
+  
+    const handleChange = (e) => {
+      setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+  
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      setIsModalOpen(true);
+      setLoading(true);
+      try {
+        const response = await api.post('/Contact', formData);
+        setMessage(
+          {
+            message: 'Аризангиз муваффақиятли юборилди! Сиз билан менежерлар тез орада алоқага чиқадилар!',
+            success: true
+          }
+        )
+        console.log(response.data);
+      } catch (error) {
+        setMessage({
+          message: 'Хатолик юз берди! Қайтадан уринб кўринг!',
+          success: false
+        })
+        console.error("Хатолик юз берди! Қайтадан уринб кўринг!", error);
+      }
+      console.log("Yuborilgan ma'lumotlar:", formData);
+      setLoading(false)
+    };
+
   return (
     <div className="fixed inset-0 bg-gray-500 bg-opacity-75 flex justify-center items-center z-50">
       <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
@@ -11,7 +54,7 @@ const ModalForm = ({ toggleModal }) => {
             <span className="text-2xl">&times;</span>
           </button>
         </div>
-        <form className="">
+        <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label
               htmlFor="name"
@@ -19,10 +62,13 @@ const ModalForm = ({ toggleModal }) => {
               Исм Фамилия
             </label>
             <input
+              onChange={handleChange}
+              name="name"
+              value={formData.name}
               id="name"
               type="text"
               required
-              className="mt-1 block w-full px-3 py-2 text-gray-700 border border border-gray-300 rounded-md"
+              className="mt-1 block w-full px-3 py-2 text-gray-700 border border-gray-300 rounded-md"
             />
           </div>
 
@@ -33,6 +79,9 @@ const ModalForm = ({ toggleModal }) => {
               Телефон
             </label>
             <input
+              onChange={handleChange}
+              name="phone"
+              value={formData.phone}
               id="phone"
               type="text"
               required
@@ -47,9 +96,11 @@ const ModalForm = ({ toggleModal }) => {
               Эл. почта
             </label>
             <input
+              onChange={handleChange}
+              name="email"
+              value={formData.email}
               id="email"
               type="email"
-              required
               className="mt-1 block w-full px-3 py-2 text-gray-700 border border-gray-300 rounded-md"
             />
           </div>
@@ -61,6 +112,9 @@ const ModalForm = ({ toggleModal }) => {
               Хабар
             </label>
             <textarea
+              onChange={handleChange}
+              name="message"
+              value={formData.message}
               id="message"
               rows="4"
               required
@@ -74,6 +128,29 @@ const ModalForm = ({ toggleModal }) => {
           </button>
         </form>
       </div>
+
+      {isModalOpen && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white p-6 rounded-lg shadow-lg text-center w-80">
+            {loading ? (
+              <div>
+                <p className="text-blue-500 font-semibold">Юборилмоқда...</p>
+                <div className="mt-3 w-6 h-6 border-4 border-blue-500 border-dashed rounded-full animate-spin mx-auto"></div>
+              </div>
+            ) : (
+              <p className={`${message.success ? 'text-green-500' : 'text-red-500'} font-semibold`}>{message.message}</p>
+            )}
+            {!loading && (
+              <button
+                className="mt-4 px-4 py-2 bg-teal-600 text-white rounded hover:bg-teal-800 transition"
+                onClick={() => (toggleModal(),setIsModalOpen(false))}
+              >
+                OK
+              </button>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 };
