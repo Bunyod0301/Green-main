@@ -22,9 +22,7 @@ import PlantNutritionView from "./pages/products/plant-nutrition/view/PlantNutri
 import PlantNutritionNpk from "./pages/products/plant-nutrition/view/NpkView";
 import Catalog from "./pages/catalog/Catalog";
 function App() {
-  const containerRef = useRef(null);
 
-  const { t, i18n } = useTranslation();
   return (
     <>
       {/* <Navbar /> */}
