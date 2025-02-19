@@ -68,7 +68,7 @@ function PlantNutrition() {
 
   if (loading) {
     return (
-      <div className="w-[100%] h-[80vh] flex items-center justify-center">
+      <div className="w-[100%] h-[70vh] flex items-center justify-center">
         <Orb
           hoverIntensity={0.2}
           rotateOnHover={true}
