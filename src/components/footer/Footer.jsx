@@ -5,9 +5,10 @@ import { PiTelegramLogo } from "react-icons/pi";
 import logo from "../../assets/img/Logo final-07.png";
 import { NavLink } from "react-router-dom";
 import ModalForm from "../modal/ModalForm";
-import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleModal = () => {

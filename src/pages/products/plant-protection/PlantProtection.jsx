@@ -8,6 +8,7 @@ import { transformImageUrl } from "../../../utils/transformImgUrl";
 import { useSearchParams } from "react-router-dom";
 import Slider from "react-slick";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const ITEMS_PER_PAGE = 6;
 const NextArrow = (props) => {
@@ -29,18 +30,20 @@ const PrevArrow = (props) => {
 };
 
 const categories = [
-  { id: 1, name: "Гербицид", icon: "/logo/gerbisid.png" },
-  { id: 2, name: "Фунгицид", icon: "/logo/fungisid.png" },
-  { id: 3, name: "Инсектоакарицид", icon: "/logo/insektisid.png" },
-  { id: 4, name: "Дефолиант", icon: "/logo/defoliant.png" },
-  { id: 5, name: "Сирт фаол модда", icon: "/logo/sirt_faol.png" },
-  { id: 6, name: "Уруғ дорилагич", icon: "/logo/urug_pereparat.png" },
-  { id: 7, name: "Ўсишни бошқарувчи препарат", icon: "/logo/usimlik_pereparat.png" },
+  { id: 1, name: "PlantProtection.herbicide", icon: "/logo/gerbisid.png" },
+  { id: 2, name: "PlantProtection.fungicide", icon: "/logo/fungisid.png" },
+  { id: 3, name: "PlantProtection.insectoacaricide", icon: "/logo/insektisid.png" },
+  { id: 4, name: "PlantProtection.defoliant", icon: "/logo/defoliant.png" },
+  { id: 5, name: "PlantProtection.surfactant", icon: "/logo/sirt_faol.png" },
+  { id: 6, name: "PlantProtection.seed_treatment", icon: "/logo/urug_pereparat.png" },
+  { id: 7, name: "PlantProtection.growth_regulator", icon: "/logo/usimlik_pereparat.png" },
 ];
 
 
 function PlantProtection() {
   const { productOne, loading, error, fetchProductOne } = useStore();
+
+  const { t } = useTranslation()
 
   const [activeTab, setActiveTab] = useState(categories[0].id);
   const [currentPage, setCurrentPage] = useState(1);
@@ -156,7 +159,7 @@ function PlantProtection() {
             onClick={() => setActiveTab(category.id)}
           >
             <img src={category.icon} alt={category.name} className="w-6 h-6" />
-            {category.name}
+            {t(category.name)}
           </button>
         ))}
       </div>
@@ -171,8 +174,8 @@ function PlantProtection() {
             <h2 ref={catalogHeaderRef} className="text-3xl font-bold">{t("OurCatalog")}</h2>
             {
               currentProducts?.length ?
-              <p className="text-lg text-gray-600">{categories.find((c) => c.id === activeTab)?.name} {FilterProduct(activeTab)?.length}+ {t("TypeProducts")}</p> :
-              <p className="text-lg text-gray-600 min-h-[60vh]">{categories.find((c) => c.id === activeTab)?.name} маҳсулотлар мавжуд эмас</p>
+              <p className="text-lg text-gray-600">{t(categories.find((c) => c.id === activeTab)?.name)} {FilterProduct(activeTab)?.length}+ {t("TypeProducts")}</p> :
+              <p className="text-lg text-gray-600 min-h-[60vh]">{t(categories.find((c) => c.id === activeTab)?.name)} маҳсулотлар мавжуд эмас</p>
             }
           </div>
         </div>
@@ -199,7 +202,7 @@ function PlantProtection() {
                 onClick={() => (setCurrentPage((prev) => Math.max(prev - 1, 1)), scrollToHeader())}
                 disabled={currentPage === 1}
               >
-                ⬅️ Олдинги
+                ⬅️ {t("previous")}
               </button>
 
               <span className="text-lg font-semibold">
@@ -211,7 +214,7 @@ function PlantProtection() {
                 onClick={() => (setCurrentPage((prev) => Math.min(prev + 1, totalPages)), scrollToHeader())}
                 disabled={currentPage === totalPages}
               >
-                Кейинги ➡️
+                {t("next")} ➡️
               </button>
             </div></>) : ''
           }

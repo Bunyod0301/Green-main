@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import useStore from "../../store/useStore.js";
 import dayjs from "dayjs";
 import Orb from "../../Orb.jsx";
-import { t } from "i18next";
+import { useTranslation } from "react-i18next";
+import { getLocalizedKey } from "../../utils/translateFormat";
 import { transformImageUrl } from "../../utils/transformImgUrl.js";
-
 const News = () => {
+  const { t } = useTranslation()
   const [isOpen, setIsOpen] = useState(false);
   const [selectedNews, setSelectedNews] = useState(null);
   const { newsS, loading, error, fetchNewsS } = useStore();
@@ -37,11 +38,11 @@ const News = () => {
             className="bg-white shadow-md rounded-lg overflow-hidden transition transform hover:scale-105 hover:shadow-xl">
             <img src={transformImageUrl(news.newPicture)} alt="" className="w-full h-48 object-contain" />
             <div className="p-4 space-y-2">
-              <h3 className="text-lg font-semibold text-gray-800">{news.titleUz}</h3>
+              <h3 className="text-lg font-semibold text-gray-800">{getLocalizedKey(news, "title")}</h3>
               <p className="text-gray-600 text-sm">
-                {news.describtionUz?.length > 60
-                  ? news.describtionUz.slice(0, 60) + "..."
-                  : news.describtionUz}
+                {getLocalizedKey(news, "describtion")?.length > 60
+                  ? getLocalizedKey(news, "describtion").slice(0, 60) + "..."
+                  : getLocalizedKey(news, "describtion")}
               </p>
               <p className="text-green-500 text-sm">{dayjs(news.date).format("DD.MM.YYYY")}</p>
               <button
@@ -61,7 +62,7 @@ const News = () => {
               <div className="relative bg-white rounded-lg shadow-lg w-full max-w-2xl max-h-[90vh] overflow-y-auto">
                 {/* Modal header */}
                 <div className="sticky top-0 bg-white p-4 md:p-5 border-b border-gray-200 rounded-t flex items-center justify-between z-10">
-                  <h2 className="text-xl font-semibold">{selectedNews.titleUz}</h2>
+                  <h2 className="text-xl font-semibold">{getLocalizedKey(selectedNews, "title")}</h2>
                   <button onClick={() => setIsOpen(false)} className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 flex items-center justify-center">
                     <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                       <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
@@ -70,8 +71,8 @@ const News = () => {
                 </div>
                 {/* Modal body */}
                 <div className="p-4 md:p-5">
-                  <img src={transformImageUrl(selectedNews.newPicture)} alt="" className="w-full rounded-md mb-4" />
-                  <p className="text-gray-600">{selectedNews.describtionUz}</p>
+                  <img src={selectedNews.newPicture} alt="" className="w-full rounded-md mb-4" />
+                  <p className="text-gray-600">{getLocalizedKey(selectedNews, "describtion")}</p>
                   <p className="text-green-500 mt-2">{dayjs(selectedNews.date).format("DD.MM.YYYY")}</p>
                 </div>
               </div>

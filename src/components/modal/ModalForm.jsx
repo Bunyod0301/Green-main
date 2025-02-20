@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { api } from "../../store/useStore";
+import { t } from "i18next";
 
 const ModalForm = ({ toggleModal }) => {
   const [formData, setFormData] = useState({
@@ -59,7 +60,7 @@ const ModalForm = ({ toggleModal }) => {
             <label
               htmlFor="name"
               className="block text-sm font-medium text-gray-700">
-              Исм Фамилия
+              {t("Contact.full_name")}
             </label>
             <input
               onChange={handleChange}
@@ -76,7 +77,7 @@ const ModalForm = ({ toggleModal }) => {
             <label
               htmlFor="phone"
               className="block text-sm font-medium  text-gray-700">
-              Телефон
+              {t("Contact.phone")}
             </label>
             <input
               onChange={handleChange}
@@ -93,7 +94,7 @@ const ModalForm = ({ toggleModal }) => {
             <label
               htmlFor="email"
               className="block text-sm font-medium text-gray-700">
-              Эл. почта
+              {t("Contact.email")}
             </label>
             <input
               onChange={handleChange}
@@ -109,7 +110,7 @@ const ModalForm = ({ toggleModal }) => {
             <label
               htmlFor="message"
               className="block text-sm font-medium text-gray-700">
-              Хабар
+              {t("Contact.message")}
             </label>
             <textarea
               onChange={handleChange}
@@ -124,7 +125,7 @@ const ModalForm = ({ toggleModal }) => {
           <button
             type="submit"
             className="w-full bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600">
-            Юбориш
+            {t("Contact.send")}
           </button>
         </form>
       </div>

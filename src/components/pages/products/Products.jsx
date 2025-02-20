@@ -11,7 +11,7 @@ import yaproq from "../../../assets/img/Icons_GreenYaproq.png";
 import yer from "../../../assets/img/Icons_Green.png";
 import yer2 from "../../../assets/img/Icons_Green2.png";
 import green5 from "../../../assets/img/Icons_Green5.png";
-import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
 const ProductCard = ({
   src,
@@ -22,6 +22,7 @@ const ProductCard = ({
 }) => {
   const imgRef = useRef(null);
   const glassRef = useRef(null);
+  const { t } = useTranslation();
   const zoom = 3;
 
   useEffect(() => {
@@ -114,6 +115,7 @@ const ProductCard = ({
 };
 
 const Products = () => {
+  const { t } = useTranslation();
   return (
     <div className="bg-gray-100 py-10">
       <h2 className="text-center text-3xl font-bold mb-10 text-green-500">

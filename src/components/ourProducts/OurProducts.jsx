@@ -6,8 +6,13 @@ import useStore from "../../store/useStore";
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { transformImageUrl } from "../../utils/transformImgUrl";
+import { useTranslation } from "react-i18next";
+
 // ProductCard komponenti
 const ProductCard = ({ img, title, desc, id }) => {
+  const { t } = useTranslation();
   
   return (
     <div className="bg-white rounded-lg shadow-lg flex flex-col items-center p-4 space-y-4 h-full md:min-h-[390px]">
@@ -40,9 +45,6 @@ const ProductCard = ({ img, title, desc, id }) => {
   );
 };
 
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import { t } from "i18next";
-import { transformImageUrl } from "../../utils/transformImgUrl";
 
 const NextArrow = (props) => {
   const { onClick } = props;
