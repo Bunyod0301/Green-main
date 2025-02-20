@@ -1,7 +1,8 @@
-import { t } from "i18next";
 import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 const TabsWithRouter = () => {
+  const { t } = useTranslation()
   const navigate = useNavigate();
   const location = useLocation();
 

@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { api } from "../../store/useStore";
+import { useTranslation } from "react-i18next";
 
 const Contact = ({ address = "Tashkent, Uzbekistan" }) => {
+  const { t } = useTranslation()
 
   const [formData, setFormData] = useState({
     name: '',
@@ -53,7 +55,7 @@ const Contact = ({ address = "Tashkent, Uzbekistan" }) => {
     <div className="bg-[#F2F2F3]">
       <div className="container mx-auto px-0 md:px-[5%] py-10 space-y-10">
         <div className="w-full">
-          <h1 className="font-semibold text-[30px] text-green-500">Бош офис</h1>
+          <h1 className="font-semibold text-[30px] text-green-500">{t("head_office")}</h1>
         </div>
         <div className="relative w-full h-96">
           <iframe
@@ -67,7 +69,7 @@ const Contact = ({ address = "Tashkent, Uzbekistan" }) => {
         </div>
         <div className="bg-white space-y-7 p-2 md:p-10">
           <h2 className="text-[#484848] text-[20px] font-semibold">
-            Қайта алоқа учун ариза
+            {t("RequestRecons")}
           </h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-2">
@@ -76,7 +78,7 @@ const Contact = ({ address = "Tashkent, Uzbekistan" }) => {
                 name="name"
                 value={formData.name}
                 type="text"
-                placeholder="Ism Familia"
+                placeholder={t("Contact.full_name")}
                 className=" shadow-md active:shadow-xl p-2 col-4 border-none bg-[#F2F3F3] rounded-md outline-none"
                 required
               />
@@ -85,7 +87,7 @@ const Contact = ({ address = "Tashkent, Uzbekistan" }) => {
                 name="phone"
                 value={formData.phone}
                 type="text"
-                placeholder="Telefon"
+                placeholder={t("Contact.phone")}
                 className=" shadow-md active:shadow-xl p-2 border-none bg-[#F2F3F3] rounded-md outline-none"
                 required
               />
@@ -94,7 +96,7 @@ const Contact = ({ address = "Tashkent, Uzbekistan" }) => {
                 name="email"
                 value={formData.email}
                 type="text"
-                placeholder="El.pochta"
+                placeholder={t("Contact.email")}
                 className=" shadow-md active:shadow-xl p-2 border-none bg-[#F2F3F3] rounded-md outline-none"
               />
             </div>
@@ -105,13 +107,13 @@ const Contact = ({ address = "Tashkent, Uzbekistan" }) => {
                 value={formData.message}
                 className="w-full outline-none bg-[#F2F3F3] p-2 rounded-md h-[250px]"
                 required
-                placeholder="Mavzu"></textarea>
+                placeholder={t("Contact.message")}></textarea>
             </div>
             <div className="flex justify-center md:justify-end">
               <button
                 type="submit"
                 className="w-[230px] h-12 rounded-lg bg-green-600 text-white font-medium rounded-tl-3xl rounded-br-3xl">
-                Юбориш
+                {t("Contact.send")}
               </button>
             </div>
           </form>

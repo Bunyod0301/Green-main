@@ -3,12 +3,12 @@ import useStore from "../../../store/useStore";
 import Orb from "../../../Orb";
 import ProductCard from "../../../components/cards/ProductCard";
 import { getLocalizedKey } from "../../../utils/translateFormat";
-import { t } from "i18next";
 import { transformImageUrl } from "../../../utils/transformImgUrl";
 import { useSearchParams } from "react-router-dom";
 import Slider from "react-slick";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { NPK_DATA } from "../../../components/cards/tableType"
+import { useTranslation } from "react-i18next";
 const ITEMS_PER_PAGE = 6;
 const NextArrow = (props) => {
   const { onClick } = props;
@@ -20,6 +20,7 @@ const NextArrow = (props) => {
 };
 
 const PrevArrow = (props) => {
+  const { t } = useTranslation()
   const { onClick } = props;
   return (
     <div className="custom-prevabsolute absolute top-[40%] left-[-30px] z-10 p-3 bg-teal-500 rounded-[50%] text-white cursor-pointer" onClick={onClick}>
@@ -29,14 +30,15 @@ const PrevArrow = (props) => {
 };
 
 const categories = [
-  { id: 1, name: "Биостимулятор" },
-  { id: 2, name: "Микроэлемент" },
-  { id: 3, name: "Органик ўғит" },
-  { id: 4, name: "NPK ўғит" }
+  { id: 1, name: "PlantNutrition.biostimulator" },
+  { id: 2, name: "PlantNutrition.microelement" },
+  { id: 3, name: "PlantNutrition.organic_fertilizer" },
+  { id: 4, name: "PlantNutrition.npk_fertilizer" }
 ];
 
 
 function PlantNutrition() {
+  const { t } = useTranslation()
   const { productTwo, loading, error, fetchProductTwo } = useStore();
 
   const [activeTab, setActiveTab] = useState(categories[0].id);
@@ -160,7 +162,7 @@ function PlantNutrition() {
             }`}
             onClick={() => setActiveTab(category.id)}
           >
-            {category.name}
+            {t(category.name)}
           </button>
         ))}
       </div>
@@ -175,8 +177,8 @@ function PlantNutrition() {
             <h2 ref={catalogHeaderRef} className="text-3xl font-bold">{t("OurCatalog")}</h2>
             {
               currentProducts?.length ?
-              <p className="text-lg text-gray-600">{categories.find((c) => c.id === activeTab)?.name} {FilterProduct(activeTab)?.length}+ {t("TypeProducts")}</p> :
-              <p className="text-lg text-gray-600 min-h-[60vh]">{categories.find((c) => c.id === activeTab)?.name} маҳсулотлар мавжуд эмас</p>
+              <p className="text-lg text-gray-600">{t(categories.find((c) => c.id === activeTab)?.name)} {FilterProduct(activeTab)?.length}+ {t("TypeProducts")}</p> :
+              <p className="text-lg text-gray-600 min-h-[60vh]">{t(categories.find((c) => c.id === activeTab)?.name)} маҳсулотлар мавжуд эмас</p>
             }
           </div>
         </div>
@@ -206,7 +208,7 @@ function PlantNutrition() {
                 onClick={() => (setCurrentPage((prev) => Math.max(prev - 1, 1)), scrollToHeader())}
                 disabled={currentPage === 1}
               >
-                ⬅️ Олдинги
+                ⬅️ {t("previous")}
               </button>
 
               <span className="text-lg font-semibold">
@@ -218,7 +220,7 @@ function PlantNutrition() {
                 onClick={() => (setCurrentPage((prev) => Math.min(prev + 1, totalPages)), scrollToHeader())}
                 disabled={currentPage === totalPages}
               >
-                Кейинги ➡️
+                {t("next")} ➡️
               </button>
             </div>
             </>) : ''

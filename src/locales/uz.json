@@ -24,11 +24,37 @@
   "News": {
     "Title": "Янгиликларни кузатиб боринг"
   },
+  "Contact": {
+    "full_name": "Исм Фамилия",
+    "phone": "Телефон",
+    "email": "Эл. почта",
+    "message": "Хабар",
+    "send": "Юбориш"
+  },
+  "PlantProtection": {
+    "herbicide": "Гербицид",
+    "fungicide": "Фунгицид",
+    "insectoacaricide": "Инсектоакарицид",
+    "defoliant": "Дефолиант",
+    "surfactant": "Сирт фаол модда",
+    "seed_treatment": "Уруғ дорилагич",
+    "growth_regulator": "Ўсишни бошқарувчи препарат"
+  },
+  "PlantNutrition": {
+    "biostimulator": "Биостимулятор",
+    "microelement": "Микроэлемент",
+    "organic_fertilizer": "Органик ўғит",
+    "npk_fertilizer": "NPK ўғит"
+  },
   "NextCatalog": "Каталогга ўтиш",
   "MoreDetail": "Батафсил",
   "OurCatalog": "Каталогимизда",
   "TypeProducts": "турлари маҳсулотлар",
   "Address": "Манзил",
   "UsSocial": "Бизни ижтимоий тармоқларда",
-  "RequestRecons": "КАЙТА АЛОКА УЧУН АРИЗА"
+  "RequestRecons": "Қайта алоқа учун ариза",
+  "next": "Кейинги",
+  "previous": "Олдинги",
+  "download": "Юклаб олиш",
+  "head_office": "Бош офис"
 }

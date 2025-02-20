@@ -24,11 +24,37 @@
   "News": {
     "Title": "Следите за новостями"
   },
+  "Contact": {
+    "full_name": "Имя Фамилия",
+    "phone": "Телефон",
+    "email": "Эл. почта",
+    "message": "Сообщение",
+    "send": "Отправить"
+  },
+  "PlantProtection": {
+    "herbicide": "Гербицид",
+    "fungicide": "Фунгицид",
+    "insectoacaricide": "Инсектоакарицид",
+    "defoliant": "Дефолиант",
+    "surfactant": "Поверхностно-активное вещество",
+    "seed_treatment": "Протравитель семян",
+    "growth_regulator": "Регулятор роста растений"
+  },
+  "PlantNutrition": {
+    "biostimulator": "Биостимулятор",
+    "microelement": "Микроэлемент",
+    "organic_fertilizer": "Органическое удобрение",
+    "npk_fertilizer": "Удобрение NPK"
+  },
   "NextCatalog": "Перейти в каталог",
   "MoreDetail": "Подробнее",
   "OurCatalog": "В нашем каталоге",
   "TypeProducts": "типы продукции",
   "Address": "Адрес",
   "UsSocial": "Подпишитесь на нас в социальных сетях",
-  "RequestRecons": "ЗАЯВКА НА ПОВТОРНОЕ ПОДКЛЮЧЕНИЕ"
+  "RequestRecons": "ЗАЯВКА НА ПОВТОРНОЕ ПОДКЛЮЧЕНИЕ",
+  "next": "Следующий",
+  "previous": "Предыдущий",
+  "download": "Скачать",
+  "head_office": "Главный офис"
 }

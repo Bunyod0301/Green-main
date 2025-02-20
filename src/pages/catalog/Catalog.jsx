@@ -3,9 +3,10 @@
 import React, { useEffect } from 'react';
 import useStore from '../../store/useStore';
 import Orb from '../../Orb';
-import { t } from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 const Catalog = () => {
+  const { t } = useTranslation()
 
   const { Catalogs, loading, error, fetchCatalog } = useStore();
 
@@ -68,7 +69,7 @@ const Catalog = () => {
                 }}
                 className="w-full bg-teal-500 font-medium text-white py-[6px] rounded-lg hover:bg-teal-600 text-center"
               >
-                Юклаб олиш
+                {t("download")}
               </button>
           </div>
           ))
