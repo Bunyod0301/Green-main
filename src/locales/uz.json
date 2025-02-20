@@ -38,13 +38,39 @@
     "defoliant": "Дефолиант",
     "surfactant": "Сирт фаол модда",
     "seed_treatment": "Уруғ дорилагич",
-    "growth_regulator": "Ўсишни бошқарувчи препарат"
+    "growth_regulator": "Ўсишни бошқарувчи препарат",
+    "View": {
+      "active_ingredient": "Таъсир этувчи модда",
+      "chemical_class": "Кимёвий синфи",
+      "formulation": "Препарат шакли",
+      "packaging": "Қадоғи",
+      "application_rates_and_usage": "Сарф меъёрлари ва қўллаш тартиби"
+    },
+    "tableType": {
+      "ekin_turi": "Экин тури",
+      "begona_utlar": "Қайси бегона ўтларга қарши ишлатилади",
+      "begona_ut": "Қайси бегона ўтга қарши ишлатилади",
+      "zararkunandalar": "Қайси зараркунандаларга қарши ишлатилади",
+      "kasallik": "Қайси касалликка қарши ишлатилади",
+      "maqsad": "Мақсади",
+      "sarflanish_mezoni": "Сарф меъёри",
+      "ishlatish_muddatlari": "Ишлатиш муддати, усули ва тавсия этилган чекловлар",
+      "ishlov_turi": "Ишлов тури",
+      "qullash_muddati": "Қўллаш муддати ва усуллари",
+      "mavsumda_necha_marta": "Бир мавсумда неча марта ишлатилади",
+      "suyuklik_sarfi": "1 га учун ишлатиладиган суюқлик сарфи, л/га",
+      "preparat_sarfi": "10 л сув учун препарат сарфи ва майдони, мл (сотих)"
+    }
   },
   "PlantNutrition": {
     "biostimulator": "Биостимулятор",
     "microelement": "Микроэлемент",
     "organic_fertilizer": "Органик ўғит",
-    "npk_fertilizer": "NPK ўғит"
+    "npk_fertilizer": "NPK ўғит",
+    "View": {
+      "guaranteed_composition": "Кафолатланган таркиби",
+      "packaging": "Қадоғи"
+    }
   },
   "NextCatalog": "Каталогга ўтиш",
   "MoreDetail": "Батафсил",
@@ -56,5 +82,6 @@
   "next": "Кейинги",
   "previous": "Олдинги",
   "download": "Юклаб олиш",
-  "head_office": "Бош офис"
+  "head_office": "Бош офис",
+  "back": "Орқага"
 }

@@ -38,13 +38,39 @@
     "defoliant": "Дефолиант",
     "surfactant": "Поверхностно-активное вещество",
     "seed_treatment": "Протравитель семян",
-    "growth_regulator": "Регулятор роста растений"
+    "growth_regulator": "Регулятор роста растений",
+    "View": {
+      "active_ingredient": "Действующее вещество",
+      "chemical_class": "Химический класс",
+      "formulation": "Форма препарата",
+      "packaging": "Упаковка",
+      "application_rates_and_usage": "Нормы расхода и порядок применения"
+    },
+    "tableType": {
+      "ekin_turi": "Вид культуры",
+      "begona_utlar": "Против каких сорняков применяется",
+      "begona_ut": "Против какого сорняка применяется",
+      "zararkunandalar": "Против каких вредителей применяется",
+      "kasallik": "Против какого заболевания применяется",
+      "maqsad": "Цель",
+      "sarflanish_mezoni": "Норма расхода",
+      "ishlatish_muddatlari": "Сроки применения, метод и рекомендуемые ограничения",
+      "ishlov_turi": "Тип обработки",
+      "qullash_muddati": "Сроки и методы применения",
+      "mavsumda_necha_marta": "Сколько раз применяется за сезон",
+      "suyuklik_sarfi": "Расход рабочей жидкости на 1 га, л/га",
+      "preparat_sarfi": "Расход препарата на 10 л воды и площадь, мл (сотки)"
+    }
   },
   "PlantNutrition": {
     "biostimulator": "Биостимулятор",
     "microelement": "Микроэлемент",
     "organic_fertilizer": "Органическое удобрение",
-    "npk_fertilizer": "Удобрение NPK"
+    "npk_fertilizer": "Удобрение NPK",
+    "View": {
+      "guaranteed_composition": "Гарантированный состав",
+      "packaging": "Упаковка"
+    }
   },
   "NextCatalog": "Перейти в каталог",
   "MoreDetail": "Подробнее",
@@ -56,5 +82,6 @@
   "next": "Следующий",
   "previous": "Предыдущий",
   "download": "Скачать",
-  "head_office": "Главный офис"
+  "head_office": "Главный офис",
+  "back": "Назад"
 }
