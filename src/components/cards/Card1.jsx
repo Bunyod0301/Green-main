@@ -62,7 +62,7 @@ const AgroNurellCard = ({data}) => {
                 </thead>
                 <tbody>
                   { 
-                    (data?.productOne?.jadvalType != 5 && data?.productOne?.jadvalType != 4 && data?.productOne?.jadvalType != 6) ?
+                    (data?.productOne?.jadvalType != 3 && data?.productOne?.jadvalType != 14 && data?.productOne?.jadvalType != 15 && data?.productOne?.jadvalType != 16 && data?.productOne?.jadvalType != 20) ?
                     data?.tableOnes?.map((data, index) => (
                       <tr className="text-center" key={index}>
                         <td className="p-1 sm:p-2 border">{getLocalizedKey(data, "ekinTuri")}</td>
