@@ -12,7 +12,7 @@ const TabsWithRouter = () => {
     }
   }, [navigate]);
   return (
-    <div className="p-4">
+    <div className="p-4 min-h-[70vh]">
       <div className="flex space-x-4 border-b">
         <NavLink
           to="/products/plant-protection"
