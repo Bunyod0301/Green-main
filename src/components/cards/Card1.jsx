@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { transformImageUrl } from "../../utils/transformImgUrl";
-import { tableType } from "./tableType";
+import { table, tableType } from "./tableType";
 import { useTranslation } from "react-i18next";
 import { getLocalizedKey } from "../../utils/translateFormat";
 const AgroNurellCard = ({data}) => {
@@ -57,7 +57,7 @@ const AgroNurellCard = ({data}) => {
               <table className="w-full mt-2 text-xs sm:text-sm text-left text-gray-700 border border-gray-300 table p-0">
                 <thead className="bg-green-100">
                   <tr>
-                    {tableType()[data?.productOne.jadvalType - 1]}
+                    {table[data?.productOne.jadvalType - 1]}
                   </tr>
                 </thead>
                 <tbody>

@@ -24,7 +24,6 @@ const Hero = () => {
   return (
     <div className="w-full overflow-hidden">
       {" "}
-      {/* Scrollni yashirish */}
       <Slider {...settings}>
         <div>
           <img
@@ -64,13 +63,6 @@ const Hero = () => {
             className="w-full h-[500px] md:h-[700px] object-cover"
           />
         </div>
-        {/* <div>
-          <img
-            src="https://uzanalytics.com/wp-content/uploads/2019/11/%D0%A4%D0%BE%D1%82%D0%BE-2.jpg"
-            alt="Agricultural Worker"
-            className="w-full h-[700px] object-cover"
-          />
-        </div> */}
       </Slider>
     </div>
   );
