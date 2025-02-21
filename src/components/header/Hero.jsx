@@ -30,7 +30,7 @@ const Hero = () => {
           <img
             src="https://agro-olam.uz/wp-content/uploads/2021/03/agricultural-management-practices-past-exam-question-paper-and-memorandum-grade-12-november-june.jpg"
             alt="Agricultural Management"
-            className="w-full h-[500px] md:h-[700px] object-cover object-top" // Rasmlarni to'g'ri joylash
+            className="w-full h-[500px] md:h-[700px] object-cover" // Rasmlarni to'g'ri joylash
           />
         </div>
         {/* <div>
