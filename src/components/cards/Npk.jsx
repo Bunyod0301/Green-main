@@ -1,6 +1,7 @@
 
 
 import React, { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
 const table = [
@@ -9,92 +10,92 @@ const table = [
     "nomi": "GreenPlus® NPK",
     "jadval": [
         {
-            "tarkibi": "Жами азот (N)",
+            "tarkibi": "PlantNutrition.Npk1.tarkibi.jami_azot",
             "foiz1": "20%",
             "foiz2": "13%",
             "foiz3": "12%"
         },
         {
-            "tarkibi": "Аммоний азоти (N)",
+            "tarkibi": "PlantNutrition.Npk1.tarkibi.ammoniy_azoti",
             "foiz1": "4%",
             "foiz2": "7.8%",
             "foiz3": "2.3%"
         },
         {
-            "tarkibi": "Мочевина азоти (N)",
+            "tarkibi": "PlantNutrition.Npk1.tarkibi.mochovina_azoti",
             "foiz1": "16%",
             "foiz2": "5.2%",
             "foiz3": "9.7%"
         },
         {
-            "tarkibi": "Сувда эрувчан фосфор 5-оксид (P₂O₅)",
+            "tarkibi": "PlantNutrition.Npk1.tarkibi.fosfor",
             "foiz1": "20%",
             "foiz2": "40%",
             "foiz3": "40%"
         },
         {
-            "tarkibi": "Сувда эрувчан калий оксид (K₂O)",
+            "tarkibi": "PlantNutrition.Npk1.tarkibi.kaliy_oksid",
             "foiz1": "20%",
             "foiz2": "10%",
             "foiz3": "36%"
         },
         {
-            "tarkibi": "Сувда эрувчан бор (B)",
+            "tarkibi": "PlantNutrition.Npk1.tarkibi.bor",
             "foiz1": "0.01%",
             "foiz2": "0.01%",
             "foiz3": "0.01%"
         },
         {
-            "tarkibi": "Сувда эрувчан мис (Cu)",
+            "tarkibi": "PlantNutrition.Npk1.tarkibi.mis",
             "foiz1": "0.02%",
             "foiz2": "0.02%",
             "foiz3": "0.02%"
         },
         {
-            "tarkibi": "Сувда эрувчан темир (Fe)",
+            "tarkibi": "PlantNutrition.Npk1.tarkibi.temir",
             "foiz1": "0.02%",
             "foiz2": "0.02%",
             "foiz3": "0.02%"
         },
         {
-            "tarkibi": "Сувда эрувчан марганец (Mn)",
+            "tarkibi": "PlantNutrition.Npk1.tarkibi.marganets",
             "foiz1": "0.02%",
             "foiz2": "0.02%",
             "foiz3": "0.02%"
         },
         {
-            "tarkibi": "Сувда эрувчан молибден (Mo)",
+            "tarkibi": "PlantNutrition.Npk1.tarkibi.molibden",
             "foiz1": "0.007%",
             "foiz2": "0.007%",
             "foiz3": "0.007%"
         },
         {
-            "tarkibi": "Сувда эрувчан рух (Zn)",
+            "tarkibi": "PlantNutrition.Npk1.tarkibi.rux",
             "foiz1": "0.01%",
             "foiz2": "0.01%",
             "foiz3": "0.01%"
         },
         {
-            "tarkibi": "Ранги",
+            "tarkibi": "PlantNutrition.Npk1.tarkibi.rangi",
             "foiz1": "Синий",
             "foiz2": "Желтый",
             "foiz3": "Зеленый"
         },
         {
-            "tarkibi": "pH",
+            "tarkibi": "PlantNutrition.Npk1.tarkibi.ph",
             "foiz1": "5-7",
             "foiz2": "5-7",
             "foiz3": "5-7"
         },
         {
-            "tarkibi": "Сувда эримайдиган чўкманинг максимал оғирлиги",
+            "tarkibi": "PlantNutrition.Npk1.tarkibi.chokma",
             "foiz1": "0.05%",
             "foiz2": "0.05%",
             "foiz3": "0.05%"
         }
     ],
-    "tavsif": "GreenPlus® NPK белгиланган нисбатда барча ўсимликлар ва мевали дарахтларда хавфсиз ишлатиладиган мувозанатли ўғитдир. Таркибидаги қўшимча магний ва ферментлар туфайли озиқ моддаларнинг ўсимликлар томонидан тўғри ва юкламасиз ўзлаштирилишини таъминлайди.",
-    "saf_meyor": "10 л сувга 20-25 гр."
+    "tavsif": "PlantNutrition.Npk1.tavsif",
+    "saf_meyor": "PlantNutrition.Npk1.saf_meyor"
   },
   {
     "img": "/npk/npk2.jpg",
@@ -213,6 +214,7 @@ const table = [
 
 const Npk = ({id}) => {
   const navigate = useNavigate();
+  const { t } = useTranslation()
   useEffect(()=>{
   },[])
   return (
@@ -220,7 +222,7 @@ const Npk = ({id}) => {
       <button
         onClick={() => navigate(-1)}
         className="bg-teal-500 font-medium text-white py-2 px-5 rounded-lg hover:bg-teal-600 absolute left-0 top-0"
-      ><span className="mr-1">←</span>Орқага</button>
+      ><span className="mr-1">←</span>{t('back')}</button>
       <div className="mt-16 w-full md:w-[80%]  bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-300">
         <div className="flex flex-col items-center md:flex-row">
           <img
@@ -252,7 +254,7 @@ const Npk = ({id}) => {
                   { 
                     table[id - 1]?.jadval.map((data, index)=>(
                       <tr key={index}>
-                        <td className="p-1 sm:p-2 border">{data?.["tarkibi"]}</td>
+                        <td className="p-1 sm:p-2 border">{t(data?.["tarkibi"])}</td>
                         <td className="p-1 sm:p-2 border">{data?.["foiz1"]}</td>
                         <td className="p-1 sm:p-2 border">{data?.["foiz2"]}</td>
                         <td className="p-1 sm:p-2 border">{data?.["foiz3"]}</td>
@@ -263,8 +265,8 @@ const Npk = ({id}) => {
                 </tbody>
               </table>
               <div>
-                <p className="mt-2">{table[id-1].tavsif}</p>
-                <p className="font-bold mt-2">{table[id-1].saf_meyor}</p>
+                <p className="mt-2">{t(table[id-1].tavsif)}</p>
+                <p className="font-bold mt-2">{t(table[id-1].saf_meyor)}</p>
               </div>
             </div>
           </div>

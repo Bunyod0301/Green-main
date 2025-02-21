@@ -30,7 +30,7 @@ const Hero = () => {
           <img
             src="https://agro-olam.uz/wp-content/uploads/2021/03/agricultural-management-practices-past-exam-question-paper-and-memorandum-grade-12-november-june.jpg"
             alt="Agricultural Management"
-            className="w-full h-[700px] object-cover" // Rasmlarni to'g'ri joylash
+            className="w-full h-[500px] md:h-[700px] object-cover object-top" // Rasmlarni to'g'ri joylash
           />
         </div>
         {/* <div>
@@ -41,17 +41,27 @@ const Hero = () => {
           />
         </div> */}
         <div>
-          <img
+          {/* <img
             src="https://agro-olam.uz/wp-content/uploads/2021/02/photo_2021-02-16_20-47-07.jpg"
             alt="Greenhouse"
             className="w-full h-[700px] object-cover"
+          /> */}
+          <img
+            src="/slider/2.jpg"
+            alt="Greenhouse"
+            className="w-full h-[500px] md:h-[700px] object-cover"
           />
         </div>
         <div>
-          <img
+          {/* <img
             src="https://agro-olam.uz/wp-content/uploads/2021/07/photo_2021-07-23_07-09-02.jpg"
             alt="Crop Inspection"
             className="w-full h-[700px] object-cover"
+          /> */}
+          <img
+            src="/slider/3.jpg"
+            alt="Greenhouse"
+            className="w-full h-[500px] md:h-[700px] object-cover"
           />
         </div>
         {/* <div>
