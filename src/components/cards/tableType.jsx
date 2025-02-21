@@ -149,6 +149,158 @@ export const table = [
 ]
 
 
+
+export const tableRu = [
+  [
+    <th key={1} className="p-1 sm:p-2 border">Вид культуры</th>,
+    <th key={2} className="p-1 sm:p-2 border">Против каких вредителей используется</th>,
+    <th key={3} className="p-1 sm:p-2 border">Норма расхода л/га</th>,
+    <th key={4} className="p-1 sm:p-2 border">Сроки и методы применения</th>,
+    <th key={5} className="p-1 sm:p-2 border">Сколько раз за сезон применяется</th>
+  ],
+  [
+    <th key={1} className="p-1 sm:p-2 border">Вид культуры</th>,
+    <th key={2} className="p-1 sm:p-2 border">Против каких вредителей используется</th>,
+    <th key={3} className="p-1 sm:p-2 border">Норма расхода кг/га</th>,
+    <th key={4} className="p-1 sm:p-2 border">Сроки и методы применения</th>,
+    <th key={5} className="p-1 sm:p-2 border">Сколько раз за сезон применяется</th>
+  ],
+  [
+    <th key={1} className="p-1 sm:p-2 border">Вид культуры</th>,
+    <th key={2} className="p-1 sm:p-2 border">Против каких сорняков используется</th>,
+    <th key={3} className="p-1 sm:p-2 border">Норма расхода л/га</th>,
+    <th key={4} className="p-1 sm:p-2 border">Расход препарата на 10 л воды и площадь, мл (сотка)</th>
+  ],
+  [
+    <th key={1} className="p-1 sm:p-2 border">Вид культуры</th>,
+    <th key={2} className="p-1 sm:p-2 border">Против каких вредителей используется</th>,
+    <th key={3} className="p-1 sm:p-2 border">Норма расхода л/га</th>,
+    <th key={4} className="p-1 sm:p-2 border">Расход рабочей жидкости на 1 га, л/га</th>,
+    <th key={5} className="p-1 sm:p-2 border">Расход препарата на 10 л воды и площадь, мл (сотка)</th>
+  ],
+  [
+    <th key={1} className="p-1 sm:p-2 border">Вид культуры</th>,
+    <th key={2} className="p-1 sm:p-2 border">Против каких вредителей используется</th>,
+    <th key={3} className="p-1 sm:p-2 border">Норма расхода кг/га</th>,
+    <th key={4} className="p-1 sm:p-2 border">Расход рабочей жидкости на 1 га, л/га</th>,
+    <th key={5} className="p-1 sm:p-2 border">Расход препарата на 10 л воды и площадь, г (сотка)</th>
+  ],
+
+
+  [
+    <th key={1} className="p-1 sm:p-2 border">Вид культуры</th>,
+    <th key={2} className="p-1 sm:p-2 border">Против какой болезни используется</th>,
+    <th key={3} className="p-1 sm:p-2 border">Норма расхода л/га</th>,
+    <th key={4} className="p-1 sm:p-2 border">Расход рабочей жидкости на 1 га, л/га</th>,
+    <th key={5} className="p-1 sm:p-2 border">Расход препарата на 10 л воды и площадь, мл (сотка)</th>
+  ],
+  [
+    <th key={1} className="p-1 sm:p-2 border">Вид культуры</th>,
+    <th key={2} className="p-1 sm:p-2 border">Против какой болезни используется</th>,
+    <th key={3} className="p-1 sm:p-2 border">Норма расхода кг/га</th>,
+    <th key={4} className="p-1 sm:p-2 border">Расход рабочей жидкости на 1 га, л/га</th>,
+    <th key={5} className="p-1 sm:p-2 border">Расход препарата на 10 л воды и площадь, мл (сотка)</th>
+  ],
+
+
+  [
+    <th key={1} className="p-1 sm:p-2 border">Вид культуры</th>,
+    <th key={2} className="p-1 sm:p-2 border">Против каких сорняков используется</th>,
+    <th key={3} className="p-1 sm:p-2 border">Норма расхода кг/га</th>,
+    <th key={4} className="p-1 sm:p-2 border">Расход рабочей жидкости на 1 га, л/га</th>,
+    <th key={5} className="p-1 sm:p-2 border">Расход препарата на 10 л воды и площадь, г (сотка)</th>
+  ],
+  [
+    <th key={1} className="p-1 sm:p-2 border">Вид культуры</th>,
+    <th key={2} className="p-1 sm:p-2 border">Против каких сорняков используется</th>,
+    <th key={3} className="p-1 sm:p-2 border">Норма расхода л/га</th>,
+    <th key={4} className="p-1 sm:p-2 border">Расход рабочей жидкости на 1 га, л/га</th>,
+    <th key={5} className="p-1 sm:p-2 border">Расход препарата на 10 л воды и площадь, г (сотка)</th>
+  ],
+  [
+    <th key={1} className="p-1 sm:p-2 border">Вид культуры</th>,
+    <th key={2} className="p-1 sm:p-2 border">Против каких сорняков используется</th>,
+    <th key={3} className="p-1 sm:p-2 border">Норма расхода л/га</th>,
+    <th key={4} className="p-1 sm:p-2 border">Сроки и методы применения</th>,
+    <th key={5} className="p-1 sm:p-2 border">Максимальное количество применений за сезон</th>
+  ],
+  [
+    <th key={1} className="p-1 sm:p-2 border">Вид культуры</th>,
+    <th key={2} className="p-1 sm:p-2 border">Против каких сорняков используется</th>,
+    <th key={3} className="p-1 sm:p-2 border">Норма расхода л/га</th>,
+    <th key={4} className="p-1 sm:p-2 border">Расход рабочей жидкости на 1 га, л/га</th>,
+    <th key={5} className="p-1 sm:p-2 border">Расход препарата на 10 л воды и площадь, мл (сотка)</th>
+  ],
+  [
+    <th key={1} className="p-1 sm:p-2 border">Вид культуры</th>,
+    <th key={2} className="p-1 sm:p-2 border">Против каких сорняков используется</th>,
+    <th key={3} className="p-1 sm:p-2 border">Норма расхода кг/га</th>,
+    <th key={4} className="p-1 sm:p-2 border">Сроки и методы применения</th>,
+    <th key={5} className="p-1 sm:p-2 border">Максимальное количество применений за сезон</th>
+  ],
+  [
+    <th key={1} className="p-1 sm:p-2 border">Вид культуры</th>,
+    <th key={2} className="p-1 sm:p-2 border">Против каких сорняков используется</th>,
+    <th key={3} className="p-1 sm:p-2 border">Норма расхода л/га</th>,
+    <th key={4} className="p-1 sm:p-2 border">Расход рабочей жидкости на 1 га, л/га</th>,
+    <th key={5} className="p-1 sm:p-2 border">Расход препарата на 10 л воды и площадь, мл (сотка)</th>
+  ],
+
+
+  [
+    <th key={1} className="p-1 sm:p-2 border">Вид культуры</th>,
+    <th key={2} className="p-1 sm:p-2 border">Против какой болезни используется</th>,
+    <th key={3} className="p-1 sm:p-2 border">Норма расхода кг/га</th>,
+    <th key={4} className="p-1 sm:p-2 border">Сроки и методы применения</th>,
+  ],
+  [
+    <th key={1} className="p-1 sm:p-2 border">Вид культуры</th>,
+    <th key={2} className="p-1 sm:p-2 border">Против каких вредителей или болезней используется</th>,
+    <th key={3} className="p-1 sm:p-2 border">Норма расхода л/т</th>,
+    <th key={4} className="p-1 sm:p-2 border">Сроки и методы применения</th>,
+  ],
+
+
+  [
+    <th key={1} className="p-1 sm:p-2 border">Вид культуры</th>,
+    <th key={3} className="p-1 sm:p-2 border">Вид обработки</th>,
+    <th key={2} className="p-1 sm:p-2 border">Норма расхода, л/га</th>,
+    <th key={4} className="p-1 sm:p-2 border">Сроки и методы применения</th>,
+  ],
+  [
+    <th key={1} className="p-1 sm:p-2 border">Вид культуры</th>,
+    <th key={2} className="p-1 sm:p-2 border">Цель применения</th>,
+    <th key={3} className="p-1 sm:p-2 border">Норма расхода, л/га</th>,
+    <th key={4} className="p-1 sm:p-2 border">Расход рабочей жидкости на 1 га, л/га</th>,
+    <th key={5} className="p-1 sm:p-2 border">Расход препарата на 10 л воды и площадь, мл (сотка)</th>
+  ],
+
+
+  [
+    <th key={1} className="p-1 sm:p-2 border">Вид культуры</th>,
+    <th key={3} className="p-1 sm:p-2 border">Цель применения</th>,
+    <th key={2} className="p-1 sm:p-2 border">Норма расхода, г/га</th>,
+    <th key={4} className="p-1 sm:p-2 border">Сроки и методы применения</th>,
+    <th key={5} className="p-1 sm:p-2 border">Максимальное количество применений за сезон</th>
+  ],
+  [
+    <th key={1} className="p-1 sm:p-2 border">Вид культуры</th>,
+    <th key={3} className="p-1 sm:p-2 border">Цель применения</th>,
+    <th key={2} className="p-1 sm:p-2 border">Норма расхода, л/га</th>,
+    <th key={4} className="p-1 sm:p-2 border">Расход рабочей жидкости на 1 га, л/га</th>,
+    <th key={5} className="p-1 sm:p-2 border">Расход препарата на 10 л воды и площадь, мл (сотка)</th>
+  ],
+
+
+  [
+    <th key={1} className="p-1 sm:p-2 border">Вид культуры</th>,
+    <th key={3} className="p-1 sm:p-2 border">Применение</th>,
+    <th key={2} className="p-1 sm:p-2 border">Норма расхода на 1 га</th>,
+    <th key={5} className="p-1 sm:p-2 border">Расход рабочей жидкости на 1 га, л/га</th>
+  ],
+]
+
+
 // export const tableType = [
 //   [
 //     <th key={1} className="p-1 sm:p-2 border">Экин тури</th>,

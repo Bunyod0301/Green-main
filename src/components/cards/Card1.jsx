@@ -1,11 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { transformImageUrl } from "../../utils/transformImgUrl";
-import { table, tableType } from "./tableType";
+import { table, tableRu, tableType } from "./tableType";
 import { useTranslation } from "react-i18next";
 import { getLocalizedKey } from "../../utils/translateFormat";
 const AgroNurellCard = ({data}) => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const navigate = useNavigate();
   return (
     data && <div className="bg-gray-100 p-0 min-h-screen flex items-center justify-center relative rounded-lg">
@@ -56,15 +56,15 @@ const AgroNurellCard = ({data}) => {
             <div className="w-full overflow-x-auto md:overflow-visible">
               <table className="w-full mt-2 text-xs sm:text-sm text-left text-gray-700 border border-gray-300 table p-0">
                 <thead className="bg-green-100">
-                  <tr>
-                    {table[data?.productOne.jadvalType - 1]}
+                  <tr className="text-center">
+                    { i18n.language == 'uz' ? table[data?.productOne.jadvalType - 1] : tableRu[data?.productOne.jadvalType - 1]}
                   </tr>
                 </thead>
                 <tbody>
                   { 
                     (data?.productOne?.jadvalType != 5 && data?.productOne?.jadvalType != 4 && data?.productOne?.jadvalType != 6) ?
                     data?.tableOnes?.map((data, index) => (
-                      <tr key={index}>
+                      <tr className="text-center" key={index}>
                         <td className="p-1 sm:p-2 border">{getLocalizedKey(data, "ekinTuri")}</td>
                         <td className="p-1 sm:p-2 border">{getLocalizedKey(data, "begonaQarshi")}</td>
                         <td className="p-1 sm:p-2 border">{getLocalizedKey(data, "sarfMeyori")}</td>
@@ -73,7 +73,7 @@ const AgroNurellCard = ({data}) => {
                       </tr>
                     )) : 
                     data?.tableOnes?.map((data, index) => (
-                      <tr key={index}>
+                      <tr className="text-center" key={index}>
                         <td className="p-1 sm:p-2 border">{getLocalizedKey(data, "ekinTuri")}</td>
                         <td className="p-1 sm:p-2 border">{getLocalizedKey(data, "begonaQarshi")}</td>
                         <td className="p-1 sm:p-2 border">{getLocalizedKey(data, "sarfMeyori")}</td>
