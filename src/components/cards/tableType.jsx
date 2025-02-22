@@ -146,6 +146,14 @@ export const table = [
       <th key={2} className="p-1 sm:p-2 border">1 га учун сарф меъёри</th>,
       <th key={5} className="p-1 sm:p-2 border">1 га учун ишлатиладиган суюқлик сарфи, л/га</th>
     ],
+
+    [
+      <th key={1} className="p-1 sm:p-2 border">Экин тури</th>,
+      <th key={2} className="p-1 sm:p-2 border">Қайси бегона ўтларга қарши ишлатилади</th>,
+      <th key={3} className="p-1 sm:p-2 border">Сарф меъёри кг/га</th>,
+      <th key={4} className="p-1 sm:p-2 border">1 га учун ишлатиладиган суюқлик сарфи, л/га</th>,
+      <th key={5} className="p-1 sm:p-2 border">10 л сув учун препарат сарфи ва майдони, мл (сотих)</th>
+    ],
 ]
 
 
@@ -297,6 +305,15 @@ export const tableRu = [
     <th key={3} className="p-1 sm:p-2 border">Применение</th>,
     <th key={2} className="p-1 sm:p-2 border">Норма расхода на 1 га</th>,
     <th key={5} className="p-1 sm:p-2 border">Расход рабочей жидкости на 1 га, л/га</th>
+  ],
+
+
+  [
+    <th key={1} className="p-1 sm:p-2 border">Вид культуры</th>,
+    <th key={2} className="p-1 sm:p-2 border">Против каких сорняков используется</th>,
+    <th key={3} className="p-1 sm:p-2 border">Норма расхода кг/га</th>,
+    <th key={4} className="p-1 sm:p-2 border">Расход рабочей жидкости на 1 га, л/га</th>,
+    <th key={5} className="p-1 sm:p-2 border">Расход препарата на 10 л воды и площадь, мл (сотка)</th>
   ],
 ]
 
