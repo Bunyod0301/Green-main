@@ -1,11 +1,65 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { transformImageUrl } from "../../utils/transformImgUrl";
 import { useTranslation } from "react-i18next";
 import { getLocalizedKey } from "../../utils/translateFormat";
 const PlantNutritionCard = ({data}) => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const navigate = useNavigate();
+  const imgRef = useRef(null);
+  const glassRef = useRef(null);
+  const zoom = 3;
+
+  useEffect(() => {
+    const magnify = () => {
+      const img = imgRef.current;
+      const glass = glassRef.current;
+      if (!img || !glass) return;
+
+      glass.style.backgroundImage = `url('${img.src}')`;
+      glass.style.backgroundRepeat = "no-repeat";
+      glass.style.backgroundSize = `${img.width * zoom}px ${
+        img.height * zoom
+      }px`;
+
+      const bw = 3;
+      const w = glass.offsetWidth / 2;
+      const h = glass.offsetHeight / 2;
+
+      const moveMagnifier = (e) => {
+        e.preventDefault();
+        const pos = getCursorPos(e);
+        let x = pos.x;
+        let y = pos.y;
+
+        if (x > img.width - w / zoom) x = img.width - w / zoom;
+        if (x < w / zoom) x = w / zoom;
+        if (y > img.height - h / zoom) y = img.height - h / zoom;
+        if (y < h / zoom) y = h / zoom;
+
+        glass.style.left = `${x - w + 100}px`;
+        glass.style.top = `${y - h + 100}px`;
+        glass.style.backgroundPosition = `-${x * zoom - w + bw}px -${
+          y * zoom - h + bw
+        }px`;
+      };
+
+      const getCursorPos = (e) => {
+        const rect = img.getBoundingClientRect();
+        const x = e.pageX - rect.left - window.pageXOffset;
+        const y = e.pageY - rect.top - window.pageYOffset;
+        return { x, y };
+      };
+
+      img.addEventListener("mousemove", moveMagnifier);
+      glass.addEventListener("mousemove", moveMagnifier);
+
+      img.addEventListener("touchmove", moveMagnifier);
+      glass.addEventListener("touchmove", moveMagnifier);
+    };
+
+    magnify();
+  }, []);
   
   return (
     data && <div className="bg-gray-100 p-0 min-h-[70vh] flex justify-center relative rounded-lg">
@@ -15,10 +69,24 @@ const PlantNutritionCard = ({data}) => {
       ><span className="mr-1">←</span>{t('back')}</button>
       <div className="mt-16 w-full md:w-[80%] my-auto  bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-300">
         <div className="flex flex-col items-center md:flex-row">
+          <div
+            ref={glassRef}
+            className="absolute w-[180px] h-[180px] bg-white rounded-full border-2 shadow-lg cursor-none"
+            style={{ visibility: "hidden" }}>
+          </div>
           <img
+            ref={imgRef}
             src={transformImageUrl(data?.productTwo?.productPicture)} // vaqtincha
             alt="Agro-Nurell 55% эм.к."
-            className="w-96 h-96 object-contain p-2"
+            className="w-96 h-96 object-contain p-2 transition-transform duration-300 cursor-pointer"
+            onMouseEnter={() => {
+              const glass = glassRef.current;
+              if (glass) glass.style.visibility = "visible";
+            }}
+            onMouseLeave={() => {
+              const glass = glassRef.current;
+              if (glass) glass.style.visibility = "hidden";
+            }}
           />
           <div className="px-1 md:px-4 py-4">
             <h1 className="text-2xl font-bold text-green-700">{getLocalizedKey(data?.productTwo, "title")}</h1>
