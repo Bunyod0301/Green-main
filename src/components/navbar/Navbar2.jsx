@@ -29,12 +29,12 @@ const Navbar2 = () => {
     <div className="bg-green-800">
       <div className='lg:container mx-auto text-white py-2 px-6 flex justify-center md:justify-between items-center text-sm'>
         <div className="hidden md:flex items-center gap-2">
-          <span>🌿</span>
-          <p className='font-bold'>{t("Navbar.HarvestFruitful")}</p>
+          {/* <span>🌿</span> */}
+          {/* <p className='font-bold'>{t("Navbar.HarvestFruitful")}</p> */}
         </div>
 
         <div className="flex items-center gap-8">
-          <p className='hidden md:block font-bold'>{t("Navbar.Address")}</p>
+          {/* <p className='hidden md:block font-bold'>{t("Navbar.Address")}</p> */}
 
           <div className="flex gap-2">
             <button onClick={() => changeLanguage('uz')} className={`hover:underline font-bold ${i18n.language == 'uz' ? 'underline' : ''}`}>ЎЗ</button>
