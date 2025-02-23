@@ -48,9 +48,10 @@ const Contact = ({ address = "Tashkent, Uzbekistan" }) => {
   };
   
 
-  const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(
-    address
-  )}&output=embed`;
+  const latitude = 41.334992;
+  const longitude = 69.325074;
+
+  const mapSrc = `https://www.google.com/maps?q=${latitude},${longitude}&output=embed`;
   return (
     <div className="bg-[#F2F2F3]">
       <div className="container mx-auto px-0 md:px-[5%] py-10 space-y-10">
