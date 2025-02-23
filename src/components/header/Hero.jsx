@@ -46,9 +46,9 @@ const Hero = () => {
             className="w-full h-[700px] object-cover"
           /> */}
           <img
-            src="/slider/2.jpg"
+            src="/slider/4.jpg"
             alt="Greenhouse"
-            className="w-full h-[500px] md:h-[700px] object-cover"
+            className="w-full h-[500px] md:h-[700px] object-cover object-right"
           />
         </div>
         <div>
@@ -58,9 +58,9 @@ const Hero = () => {
             className="w-full h-[700px] object-cover"
           /> */}
           <img
-            src="/slider/3.jpg"
+            src="/slider/5.jpg"
             alt="Greenhouse"
-            className="w-full h-[500px] md:h-[700px] object-cover"
+            className="w-full h-[500px] md:h-[700px] object-cover object-bottom"
           />
         </div>
       </Slider>
