@@ -47,23 +47,23 @@ const Navbar2 = () => {
     <nav className="w-full bg-green-600">
       <div className="lg:container flex flex-wrap items-center justify-between mx-auto p-8 text-sm 2xl:text-2xl">
         <NavLink to='/' className="flex items-center space-x-3 rtl:space-x-reverse" end>
-          <div className="rounded-sm rounded-tr-[55px] rounded-bl-[30px] bg-white p-1 h-[70px] w-[210px]">
-            <div className="flex items-center justify-between gap-2">
+          {/* <div className="rounded-sm rounded-tr-[55px] rounded-bl-[30px] bg-white p-1 h-[70px] w-[210px]"> */}
+            <div className="flex items-center justify-between gap-2 bg-green-100 p-3 rounded">
               <img
                 src={logo}
                 alt="logo"
-                className="rounded-[17px] w-[80px] h-[55px]"
+                className="rounded-[17px] w-[40px] h-[40px] md:w-[80px] md:h-[55px] xl:h-[65px]"
               />
               <div className="w-full text-end">
-                <h3 className="font-bold text-[#0E644D] text-start text-[26px]">
+                <h3 className="font-bold text-[#0E644D] text-start text-sm md:text-lg xl:text-2xl">
                   Agro<span className="text-green-500">Com</span>
                 </h3>
-                <span className="text-green-600 text-end w-full font-medium text-[12px] hover:text-slate-300">
+                <span className="text-green-600 text-end w-full font-medium text-xs md:text-sm xl:text-xl">
                   Ishonchli himoya
                 </span>
               </div>
             </div>
-          </div>
+          {/* </div> */}
         </NavLink>
 
 
