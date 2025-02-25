@@ -13,6 +13,7 @@ const Footer = () => {
 
   const toggleModal = () => {
     setIsOpen(!isOpen);
+    
   };
 
   return (
