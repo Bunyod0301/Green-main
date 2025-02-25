@@ -8,7 +8,7 @@ const TabsWithRouter = () => {
 
   useEffect(() => {
     if (location.pathname === "/products") {
-      navigate("/products/plant-protection");
+      // navigate("/products/plant-protection");
     }
   }, [navigate]);
   return (

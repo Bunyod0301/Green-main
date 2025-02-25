@@ -14,7 +14,8 @@ export default {
         lg: "1024px", // Large screens
         xl: "1280px", // Extra large screens
         "2xl": "1536px", // 2x extra large screens
-        "3xl": "1920px" // 3x extra large screens
+        "3xl": "1920px", // 3x extra large screens
+        "4xl": "2560px" // 4x extra large screens
       }
     }
   },

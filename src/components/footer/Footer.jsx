@@ -17,7 +17,7 @@ const Footer = () => {
   };
 
   return (
-    <div className="w-full bg-green-600 text-white py-10 px-5 text-sm 2xl:text-2xl">
+    <div className="w-full bg-green-600 text-white py-10 px-5 text-sm 2xl:text-2xl 4xl:text-3xl">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center md:text-left">
         {/* Logo Section */}
         {/* <div className="rounded-sm rounded-tr-[55px] rounded-bl-[30px] bg-white p-1 h-[70px] w-[210px]"> */}
@@ -29,10 +29,10 @@ const Footer = () => {
                   className="rounded-[17px] w-[40px] h-[40px] md:w-[80px] md:h-[55px] xl:h-[65px]"
                 />
                 <div className="w-full text-end">
-                  <h3 className="font-bold text-[#0E644D] text-start text-sm md:text-lg xl:text-2xl">
+                  <h3 className="font-bold text-[#0E644D] text-start text-sm md:text-lg xl:text-2xl 4xl:text-3xl">
                     Agro<span className="text-green-500">Com</span>
                   </h3>
-                  <span className="text-green-600 text-end w-full font-medium text-xs md:text-sm xl:text-xl">
+                  <span className="text-green-600 text-end w-full font-medium text-xs md:text-sm xl:text-xl 4xl:text-2xl">
                     Ishonchli himoya
                   </span>
                 </div>
@@ -42,13 +42,13 @@ const Footer = () => {
 
         {/* Address Section */}
         <div>
-          <h3 className="text-lg font-bold text-green-300">{t("Address")}</h3>
+          <h3 className="text-lg 4xl:text-3xl font-bold text-green-300">{t("Address")}</h3>
           <p className="max-w-[300px] mt-2">{t("Navbar.Address")}</p>
         </div>
 
         {/* Contact Section */}
         <div>
-          <h3 className="text-lg font-bold text-green-300">{t("Navbar.Menu.Contact")}</h3>
+          <h3 className="text-lg 4xl:text-3xl font-bold text-green-300">{t("Navbar.Menu.Contact")}</h3>
           <div className="mt-2 space-y-1">
             <a href="tel:+998998510018" className="block hover:text-green-300">+998 99 851 00 18</a>
             <a href="tel:+998998210018" className="block hover:text-green-300">+998 99 821 00 18</a>
@@ -59,7 +59,7 @@ const Footer = () => {
 
         {/* Social Media & Modal Button */}
         <div>
-          <h3 className="text-lg 2xl:text-2xl font-bold text-green-300">{t("UsSocial")}</h3>
+          <h3 className="text-lg 2xl:text-2xl 4xl:text-3xl font-bold text-green-300">{t("UsSocial")}</h3>
           <div className="flex justify-center md:justify-start gap-3 mt-2">
             <a target="_blank" href="https://www.facebook.com/100090505449159/" className="p-2 bg-white text-green-600 rounded-md hover:bg-green-500 hover:text-white"><TbBrandFacebook size={24} /></a>
             <a target="_blank" href="https://www.instagram.com/agrocom_uz?igsh=OXRyOTA3YXo5enhq" className="p-2 bg-white text-green-600 rounded-md hover:bg-green-500 hover:text-white"><RxInstagramLogo size={24} /></a>
