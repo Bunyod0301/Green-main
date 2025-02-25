@@ -12,8 +12,8 @@ const TabsWithRouter = () => {
     }
   }, [navigate]);
   return (
-    <div className="p-4 min-h-[70vh]">
-      <div className="flex space-x-4 border-b">
+    <div className="p-4 min-h-[80vh]">
+      <div className="flex space-x-4 border-b text-lg 2xl:text-2xl">
         <NavLink
           to="/products/plant-protection"
           className={({ isActive }) =>

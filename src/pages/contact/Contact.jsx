@@ -56,7 +56,7 @@ const Contact = ({ address = "Tashkent, Uzbekistan" }) => {
     <div className="bg-[#F2F2F3]">
       <div className="container mx-auto px-0 md:px-[5%] py-10 space-y-10">
         <div className="w-full">
-          <h1 className="font-semibold text-[30px] text-green-500">{t("head_office")}</h1>
+          <h1 className="font-semibold text-3xl 2xl:text-4xl text-green-500">{t("head_office")}</h1>
         </div>
         <div className="relative w-full h-96">
           <iframe
@@ -69,11 +69,11 @@ const Contact = ({ address = "Tashkent, Uzbekistan" }) => {
             allowFullScreen></iframe>
         </div>
         <div className="bg-white space-y-7 p-2 md:p-10">
-          <h2 className="text-[#484848] text-[20px] font-semibold">
+          <h2 className="text-[#484848] text-lg 2xl:text-xl font-semibold">
             {t("RequestRecons")}
           </h2>
           <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-2">
+            <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-2 text-sm 2xl:text-lg">
               <input
                 onChange={handleChange}
                 name="name"

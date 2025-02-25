@@ -147,7 +147,7 @@ function PlantProtection() {
 
 <div className="w-full container mx-auto">
       {/* Ichki kategoriya (Mahsulot turlari) */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 bg-gray-100 p-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 bg-gray-100 p-4 text-sm 2xl:text-xl">
         {categories.map((category) => (
           <button
             key={category.id}
@@ -171,11 +171,11 @@ function PlantProtection() {
       <div className="container mx-auto flex items-center justify-center flex-col px-2 py-8">
         <div className="flex w-full items-center flex-col md:flex-row justify-center gap-4">
           <div className="text-center ">
-            <h2 ref={catalogHeaderRef} className="text-3xl font-bold">{t("OurCatalog")}</h2>
+            <h2 ref={catalogHeaderRef} className="text-3xl 2xl:text-4xl font-bold">{t("OurCatalog")}</h2>
             {
               currentProducts?.length ?
-              <p className="text-lg text-gray-600">{t(categories.find((c) => c.id === activeTab)?.name)} {FilterProduct(activeTab)?.length}+ {t("TypeProducts")}</p> :
-              <p className="text-lg text-gray-600 min-h-[60vh]">{t(categories.find((c) => c.id === activeTab)?.name)} маҳсулотлар мавжуд эмас</p>
+              <p className="text-lg text-gray-600 2xl:text-2xl">{t(categories.find((c) => c.id === activeTab)?.name)} {FilterProduct(activeTab)?.length}+ {t("TypeProducts")}</p> :
+              <p className="text-lg text-gray-600 2xl:text-2xl min-h-[60vh]">{t(categories.find((c) => c.id === activeTab)?.name)} маҳсулотлар мавжуд эмас</p>
             }
           </div>
         </div>
@@ -205,7 +205,7 @@ function PlantProtection() {
                 ⬅️ {t("previous")}
               </button>
 
-              <span className="text-lg font-semibold">
+              <span className="text-lg 2xl:text-2xl font-semibold">
                 {currentPage} / {totalPages}
               </span>
 

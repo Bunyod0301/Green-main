@@ -16,7 +16,7 @@ const Footer = () => {
   };
 
   return (
-    <div className="w-full bg-green-600 text-white py-10 px-5">
+    <div className="w-full bg-green-600 text-white py-10 px-5 text-sm 2xl:text-2xl">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center md:text-left">
         {/* Logo Section */}
         <div className="rounded-sm rounded-tr-[55px] rounded-bl-[30px] bg-white p-1 h-[70px] w-[210px]">
@@ -56,13 +56,13 @@ const Footer = () => {
 
         {/* Social Media & Modal Button */}
         <div>
-          <h3 className="text-lg font-bold text-green-300">{t("UsSocial")}</h3>
+          <h3 className="text-lg 2xl:text-2xl font-bold text-green-300">{t("UsSocial")}</h3>
           <div className="flex justify-center md:justify-start gap-3 mt-2">
             <a target="_blank" href="https://www.facebook.com/100090505449159/" className="p-2 bg-white text-green-600 rounded-md hover:bg-green-500 hover:text-white"><TbBrandFacebook size={24} /></a>
             <a target="_blank" href="https://www.instagram.com/agrocom_uz?igsh=OXRyOTA3YXo5enhq" className="p-2 bg-white text-green-600 rounded-md hover:bg-green-500 hover:text-white"><RxInstagramLogo size={24} /></a>
             <a target="_blank" href="https://t.me/agrocomguruh" className="p-2 bg-white text-green-600 rounded-md hover:bg-green-500 hover:text-white"><PiTelegramLogo size={24} /></a>
           </div>
-          <button onClick={toggleModal} className="mt-4 text-green-400 font-medium py-2 px-4 rounded-lg hover:text-green-200">
+          <button onClick={toggleModal} className="mt-4 text-green-400 font-medium py-2 rounded-lg hover:text-green-200">
             {t("RequestRecons")}
           </button>
         </div>

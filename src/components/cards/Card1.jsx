@@ -65,9 +65,9 @@ const AgroNurellCard = ({data}) => {
     data && <div className="bg-gray-100 p-0 min-h-screen flex items-center justify-center relative rounded-lg">
       <button
         onClick={() => navigate(-1)}
-        className="bg-teal-500 font-medium text-white py-2 px-5 rounded-lg hover:bg-teal-600 absolute left-0 top-0"
+        className="bg-teal-500 font-medium text-white py-2 px-5 rounded-lg hover:bg-teal-600 absolute left-0 top-0 text-lg 2xl:text-2xl"
       ><span className="mr-1">←</span>{t("back")}</button>
-      <div className="mt-16 w-full md:w-[80%]  bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-300">
+      <div className="mt-16 w-full md:w-[90%]  bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-300">
         <div className="flex flex-col items-center md:flex-row">
         <div
           ref={glassRef}
@@ -89,16 +89,16 @@ const AgroNurellCard = ({data}) => {
             }}
           />
           <div className="px-1 md:px-4 py-4">
-            <h1 className="text-2xl font-bold text-green-700">{getLocalizedKey(data?.productOne, "title")}</h1>
-            <p className="text-sm text-gray-600 mt-1">{ data?.productOne?.productOneName }</p>
-            <p className="text-gray-700 mt-2">{ getLocalizedKey(data?.productOne, "description") }</p>
+            <h1 className="text-2xl 2xl:text-4xl font-bold text-green-700">{getLocalizedKey(data?.productOne, "title")}</h1>
+            <p className="text-sm 2xl:text-lg text-gray-600 mt-1">{ data?.productOne?.productOneName }</p>
+            <p className="text-lg 2xl:text-xl text-gray-700 mt-2">{ getLocalizedKey(data?.productOne, "description") }</p>
           </div>
         </div>
 
         <div className="px-1 md:px-4 pb-4">
-          <div className="flex gap-2 md:gap-10 flex-col items-start md:flex-row md:items-center">
+          <div className="flex gap-2 md:gap-10 flex-col items-start md:flex-row md:items-center text-lg 2xl:text-xl">
             <div className="mt-2">
-              <h2 className="font-semibold text-gray-800">{t("PlantProtection.View.active_ingredient")}:</h2>
+              <h2 className="font-semibold text-gray-800 ">{t("PlantProtection.View.active_ingredient")}:</h2>
               <p className="text-gray-700">{ getLocalizedKey(data?.productOne, "tasirModda") }</p>
             </div>
 
@@ -118,11 +118,11 @@ const AgroNurellCard = ({data}) => {
           </div>
 
           <div className="mt-4">
-            <h2 className="text-lg font-semibold text-green-700">
+            <h2 className="text-lg 2xl:text-xl font-semibold text-green-700">
               {t("PlantProtection.View.application_rates_and_usage")}:
             </h2>
             <div className="w-full overflow-x-auto md:overflow-visible">
-              <table className="w-full mt-2 text-xs sm:text-sm text-left text-gray-700 border border-gray-300 table p-0">
+              <table className="w-full mt-2 text-xs sm:text-sm 2xl:text-lg text-left text-gray-700 border border-gray-300 table p-0">
                 <thead className="bg-green-100">
                   <tr className="text-center">
                     { i18n.language == 'uz' ? table[data?.productOne.jadvalType - 1] : tableRu[data?.productOne.jadvalType - 1]}

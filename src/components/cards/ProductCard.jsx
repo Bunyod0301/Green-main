@@ -36,7 +36,7 @@ function ProductCard({ icon, productPicture, title, description, type, id, produ
     : description.slice(0, maxLength) + (isTextLong ? "..." : "");
 
   return (
-    <div className="bg-white rounded-lg transform transition duration-300 hover:scale-105 shadow-lg hover:shadow-2xl p-4 w-full sm:w-60 md:w-72 lg:w-80 space-y-2">
+    <div className="bg-white rounded-lg transform transition duration-300 hover:scale-105 shadow-lg hover:shadow-2xl p-4 w-full sm:w-60 md:w-72 lg:w-80 space-y-2 flex flex-col justify-between">
       <div className="flex justify-center items-center mb-4">
         {icon && <img
           src={icon}
@@ -51,10 +51,12 @@ function ProductCard({ icon, productPicture, title, description, type, id, produ
           // onError={(e) => (e.target.src = "/default-image.jpg")}
         />
       </div>
-      <h3 className="text-xl font-semibold text-start mb-2">{title}</h3>
-      <p className="text-gray-700 text-start text-[13px] font-medium">
-        {displayText}
-      </p>
+      <div>
+        <h3 className="text-xl 2xl:text-2xl font-semibold text-start mb-2">{title}</h3>
+        <p className="text-gray-700 text-start text-sm 2xl:text-lg font-medium">
+          {displayText}
+        </p>
+      </div>
 
       <button
         onClick={handleDetailsClick}

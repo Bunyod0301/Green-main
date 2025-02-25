@@ -102,10 +102,10 @@ const ProductCard = ({
 
       {/* Product Info */}
       <div className="p-4 text-start flex flex-col justify-between w-full md:w-1/2">
-        <h3 className={`text-xl font-semibold mb-2 ${textColor}`}>{title}</h3>
+        <h3 className={`text-xl xl:text-3xl font-semibold mb-2 ${textColor}`}>{title}</h3>
         <NavLink
           to={catalogLink}
-          className={`${textColor} text-sm md:text-base font-medium hover:underline transition-all`}
+          className={`${textColor} text-sm xl:text-2xl md:text-base font-medium hover:underline transition-all`}
         >
           {t("NextCatalog")}
         </NavLink>
@@ -118,7 +118,7 @@ const Products = () => {
   const { t } = useTranslation();
   return (
     <div className="bg-gray-100 py-10">
-      <h2 className="text-center text-3xl font-bold mb-10 text-green-500">
+      <h2 className="text-center text-3xl xl:text-5xl font-bold mb-10 text-green-500">
         {t("Navbar.Menu.Products")}
       </h2>
 
