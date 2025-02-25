@@ -23,23 +23,23 @@ const ProductCard = ({ img, title, desc, id }) => {
           alt="Product Image"
           className="w-full h-48 object-cover rounded-lg"
         />
-        <div className="absolute top-2 right-2 bg-white p-2 rounded-full shadow-md">
+        {/* <div className="absolute top-2 right-2 bg-white p-2 rounded-full shadow-md">
           <i className="fas fa-leaf text-green-500"></i>
-        </div>
+        </div> */}
       </div>
 
       {/* Mahsulot nomi va tavsifi */}
       <div className="flex-grow flex flex-col justify-between w-full">
-        <h3 className="text-xl font-semibold text-gray-800">{title}</h3>
-        <p className="text-gray-600 text-sm mt-2">{desc}</p>
+        <h3 className="text-xl xl:text-2xl font-semibold text-gray-800">{title}</h3>
+        <p className="text-gray-600 text-sm xl:text-xl mt-2">{desc}</p>
       </div>
 
       {/* "Batafsil" tugmasi */}
-      <div className="flex justify-between w-full mt-auto">
+      <div className="flex justify-between w-full mt-auto text-lg xl:text-xl">
         <NavLink to={`/products/plant-protection/view/${id}`} className="text-green-500 hover:text-green-600">
           {t("MoreDetail")}
         </NavLink>
-        <span className="text-green-500 text-lg">&#9733;</span>
+        <span className="text-green-500">&#9733;</span>
       </div>
     </div>
   );

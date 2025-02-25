@@ -65,9 +65,9 @@ const PlantNutritionCard = ({data}) => {
     data && <div className="bg-gray-100 p-0 min-h-[70vh] flex justify-center relative rounded-lg">
       <button
         onClick={() => navigate(-1)}
-        className="bg-teal-500 font-medium text-white py-2 px-5 rounded-lg hover:bg-teal-600 absolute left-0 top-0"
+        className="bg-teal-500 font-medium text-white py-2 px-5 rounded-lg hover:bg-teal-600 absolute left-0 top-0 text-lg 2xl:text-2xl"
       ><span className="mr-1">←</span>{t('back')}</button>
-      <div className="mt-16 w-full md:w-[80%] my-auto  bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-300">
+      <div className="mt-16 w-full md:w-[90%] my-auto  bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-300">
         <div className="flex flex-col items-center md:flex-row">
           <div
             ref={glassRef}
@@ -89,11 +89,11 @@ const PlantNutritionCard = ({data}) => {
             }}
           />
           <div className="px-1 md:px-4 py-4">
-            <h1 className="text-2xl font-bold text-green-700">{getLocalizedKey(data?.productTwo, "title")}</h1>
-            <p className="text-sm text-gray-600 mt-1">{ data?.productTwo?.productTwoName }</p>
+            <h1 className="text-2xl 2xl:text-4xl font-bold text-green-700">{getLocalizedKey(data?.productTwo, "title")}</h1>
+            <p className="text-sm 2xl:text-lg text-gray-600 mt-1">{ data?.productTwo?.productTwoName }</p>
 
             <div className="w-full overflow-x-auto md:overflow-visible">
-              <table className="w-full mt-2 text-xs sm:text-sm text-left text-gray-700 border border-gray-300 table p-0">
+              <table className="w-full mt-2 text-xs sm:text-sm 2xl:text-lg text-left text-gray-700 border border-gray-300 table p-0">
                 <thead className="bg-green-100">
                   <tr>
                     <th className="p-1 sm:p-2 border">{t("PlantNutrition.View.guaranteed_composition")}</th>
@@ -111,7 +111,7 @@ const PlantNutritionCard = ({data}) => {
                   }
                 </tbody>
               </table>
-              <div>
+              <div className="text-lg 2xl:text-xl">
                 <p className="mt-2">{getLocalizedKey(data?.productTwo, "description")}</p>
                 <p className="font-bold mt-2">{getLocalizedKey(data?.productTwo, "sarf")}</p>
                 <p className="font-bold mt-2">{t("PlantNutrition.View.packaging")} - {data?.productTwo?.desUz}</p>

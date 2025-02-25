@@ -27,7 +27,7 @@ const Navbar2 = () => {
   return (
     <>
     <div className="bg-green-800">
-      <div className='lg:container mx-auto text-white py-2 px-6 flex justify-center md:justify-between items-center text-sm'>
+      <div className='lg:container mx-auto text-white py-2 px-6 flex justify-center md:justify-between items-center text-sm 2xl:text-2xl'>
         <div className="hidden md:flex items-center gap-2">
           {/* <span>🌿</span> */}
           {/* <p className='font-bold'>{t("Navbar.HarvestFruitful")}</p> */}
@@ -45,7 +45,7 @@ const Navbar2 = () => {
       </div>
     </div>
     <nav className="w-full bg-green-600">
-      <div className="lg:container flex flex-wrap items-center justify-between mx-auto p-8">
+      <div className="lg:container flex flex-wrap items-center justify-between mx-auto p-8 text-sm 2xl:text-2xl">
         <NavLink to='/' className="flex items-center space-x-3 rtl:space-x-reverse" end>
           <div className="rounded-sm rounded-tr-[55px] rounded-bl-[30px] bg-white p-1 h-[70px] w-[210px]">
             <div className="flex items-center justify-between gap-2">

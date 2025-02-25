@@ -8,14 +8,14 @@ import { t } from "i18next";
 const Content1 = () => {
   return (
     <div>
-      <div className="p-4 xs:p-1 md:p-4 xs:text-sm md:text-lg text-gray-700">
+      <div className="p-4 xs:p-1 md:p-4 xs:text-sm md:text-lg 2xl:text-2xl text-gray-700">
         {t("About.Desc1")}
       </div>
       <div className="flex items-center justify-center">
         <img src={kompImg3} alt="kompImg" className="w-[450px]" />
       </div>
-      <div className="p-4 xs:p-1 md:p-4 xs:text-sm md:text-lg text-gray-700">
-        <span className="font-bold xs:text-lg md:text-xl">
+      <div className="p-4 xs:p-1 md:p-4 xs:text-sm md:text-lg 2xl:text-2xl text-gray-700">
+        <span className="font-bold xs:text-lg md:text-xl 2xl:text-3xl">
           Agro Alliance Group
         </span>{" "}
         {t("About.Desc2")}
@@ -23,8 +23,8 @@ const Content1 = () => {
       <div className="flex items-center justify-center">
         <img src={kompImg} alt="kompImg" />
       </div>
-      <div className="p-4 xs:p-1 md:p-4 xs:text-sm md:text-lg text-gray-700">
-        <span className="font-bold xs:text-lg md:text-xl">
+      <div className="p-4 xs:p-1 md:p-4 xs:text-sm md:text-lg 2xl:text-2xl text-gray-700">
+        <span className="font-bold xs:text-lg md:text-xl 2xl:text-3xl">
           Agro Aziya Group
         </span>{" "}
         {t("About.Desc3")}
@@ -43,7 +43,7 @@ const AboutPage = () => {
   return (
     <section>
       <div className="mx-auto container px-[5%] py-10">
-        <h1 className="font-semibold text-green-500 text-[30px]">
+        <h1 className="font-semibold text-green-500 text-2xl md:text-3xl xl:text-5xl">
           {t("About.Title")}
         </h1>
         <div className="w-full mt-10">
