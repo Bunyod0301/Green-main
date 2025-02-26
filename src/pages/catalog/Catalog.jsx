@@ -43,7 +43,7 @@ const Catalog = () => {
 
       <div className='md:w-[70%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-8'>
         {
-          Catalogs?.length && 
+          Catalogs?.length ? 
           Catalogs.map((item, index)=>(
           <div key={index} className="bg-white rounded-lg transform transition duration-300 hover:scale-105 shadow-lg hover:shadow-2xl p-4 w-full space-y-2">
               <div className="flex justify-center items-center mb-4">
@@ -73,7 +73,7 @@ const Catalog = () => {
                 {t("download")}
               </button>
           </div>
-          ))
+          )) : ''
         }
       </div>
     </div>
