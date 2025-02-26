@@ -36,7 +36,7 @@ function ProductCard({ icon, productPicture, title, description, type, id, produ
     : description.slice(0, maxLength) + (isTextLong ? "..." : "");
 
   return (
-    <div className="bg-white rounded-lg transform transition duration-300 hover:scale-105 shadow-lg hover:shadow-2xl p-4 w-full sm:w-60 md:w-72 lg:w-80 space-y-2 flex flex-col justify-between">
+    <div className="bg-white rounded-lg transform transition duration-300 hover:scale-105 shadow-lg hover:shadow-2xl p-4 w-full sm:w-60 md:w-72 lg:w-80 2xl:w-[400px] space-y-2 flex flex-col justify-between">
       <div className="flex justify-center items-center mb-4">
         {icon && <img
           src={icon}
@@ -47,7 +47,7 @@ function ProductCard({ icon, productPicture, title, description, type, id, produ
         <img
           src={productPicture}
           alt={title}
-          className="w-[250px] h-[250px] object-contain bg-white"
+          className="w-[250px] h-[250px] 3xl:h-[350px] object-contain bg-white"
           // onError={(e) => (e.target.src = "/default-image.jpg")}
         />
       </div>
@@ -60,7 +60,7 @@ function ProductCard({ icon, productPicture, title, description, type, id, produ
 
       <button
         onClick={handleDetailsClick}
-        className="w-full bg-teal-500  font-medium text-white py-[6px] rounded-lg hover:bg-teal-600">
+        className="w-full bg-teal-500  font-medium text-white py-[6px] 2xl:py-[12px] 2xl:text-xl rounded-lg hover:bg-teal-600">
         {t("MoreDetail")}
       </button>
     </div>

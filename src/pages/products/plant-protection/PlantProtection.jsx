@@ -198,7 +198,7 @@ function PlantProtection() {
 
             <div className=" w-full flex justify-center items-center gap-4 mt-10">
               <button
-                className="px-4 py-2 border rounded disabled:opacity-50 bg-teal-500 text-white"
+                className="px-4 py-2 2xl:py-[12px] 2xl:text-xl border rounded disabled:opacity-50 bg-teal-500 hover:bg-teal-900 text-white"
                 onClick={() => (setCurrentPage((prev) => Math.max(prev - 1, 1)), scrollToHeader())}
                 disabled={currentPage === 1}
               >
@@ -210,7 +210,7 @@ function PlantProtection() {
               </span>
 
               <button
-                className="px-4 py-2 border rounded disabled:opacity-50 bg-teal-500 text-white"
+                className="px-4 py-2 2xl:py-[12px] 2xl:text-xl border rounded disabled:opacity-50 bg-teal-500 hover:bg-teal-900 text-white"
                 onClick={() => (setCurrentPage((prev) => Math.min(prev + 1, totalPages)), scrollToHeader())}
                 disabled={currentPage === totalPages}
               >

@@ -25,13 +25,13 @@ const Hero = () => {
     <div className="w-full overflow-hidden">
       {" "}
       <Slider {...settings}>
-        <div>
+        {/* <div>
           <img
             src="https://agro-olam.uz/wp-content/uploads/2021/03/agricultural-management-practices-past-exam-question-paper-and-memorandum-grade-12-november-june.jpg"
             alt="Agricultural Management"
             className="w-full h-[500px] md:h-[700px] object-cover" // Rasmlarni to'g'ri joylash
           />
-        </div>
+        </div> */}
         {/* <div>
           <img
             src="https://agro-olam.uz/wp-content/uploads/2021/02/photo_2021-02-11_20-52-17.jpg"
@@ -48,7 +48,7 @@ const Hero = () => {
           <img
             src="/slider/4.jpg"
             alt="Greenhouse"
-            className="w-full h-[500px] md:h-[700px] object-cover object-right"
+            className="w-full h-[500px] md:h-[700px] 4xl:h-[900px] object-cover object-right"
           />
         </div>
         <div>
@@ -60,7 +60,7 @@ const Hero = () => {
           <img
             src="/slider/5.jpg"
             alt="Greenhouse"
-            className="w-full h-[500px] md:h-[700px] object-cover object-bottom"
+            className="w-full h-[500px] md:h-[700px] 4xl:h-[900px] object-cover object-bottom"
           />
         </div>
       </Slider>

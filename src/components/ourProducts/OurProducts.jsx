@@ -9,9 +9,13 @@ import { NavLink } from "react-router-dom";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { transformImageUrl } from "../../utils/transformImgUrl";
 import { useTranslation } from "react-i18next";
+import { getLocalizedKey } from "../../utils/translateFormat";
 
 // ProductCard komponenti
 const ProductCard = ({ img, title, desc, id }) => {
+  const maxLength = 60;
+  const isTextLong = desc?.length > maxLength;
+  const displayText = desc?.slice(0, maxLength) + (isTextLong ? "..." : "");
   const { t } = useTranslation();
   
   return (
@@ -21,7 +25,7 @@ const ProductCard = ({ img, title, desc, id }) => {
         <img
           src={img}
           alt="Product Image"
-          className="w-full h-48 object-cover rounded-lg"
+          className="w-full h-48 3xl:h-96 object-cover rounded-lg"
         />
         {/* <div className="absolute top-2 right-2 bg-white p-2 rounded-full shadow-md">
           <i className="fas fa-leaf text-green-500"></i>
@@ -31,7 +35,7 @@ const ProductCard = ({ img, title, desc, id }) => {
       {/* Mahsulot nomi va tavsifi */}
       <div className="flex-grow flex flex-col justify-between w-full">
         <h3 className="text-xl xl:text-2xl font-semibold text-gray-800">{title}</h3>
-        <p className="text-gray-600 text-sm xl:text-xl mt-2">{desc}</p>
+        <p className="text-gray-600 text-sm xl:text-xl mt-2">{displayText}</p>
       </div>
 
       {/* "Batafsil" tugmasi */}
@@ -134,7 +138,7 @@ function LazyLoad() {
         <Slider {...settings}>
           {productOne?.map((item, index) => (
             <div className="px-2 my-2 h-full flex" key={index}>
-              <ProductCard title={item.titleUz} img={transformImageUrl(item.productPicture)} desc={item.desUz} id={item.id} /> {/* vaqtincha */}
+              <ProductCard title={item.titleUz} img={transformImageUrl(item.productPicture)} desc={getLocalizedKey(item, "description")} id={item.id} /> {/* vaqtincha */}
             </div>
           ))}
         </Slider>

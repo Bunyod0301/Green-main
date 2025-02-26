@@ -107,7 +107,7 @@ const ProductCard = ({
           to={catalogLink}
           className={`${textColor} text-sm xl:text-2xl md:text-base font-medium hover:underline transition-all`}
         >
-          {t("NextCatalog")}
+          {t("NextCatalog")}→
         </NavLink>
       </div>
     </div>

@@ -4,7 +4,9 @@ import { NavLink, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 const Navbar2 = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isDropdownOpen2, setIsDropdownOpen2] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [pathName, setPathName] = useState()
   const { t, i18n } = useTranslation();
   const location = useLocation();
   
@@ -14,6 +16,11 @@ const Navbar2 = () => {
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
+    setIsDropdownOpen2(false);
+  };
+  const toggleDropdown2 = () => {
+    setIsDropdownOpen2(!isDropdownOpen2);
+    setIsDropdownOpen(false);
   };
 
   const toggleMobileMenu = () => {
@@ -22,6 +29,9 @@ const Navbar2 = () => {
 
   useEffect(()=>{
     setIsMobileMenuOpen(false);
+    setIsDropdownOpen2(false);
+    setIsDropdownOpen(false);
+    setPathName(location.pathname)
   }, [location.pathname])
 
   return (
@@ -37,9 +47,9 @@ const Navbar2 = () => {
           {/* <p className='hidden md:block font-bold'>{t("Navbar.Address")}</p> */}
 
           <div className="flex gap-2">
-            <button onClick={() => changeLanguage('uz')} className={`hover:underline font-bold ${i18n.language == 'uz' ? 'underline' : ''}`}>ЎЗ</button>
+            <button onClick={() => changeLanguage('uz')} className={`underline-offset-4 hover:underline font-bold ${i18n.language == 'uz' ? 'underline' : ''}`}>🇺🇿 ЎЗ</button>
             <span>/</span>
-            <button onClick={() => changeLanguage('ru')} className={`hover:underline font-bold ${i18n.language == 'ru' ? 'underline' : ''}`}>РУ</button>
+            <button onClick={() => changeLanguage('ru')} className={`underline-offset-4 hover:underline font-bold ${i18n.language == 'ru' ? 'underline' : ''}`}>🇷🇺 РУ</button>
           </div>
         </div>
       </div>
@@ -129,7 +139,7 @@ const Navbar2 = () => {
                 <NavLink
                   to="/"
                   className={({ isActive }) =>
-                    `block py-2 px-3 rounded-sm md:p-0 font-bold ${
+                    `block py-2 px-3 rounded-sm md:p-0 font-bold hover:text-green-300 ${
                       isActive ? 'text-green-900' : 'text-white'
                     }`
                   }
@@ -141,7 +151,7 @@ const Navbar2 = () => {
                 <NavLink
                   to="/about"
                   className={({ isActive }) =>
-                    `block py-2 px-3 rounded-sm md:p-0 font-bold ${
+                    `block py-2 px-3 rounded-sm md:p-0 font-bold hover:text-green-300 ${
                       isActive ? 'text-green-900' : 'text-white'
                     }`
                   }
@@ -149,35 +159,83 @@ const Navbar2 = () => {
                   {t("Navbar.Menu.About")}
                 </NavLink>
               </li>
-              <li>
+              {/* <li>
                 <NavLink
                   to="/products"
                   className={({ isActive }) =>
-                    `block py-2 px-3 rounded-sm md:p-0 font-bold ${
+                    `block py-2 px-3 rounded-sm md:p-0 font-bold hover:text-green-300 ${
                       isActive ? 'text-green-900' : 'text-white'
                     }`
                   }
                 >
                   {t("Navbar.Menu.Products")}
                 </NavLink>
-              </li>
-              {/* <li>
-                <NavLink
-                  to="/blog"
-                  className={({ isActive }) =>
-                    `block py-2 px-3 rounded-sm md:p-0 font-bold ${
-                      isActive ? 'text-green-900' : 'text-white'
-                    }`
+              </li> */}
+              <li className="relative">
+                <button
+                  onClick={toggleDropdown2}
+                  className={`flex items-center justify-between w-full px-3 rounded-sm font-bold hover:text-green-300 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto
+                    ${
+                      (pathName == '/products/plant-protection' || pathName == '/products/plant-nutrition') ? 'text-green-900' : 'text-white'
+                    }
+                    `
                   }
                 >
-                  {t("Navbar.Menu.Blog")}
-                </NavLink>
-              </li> */}
+                  {t("Navbar.Menu.Products")}
+                  <svg
+                    className={`w-2.5 h-2.5 ms-2.5 transition-transform duration-200 ${
+                      isDropdownOpen2 ? 'rotate-180' : 'rotate-0'
+                    }`}
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </button>
+
+                
+                  <div className={`absolute left-0 mt-2 z-10 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-md w-[100%] md:w-[150%] overflow-hidden transition-all duration-500 ease-in-out ${
+                    isDropdownOpen2 ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
+                  }`}>
+                    <ul className="py-2 text-sm 2xl:text-2xl 4xl:text-3xl">
+                      <li>
+                        <NavLink to={'/products/plant-protection'}
+                          className = {({ isActive }) =>
+                            `block px-4 py-2 hover:bg-gray-100 ${
+                              isActive ? 'bg-gray-200 text-green-900' : ''
+                            }`
+                          }
+                        >
+                          {t("Menu.PlantProtection")}
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink to={'/products/plant-nutrition'}
+                          className = {({ isActive }) =>
+                            `block px-4 py-2 hover:bg-gray-100 ${
+                              isActive ? 'bg-gray-200 text-green-900' : ''
+                            }`
+                          }
+                        >
+                          {t("Menu.PlantNutrition")}
+                        </NavLink>
+                      </li>
+                    </ul>
+                  </div>
+              </li>
               <li>
                 <NavLink
                   to="/news"
                   className={({ isActive }) =>
-                    `block py-2 px-3 rounded-sm md:p-0 font-bold ${
+                    `block py-2 px-3 rounded-sm md:p-0 font-bold hover:text-green-300 ${
                       isActive ? 'text-green-900' : 'text-white'
                     }`
                   }
@@ -185,23 +243,82 @@ const Navbar2 = () => {
                   {t("Navbar.Menu.News")}
                 </NavLink>
               </li>
-              <li>
+              {/* <li>
                 <NavLink
                   to="/catalog"
                   className={({ isActive }) =>
-                    `block py-2 px-3 rounded-sm md:p-0 font-bold ${
+                    `block py-2 px-3 rounded-sm md:p-0 font-bold hover:text-green-300 ${
                       isActive ? 'text-green-900' : 'text-white'
                     }`
                   }
                 >
                   {'Каталог'}
                 </NavLink>
+              </li> */}
+              <li className="relative">
+                <button
+                  onClick={toggleDropdown}
+                  className={`flex items-center justify-between w-full px-3 rounded-sm font-bold hover:text-green-300 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto
+                    ${
+                      (pathName == '/catalog' || pathName == '/products/plant-nutrition') ? 'text-green-900' : 'text-white'
+                    }
+                    `
+                  }
+                >
+                  Каталог
+                  <svg
+                    className={`w-2.5 h-2.5 ms-2.5 transition-transform duration-200 ${
+                      isDropdownOpen ? 'rotate-180' : 'rotate-0'
+                    }`}
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </button>
+
+                  <div className={`absolute left-0 mt-2 z-10 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-md w-[100%] md:w-[150%] overflow-hidden transition-all duration-500 ease-in-out ${
+                    isDropdownOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
+                  }`}>
+                    <ul className="py-2 text-sm 2xl:text-2xl 4xl:text-3xl">
+                      <li>
+                        <NavLink to={'/catalog'}
+                          className = {({ isActive }) =>
+                            `block px-4 py-2 hover:bg-gray-100 ${
+                              isActive ? 'bg-gray-200 text-green-900' : ''
+                            }`
+                          }
+                        >
+                          Каталог
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink to={'/'}
+                          className = {({ isActive }) =>
+                            `block px-4 py-2 hover:bg-gray-100 ${
+                              isActive ? 'bg-gray-200 text-green-900' : ''
+                            }`
+                          }
+                        >
+                          Лифлет
+                        </NavLink>
+                      </li>
+                    </ul>
+                  </div>
               </li>
               <li>
                 <NavLink
                   to="/contact"
                   className={({ isActive }) =>
-                    `block py-2 px-3 rounded-sm md:p-0 font-bold ${
+                    `block py-2 px-3 rounded-sm md:p-0 font-bold hover:text-green-300 ${
                       isActive ? 'text-green-900' : 'text-white'
                     }`
                   }

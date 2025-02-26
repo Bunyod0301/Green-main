@@ -1,6 +1,7 @@
 import Hero from "../../components/header/Hero";
 import About from "../about/About";
 import OurProducts from "../../components/ourProducts/OurProducts";
+import AboutHome from "../../components/pages/products/AboutHome";
 
 const Home = () => {
   const latitude = 41.334992;
@@ -11,10 +12,10 @@ const Home = () => {
     <div className="">
       <Hero />
       <OurProducts />
-      
+      <AboutHome />
       {/* <About /> */}
       <div className="container mx-auto">
-        <div className="relative w-[90%] mx-auto my-6 h-96">
+        <div className="relative w-[90%] mx-auto my-6 h-96 3xl:h-[600px]">
           <iframe
             src={mapSrc}
             title="Google Map"
