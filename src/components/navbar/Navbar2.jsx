@@ -48,10 +48,10 @@ const Navbar2 = () => {
 
           <div className="flex gap-2">
             {/* <button onClick={() => changeLanguage('uz')} className={`underline-offset-4 hover:underline font-bold ${i18n.language == 'uz' ? 'underline' : ''}`}>🇺🇿 ЎЗ</button> */}
-            <button onClick={() => changeLanguage('uz')} className={`flex items-center gap-2 border-b-2 hover:text-green-200 font-bold ${i18n.language == 'uz' ? 'border-white' : 'border-hidden'}`}><img src="https://flagcdn.com/w40/uz.png" alt="Uzbekistan Flag" width="40" /> ЎЗ</button>
+            <button onClick={() => changeLanguage('uz')} className={`flex items-center gap-2 border-b-2 hover:text-green-200 font-bold ${i18n.language == 'uz' ? 'border-white' : 'border-hidden'}`}><img src="/flags/uz.svg" alt="Uzbekistan Flag" width="40" /> ЎЗ</button>
             <span>/</span>
             {/* <button onClick={() => changeLanguage('ru')} className={`underline-offset-4 hover:underline font-bold ${i18n.language == 'ru' ? 'underline' : ''}`}>🇷🇺 РУ</button> */}
-            <button onClick={() => changeLanguage('ru')} className={`flex items-center gap-2 border-b-2 hover:text-green-200 font-bold ${i18n.language == 'ru' ? 'border-white' : 'border-hidden'}`}><img src="https://flagcdn.com/w40/ru.png" alt="Russia Flag" width="30" /> РУ</button>
+            <button onClick={() => changeLanguage('ru')} className={`flex items-center gap-2 border-b-2 hover:text-green-200 font-bold ${i18n.language == 'ru' ? 'border-white' : 'border-hidden'}`}><img src="/flags/ru.svg" alt="Russia Flag" width="30" /> РУ</button>
           </div>
         </div>
       </div>
