@@ -13,6 +13,7 @@ import PlantNutrition from "./pages/products/plant-nutrition/PlantNutrition";
 import PlantNutritionView from "./pages/products/plant-nutrition/view/PlantNutritionView";
 import PlantNutritionNpk from "./pages/products/plant-nutrition/view/NpkView";
 import Catalog from "./pages/catalog/Catalog";
+import Liflet from "./pages/liflet/Liflet";
 function App() {
 
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/catalog" element={<Catalog />} />
+        <Route path="/liflet" element={<Liflet />} />
         <Route path="/products/*" element={<TabsWithRouter />}>
           <Route path="plant-protection/view/:id" element={<PlantProtectionView />} />
           <Route path="plant-protection" element={<PlantProtection />} />

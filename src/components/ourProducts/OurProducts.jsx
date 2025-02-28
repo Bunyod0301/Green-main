@@ -40,7 +40,7 @@ const ProductCard = ({ img, title, desc, id }) => {
 
       {/* "Batafsil" tugmasi */}
       <div className="flex justify-between w-full mt-auto text-lg xl:text-xl">
-        <NavLink to={`/products/plant-protection/view/${id}`} className="text-green-500 hover:text-green-600">
+        <NavLink to={`/products/plant-protection/view/${id}`} className="text-green-500 hover:text-green-800 transition-all ease-in">
           {t("MoreDetail")}
         </NavLink>
         <span className="text-green-500">&#9733;</span>

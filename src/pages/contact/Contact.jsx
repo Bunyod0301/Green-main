@@ -113,8 +113,9 @@ const Contact = ({ address = "Tashkent, Uzbekistan" }) => {
             <div className="flex justify-center md:justify-end">
               <button
                 type="submit"
-                className="w-[230px] h-12 rounded-lg bg-green-600 text-white font-medium rounded-tl-3xl rounded-br-3xl">
-                {t("Contact.send")}
+                className="relative overflow-hidden w-[230px] h-12 rounded-lg bg-green-600 text-white font-medium rounded-tl-3xl rounded-br-3xl group">
+                  <span className="absolute left-0 top-0 h-full w-0 bg-green-800 transition-all duration-500 ease-in-out group-hover:w-full"></span>
+                  <span className="relative z-10">{t("Contact.send")}</span>
               </button>
             </div>
           </form>

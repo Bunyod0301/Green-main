@@ -173,7 +173,11 @@ const Navbar2 = () => {
                   {t("Navbar.Menu.Products")}
                 </NavLink>
               </li> */}
-              <li className="relative">
+              <li
+                className="relative"
+                onMouseEnter={() => setIsDropdownOpen2(true)}
+                onMouseLeave={() => setIsDropdownOpen2(false)}
+              >
                 <button
                   onClick={toggleDropdown2}
                   className={`flex items-center justify-between w-full px-3 rounded-sm font-bold hover:text-green-300 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto
@@ -257,7 +261,11 @@ const Navbar2 = () => {
                   {'Каталог'}
                 </NavLink>
               </li> */}
-              <li className="relative">
+              <li 
+                className="relative"
+                onMouseEnter={() => setIsDropdownOpen(true)}
+                onMouseLeave={() => setIsDropdownOpen(false)}
+              >
                 <button
                   onClick={toggleDropdown}
                   className={`flex items-center justify-between w-full px-3 rounded-sm font-bold hover:text-green-300 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto
@@ -303,7 +311,7 @@ const Navbar2 = () => {
                         </NavLink>
                       </li>
                       <li>
-                        <NavLink to={'/'}
+                        <NavLink to={'/liflet'}
                           className = {({ isActive }) =>
                             `block px-4 py-2 hover:bg-gray-100 ${
                               isActive ? 'bg-gray-200 text-green-900' : ''
