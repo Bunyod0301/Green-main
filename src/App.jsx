@@ -14,6 +14,7 @@ import PlantNutritionView from "./pages/products/plant-nutrition/view/PlantNutri
 import PlantNutritionNpk from "./pages/products/plant-nutrition/view/NpkView";
 import Catalog from "./pages/catalog/Catalog";
 import Liflet from "./pages/liflet/Liflet";
+import ScrollToTop from "./components/scroll-to-top/ScrollToTop";
 function App() {
 
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/news" element={<News />} />
       </Routes>
+      <ScrollToTop />
       <Footer />
     </>
   );
