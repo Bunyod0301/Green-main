@@ -1,7 +1,24 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; // Slick uchun CSS
 import "slick-carousel/slick/slick-theme.css"; // Slick mavzusi uchun CSS
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+const NextArrow = (props) => {
+  const { onClick } = props;
+  return (
+    <div className="custom-next absolute top-[50%] right-[5%] z-10 p-[2vh] text-[2vh] bg-teal-500 hover:bg-teal-800 transition-all ease-in rounded-[50%] text-white cursor-pointer" onClick={onClick}>
+      <FaArrowRight />
+    </div>
+  );
+};
 
+const PrevArrow = (props) => {
+  const { onClick } = props;
+  return (
+    <div className="custom-prevabsolute absolute top-[50%] left-[5%] z-10 p-[2vh] text-[2vh] bg-teal-500 hover:bg-teal-800 transition-all ease-in rounded-[50%] text-white cursor-pointer" onClick={onClick}>
+      <FaArrowLeft />
+    </div>
+  );
+};
 const Hero = () => {
   const settings = {
     dots: false, // Pastki nuqtalarni ko'rsatadi
@@ -10,17 +27,10 @@ const Hero = () => {
     slidesToShow: 1, // Har safar bitta slayd
     slidesToScroll: 1, // Har safar bitta slaydni aylantirish
     autoplay: true,
-    autoplaySpeed: 4000
+    autoplaySpeed: 4000,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
   };
-
-  // axios
-  //   .get("http://152.42.231.76/New")
-  //   .then((response) => {
-  //     console.log(response.data[0].desUz);
-  //   })
-  //   .catch((error) => {
-  //     console.log(error);
-  //   })
   return (
     <div className="w-full overflow-hidden">
       <Slider {...settings}>
@@ -28,21 +38,21 @@ const Hero = () => {
           <img
             src="/slider/7.jpg"
             alt="Agricultural Management"
-            className="w-full h-[80vh] object-cover object-bottom"
+            className="w-full h-[80vh] object-cover object-center"
           />
         </div>
         <div>
           <img
             src="/slider/6.jpg"
             alt="Farm Fields"
-            className="w-full h-[80vh] object-cover object-bottom"
+            className="w-full h-[80vh] object-cover object-center"
           />
         </div>
         <div>
           <img
             src="/slider/5.jpg"
             alt="Greenhouse"
-            className="w-full h-[80vh] object-cover object-bottom"
+            className="w-full h-[80vh] object-cover center"
           />
         </div>
         <div>
@@ -50,6 +60,13 @@ const Hero = () => {
             src="/slider/8.jpg"
             alt="Crop Inspection"
             className="w-full h-[80vh] object-cover object-top"
+          />
+        </div>
+        <div>
+          <img
+            src="/slider/4.jpg"
+            alt="Crop Inspection"
+            className="w-full h-[80vh] object-cover"
           />
         </div>
       </Slider>
