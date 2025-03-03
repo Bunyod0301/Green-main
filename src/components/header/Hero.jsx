@@ -26,28 +26,28 @@ const Hero = () => {
       <Slider {...settings}>
         <div>
           <img
-            src="/public/slider/7.jpg"
+            src="/slider/7.jpg"
             alt="Agricultural Management"
             className="w-full h-[80vh] object-cover object-bottom"
           />
         </div>
         <div>
           <img
-            src="/public/slider/6.jpg"
+            src="/slider/6.jpg"
             alt="Farm Fields"
             className="w-full h-[80vh] object-cover object-bottom"
           />
         </div>
         <div>
           <img
-            src="/public/slider/5.jpg"
+            src="/slider/5.jpg"
             alt="Greenhouse"
             className="w-full h-[80vh] object-cover object-bottom"
           />
         </div>
         <div>
           <img
-            src="/public/slider/4.jpg"
+            src="/slider/4.jpg"
             alt="Crop Inspection"
             className="w-full h-[80vh] object-cover"
           />
