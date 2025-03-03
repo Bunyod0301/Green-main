@@ -47,9 +47,9 @@ const Hero = () => {
         </div>
         <div>
           <img
-            src="/slider/4.jpg"
+            src="/slider/8.jpg"
             alt="Crop Inspection"
-            className="w-full h-[80vh] object-cover"
+            className="w-full h-[80vh] object-cover object-top"
           />
         </div>
       </Slider>

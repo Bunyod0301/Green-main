@@ -14,10 +14,10 @@ const AboutHome = () => {
         <div className="mt-4 w-[90%] mx-auto h-[200px] lg:h-[300px] xl:h-[350px] 2xl:h-[400px] 3xl:h-[500px] 4xl:h-[700px] bg-green-600 flex justify-center items-end relative clip-triangle">
           <div className="flex gap-2 mb-2 z-10">
             <div className="w-[100px] bg-white rounded-md 4xl:w-[500px] 3xl:w-[400px] 2xl:w-[300px] md:w-[200px]">
-              <img src="/logo/aboutlogo1.png" alt="" />
+              <img src="/logo/aboutlogo2.png" alt="" />
             </div>
             <div className="w-[100px] bg-white rounded-md 4xl:w-[500px] 3xl:w-[400px] 2xl:w-[300px] md:w-[200px]">
-              <img src="/logo/aboutlogo2.png" alt="" />
+              <img src="/logo/aboutlogo1.png" alt="" />
             </div>
           </div>
         </div>
