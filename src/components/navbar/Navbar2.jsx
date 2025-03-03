@@ -270,7 +270,7 @@ const Navbar2 = () => {
                   onClick={toggleDropdown}
                   className={`flex items-center justify-between w-full px-3 rounded-sm font-bold hover:text-green-300 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto
                     ${
-                      (pathName == '/catalog' || pathName == '/products/plant-nutrition') ? 'text-green-900' : 'text-white'
+                      (pathName == '/catalog' || pathName == '/liflet') ? 'text-green-900' : 'text-white'
                     }
                     `
                   }
