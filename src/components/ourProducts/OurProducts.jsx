@@ -106,7 +106,7 @@ function LazyLoad() {
     focusOnSelect: false,
     responsive: [
       {
-        breakpoint: 1280,
+        breakpoint: 1600,
         settings: {
           slidesToShow: 3
         }
