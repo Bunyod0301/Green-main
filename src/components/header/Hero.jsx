@@ -23,47 +23,43 @@ const Hero = () => {
   //   })
   return (
     <div className="w-full overflow-hidden">
-      {" "}
-      <Slider {...settings}>
-        {/* <div>
+      {/* <Slider {...settings}>
+        <div>
           <img
             src="https://agro-olam.uz/wp-content/uploads/2021/03/agricultural-management-practices-past-exam-question-paper-and-memorandum-grade-12-november-june.jpg"
             alt="Agricultural Management"
             className="w-full h-[500px] md:h-[700px] object-cover" // Rasmlarni to'g'ri joylash
           />
-        </div> */}
-        {/* <div>
+        </div>
+        <div>
           <img
             src="https://agro-olam.uz/wp-content/uploads/2021/02/photo_2021-02-11_20-52-17.jpg"
             alt="Farm Fields"
             className="w-full h-[700px] object-cover"
           />
-        </div> */}
+        </div>
         <div>
-          {/* <img
+          <img
             src="https://agro-olam.uz/wp-content/uploads/2021/02/photo_2021-02-16_20-47-07.jpg"
             alt="Greenhouse"
             className="w-full h-[700px] object-cover"
-          /> */}
-          <img
-            src="/slider/4.jpg"
-            alt="Greenhouse"
-            className="w-full h-[500px] md:h-[700px] 4xl:h-[900px] object-cover object-right"
           />
         </div>
         <div>
-          {/* <img
+          <img
             src="https://agro-olam.uz/wp-content/uploads/2021/07/photo_2021-07-23_07-09-02.jpg"
             alt="Crop Inspection"
             className="w-full h-[700px] object-cover"
-          /> */}
-          <img
-            src="/slider/5.jpg"
-            alt="Greenhouse"
-            className="w-full h-[500px] md:h-[700px] 4xl:h-[900px] object-cover object-bottom"
           />
         </div>
-      </Slider>
+      </Slider> */}
+      <div>
+          <img
+            src="/slider/6.jpg"
+            alt="Greenhouse"
+            className="w-full h-[80vh] object-cover object-bottom"
+          />
+        </div>
     </div>
   );
 };

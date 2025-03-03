@@ -8,30 +8,30 @@ import { t } from "i18next";
 const Content1 = () => {
   return (
     <div>
-      <div className="p-4 xs:p-1 md:p-4 xs:text-sm md:text-lg 2xl:text-2xl text-gray-700">
+      <div className="p-4 xs:p-1 md:p-4 xs:text-sm md:text-lg 2xl:text-2xl text-gray-700 text-justify indent-10">
         {t("About.Desc1")}
       </div>
-      <div className="flex items-center justify-center">
+      {/* <div className="flex items-center justify-center">
         <img src={kompImg3} alt="kompImg" className="w-[450px]" />
-      </div>
-      <div className="p-4 xs:p-1 md:p-4 xs:text-sm md:text-lg 2xl:text-2xl text-gray-700">
+      </div> */}
+      <div className="p-4 xs:p-1 md:p-4 xs:text-sm md:text-lg 2xl:text-2xl text-gray-700 text-justify indent-10">
         <span className="font-bold xs:text-lg md:text-xl 2xl:text-3xl">
           Agro Alliance Group
         </span>{" "}
         {t("About.Desc2")}
       </div>
-      <div className="flex items-center justify-center">
+      {/* <div className="flex items-center justify-center">
         <img src={kompImg} alt="kompImg" />
-      </div>
-      <div className="p-4 xs:p-1 md:p-4 xs:text-sm md:text-lg 2xl:text-2xl text-gray-700">
+      </div> */}
+      <div className="p-4 xs:p-1 md:p-4 xs:text-sm md:text-lg 2xl:text-2xl text-gray-700 text-justify indent-10">
         <span className="font-bold xs:text-lg md:text-xl 2xl:text-3xl">
           Agro Aziya Group
         </span>{" "}
         {t("About.Desc3")}
       </div>
-      <div className="flex items-center justify-center">
+      {/* <div className="flex items-center justify-center">
         <img src={kompImg2} alt="kompImg2" />
-      </div>
+      </div> */}
     </div>
   );
 };
