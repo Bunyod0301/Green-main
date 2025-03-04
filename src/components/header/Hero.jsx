@@ -28,8 +28,8 @@ const Hero = () => {
     slidesToScroll: 1, // Har safar bitta slaydni aylantirish
     autoplay: true,
     autoplaySpeed: 4000,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
+    // nextArrow: <NextArrow />,
+    // prevArrow: <PrevArrow />,
   };
   return (
     <div className="w-full overflow-hidden">
