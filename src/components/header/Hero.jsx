@@ -36,9 +36,9 @@ const Hero = () => {
       <Slider {...settings}>
         <div>
           <img
-            src="/slider/7.jpg"
-            alt="Agricultural Management"
-            className="w-full h-[80vh] object-cover object-center"
+            src="/slider/8.jpg"
+            alt="Crop Inspection"
+            className="w-full h-[80vh] object-cover object-top"
           />
         </div>
         <div>
@@ -55,18 +55,19 @@ const Hero = () => {
             className="w-full h-[80vh] object-cover center"
           />
         </div>
-        <div>
-          <img
-            src="/slider/8.jpg"
-            alt="Crop Inspection"
-            className="w-full h-[80vh] object-cover object-top"
-          />
-        </div>
+        
         <div>
           <img
             src="/slider/4.jpg"
             alt="Crop Inspection"
             className="w-full h-[80vh] object-cover"
+          />
+        </div>
+        <div>
+          <img
+            src="/slider/7.jpg"
+            alt="Agricultural Management"
+            className="w-full h-[80vh] object-cover object-center"
           />
         </div>
       </Slider>
