@@ -34,7 +34,7 @@ const ProductCard = ({ img, title, desc, id }) => {
         </p>
       </div>
 
-      <div className="flex justify-between w-full mt-auto text-lg xl:text-xl 3xl:text-2xl ">
+      <div className="flex justify-between w-full mt-auto text-lg xl:text-xl 3xl:text-2xl">
         <NavLink
           to={`/products/plant-protection/view/${id}`}
           className="text-green-500 hover:text-green-800 transition-all ease-in cursor-pointer"
