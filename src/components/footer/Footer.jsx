@@ -39,7 +39,7 @@ const Footer = () => {
                   </div>
                 </div>
               </NavLink>
-              <p className='font-bold text-sm md:text-lg xl:text-xl mt-2'>СИЗГА ЮҚОРИ ҲОСИЛ ОЛИШИНГИЗДА КЎМАКЛАШАМИЗ</p>
+              <p className='font-bold text-sm md:text-lg 2xl:text-xl 4xl:text-2xl mt-2'>СИЗГА ЮҚОРИ ҲОСИЛ ОЛИШИНГИЗДА КЎМАКЛАШАМИЗ</p>
             </div>
           {/* </div> */}
 
