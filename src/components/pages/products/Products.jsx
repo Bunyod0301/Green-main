@@ -109,8 +109,8 @@ const ProductCard = ({
         >
           {t("NextCatalog")}→
         </NavLink> */}
-        <NavLink className='relative w-[80%]  overflow-hidden xs:text-sm md:text-lg 2xl:text-2xl 3xl:text-2xl px-5 py-2 3xl:px-10 3xl:py-4 bg-teal-600 text-white rounded-md group' to={'/about'}>
-          <span className="absolute left-0 top-0 h-full w-0 bg-teal-800 transition-all duration-800 group-hover:w-full"></span>
+        <NavLink className='relative w-[80%]  overflow-hidden xs:text-sm md:text-lg 2xl:text-2xl 3xl:text-2xl px-5 py-2 3xl:px-10 3xl:py-4 bg-teal-600 text-white rounded-full my-3 group' to={catalogLink}>
+          <span className="absolute left-0 top-0 h-full w-0 bg-teal-800 transition-all duration-700 group-hover:w-full"></span>
           <span className="relative z-10">{t("NextCatalog")}</span>
         </NavLink>
       </div>

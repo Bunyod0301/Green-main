@@ -43,10 +43,16 @@ const AboutHome = () => {
         <span className="relative z-10">{t("MoreDetail")}</span>
       </button> */}
 
-          <NavLink className='relative  overflow-hidden xs:text-sm md:text-lg 2xl:text-2xl 3xl:text-3xl px-5 py-2 3xl:px-10 3xl:py-4 bg-teal-600 text-white rounded-md group' to={'/about'}>
+          {/* <NavLink className='relative button overflow-hidden xs:text-sm md:text-lg 2xl:text-2xl 3xl:text-3xl px-5 py-2 3xl:px-10 3xl:py-4 bg-teal-600 text-white rounded-md group' to={'/about'}>
             <span className="absolute left-0 top-0 h-full w-0 bg-teal-800 transition-all duration-800 group-hover:w-full"></span>
             <span className="relative z-10">{t("MoreDetail")}</span>
-          </NavLink>
+          </NavLink> */}
+          <div class="wrap my-10">
+            <NavLink to={'about'} className="button">
+              {t("MoreDetail")}
+            </NavLink>
+          </div>
+
         </div>
       </div>
     </div>

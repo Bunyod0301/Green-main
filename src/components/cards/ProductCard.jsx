@@ -62,7 +62,7 @@ function ProductCard({ icon, productPicture, title, description, type, id, produ
         onClick={handleDetailsClick}
         className="relative overflow-hidden w-full bg-teal-500 font-medium text-white py-[6px] 2xl:py-[12px] 2xl:text-xl rounded-lg group"
       >
-        <span className="absolute left-0 top-0 h-full w-0 bg-teal-800 transition-all duration-800 group-hover:w-full"></span>
+        <span className="absolute left-0 top-0 h-full w-0 bg-teal-800 transition-all duration-500 group-hover:w-full"></span>
         <span className="relative z-10">{t("MoreDetail")}</span>
       </button>
 
