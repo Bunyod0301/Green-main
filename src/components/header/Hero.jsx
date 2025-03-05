@@ -50,9 +50,17 @@ const Hero = () => {
         </div>
         <div>
           <img
-            src="/slider/5.jpg"
+            src="/slider/10.jpg"
             alt="Greenhouse"
-            className="w-full h-[80vh] object-cover center"
+            className="w-full h-[80vh] object-cover object-bottom"
+          />
+        </div>
+
+        <div>
+          <img
+            src="/slider/11.webp"
+            alt="Greenhouse"
+            className="w-full h-[80vh] object-cover object-bottom"
           />
         </div>
         
