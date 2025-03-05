@@ -21,23 +21,26 @@ const Footer = () => {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center md:text-left">
         {/* Logo Section */}
         {/* <div className="rounded-sm rounded-tr-[55px] rounded-bl-[30px] bg-white p-1 h-[70px] w-[210px]"> */}
-            <NavLink to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-              <div className="flex items-center justify-between gap-2 bg-green-100 p-3 rounded">
-                <img
-                  src={logo}
-                  alt="logo"
-                  className="rounded-[17px] w-[40px] h-[40px] md:w-[80px] md:h-[55px] xl:h-[65px]"
-                />
-                <div className="w-full text-end">
-                  <h3 className="font-bold text-[#0E644D] text-start text-sm md:text-lg xl:text-2xl 4xl:text-3xl">
-                    Agro<span className="text-green-500">Com</span>
-                  </h3>
-                  <span className="text-green-600 text-end w-full font-medium text-xs md:text-sm xl:text-xl 4xl:text-2xl">
-                    Ishonchli himoya
-                  </span>
+            <div>
+              <NavLink to="/" className="flex items-center justify-center md:justify-start space-x-3 rtl:space-x-reverse">
+                <div className="flex items-center justify-between gap-2 bg-green-100 p-3 rounded">
+                  <img
+                    src={logo}
+                    alt="logo"
+                    className="rounded-[17px] w-[40px] h-[40px] md:w-[80px] md:h-[55px] xl:h-[65px]"
+                  />
+                  <div className="w-full text-end">
+                    <h3 className="font-bold text-[#0E644D] text-start text-sm md:text-lg xl:text-2xl 4xl:text-3xl">
+                      Agro<span className="text-green-500">Com</span>
+                    </h3>
+                    <span className="text-green-600 text-end w-full font-medium text-xs md:text-sm xl:text-xl 4xl:text-2xl">
+                      Ishonchli himoya
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </NavLink>
+              </NavLink>
+              <p className='font-bold text-sm md:text-lg xl:text-xl mt-2'>СИЗГА ЮҚОРИ ҲОСИЛ ОЛИШИНГИЗДА КЎМАКЛАШАМИЗ</p>
+            </div>
           {/* </div> */}
 
         {/* Address Section */}

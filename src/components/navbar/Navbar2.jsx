@@ -39,8 +39,7 @@ const Navbar2 = () => {
     <div className="bg-green-800">
       <div className='lg:container mx-auto text-white py-2 px-6 flex justify-center md:justify-between items-center text-sm 2xl:text-2xl'>
         <div className="hidden md:flex items-center gap-2">
-          {/* <span>🌿</span> */}
-          {/* <p className='font-bold'>{t("Navbar.HarvestFruitful")}</p> */}
+          <p className='font-bold text-xl'>СИЗГА ЮҚОРИ ҲОСИЛ ОЛИШИНГИЗДА КЎМАКЛАШАМИЗ</p>
         </div>
 
         <div className="flex items-center gap-8">
