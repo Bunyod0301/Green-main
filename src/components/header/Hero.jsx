@@ -48,13 +48,13 @@ const Hero = () => {
             className="w-full h-[80vh] object-cover object-center"
           />
         </div>
-        <div>
+        {/* <div>
           <img
             src="/slider/10.jpg"
             alt="Greenhouse"
             className="w-full h-[80vh] object-cover object-bottom"
           />
-        </div>
+        </div> */}
 
         <div>
           <img
@@ -78,27 +78,27 @@ const Hero = () => {
             className="w-full h-[80vh] object-cover"
           />
         </div>
-        <div>
+        {/* <div>
           <img
             src="/slider/13.jpg"
             alt="Crop Inspection"
             className="w-full h-[80vh] object-cover"
           />
-        </div>
-        <div>
+        </div> */}
+        {/* <div>
           <img
             src="/slider/14.jpg"
             alt="Crop Inspection"
             className="w-full h-[80vh] object-cover object-center"
           />
-        </div>
-        <div>
+        </div> */}
+        {/* <div>
           <img
             src="/slider/15.jpg"
             alt="Crop Inspection"
             className="w-full h-[80vh] object-cover"
           />
-        </div>
+        </div> */}
         <div>
           <img
             src="/slider/7.jpg"
