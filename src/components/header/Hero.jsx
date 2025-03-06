@@ -56,13 +56,13 @@ const Hero = () => {
           />
         </div> */}
 
-        <div>
+        {/* <div>
           <img
             src="/slider/11.webp"
             alt="Greenhouse"
             className="w-full h-[80vh] object-cover object-bottom"
           />
-        </div>
+        </div> */}
         
         {/* <div>
           <img
