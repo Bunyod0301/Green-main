@@ -98,7 +98,7 @@ function LazyLoad() {
     slidesToScroll: 1,
     initialSlide: 0,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 2000,
     cssEase: "linear",
     centerMode: false,
     focusOnSelect: false,
