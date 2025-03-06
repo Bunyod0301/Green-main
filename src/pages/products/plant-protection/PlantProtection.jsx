@@ -151,14 +151,14 @@ function PlantProtection() {
         {categories.map((category) => (
           <button
             key={category.id}
-            className={`flex items-center 3xl:text-2xl 4xl:text-3xl gap-1 p-2 text-left w-full ${
+            className={`flex items-center 3xl:text-2xl 4xl:text-3xl gap-1 p-2 text-left md:hover:bg-green-300  transition-colors ease-in w-full ${
               activeTab === category.id
                 ? "text-black font-bold border-l-4 border-green-500 bg-white shadow"
                 : "text-gray-600"
             }`}
             onClick={() => setActiveTab(category.id)}
           >
-            <img src={category.icon} alt={category.name} className="w-6 h-6" />
+            <img src={category.icon} alt={category.name} className="w-10 h-10" />
             {t(category.name)}
           </button>
         ))}
