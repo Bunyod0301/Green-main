@@ -221,7 +221,7 @@ const Npk = ({id}) => {
     table && <div className="bg-gray-100 p-0 min-h-screen flex items-center justify-center relative rounded-lg">
       <button
         onClick={() => navigate(-1)}
-        className="bg-teal-500 font-medium text-white py-2 px-5 rounded-lg hover:bg-teal-600 absolute left-0 top-0"
+        className="bg-teal-500 font-medium text-white py-2 px-5 rounded-lg hover:bg-teal-600 absolute left-0 top-0 text-lg 2xl:text-2xl"
       ><span className="mr-1">←</span>{t('back')}</button>
       <div className="mt-16 w-full md:w-[80%]  bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-300">
         <div className="flex flex-col items-center md:flex-row">
@@ -234,7 +234,7 @@ const Npk = ({id}) => {
             <h1 className="text-2xl font-bold text-green-700">{table[id-1].nomi}</h1>
 
             <div className="w-full overflow-x-auto md:overflow-visible">
-              <table className="w-full mt-2 text-xs sm:text-sm text-left text-gray-700 border border-gray-300 table p-0">
+              <table className="w-full mt-2 text-xs sm:text-sm 2xl:text-xl text-left text-gray-700 border border-gray-300 table p-0">
                 <thead className="bg-green-100">
                   {id == 2 ? <tr>
                     <th className="p-1 sm:p-2 border">Таркиби</th>
@@ -265,8 +265,8 @@ const Npk = ({id}) => {
                 </tbody>
               </table>
               <div>
-                <p className="mt-2">{t(table[id-1].tavsif)}</p>
-                <p className="font-bold mt-2">{t(table[id-1].saf_meyor)}</p>
+                <p className="mt-2 md:text-lg 2xl:text-xl">{t(table[id-1].tavsif)}</p>
+                <p className="font-bold md:text-lg 2xl:text-xl mt-2">{t(table[id-1].saf_meyor)}</p>
               </div>
             </div>
           </div>

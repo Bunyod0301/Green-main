@@ -88,7 +88,7 @@ const PlantNutritionCard = ({data}) => {
               if (glass) glass.style.visibility = "hidden";
             }}
           />
-          <div className="px-1 md:px-4 py-4">
+          <div className="px-1 md:px-4 py-4 w-full">
             <h1 className="text-2xl 2xl:text-4xl font-bold text-green-700">{getLocalizedKey(data?.productTwo, "title")}</h1>
             <p className="text-sm 2xl:text-lg text-gray-600 mt-1">{ data?.productTwo?.productTwoName }</p>
 
