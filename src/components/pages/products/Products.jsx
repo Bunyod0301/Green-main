@@ -1,16 +1,8 @@
 import React, { useRef, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
-// Rasm importlari
 import kalsiyCom from "../../../assets/img/kalsiyCom.jpg";
 import agroVertimaks from "../../../assets/img/Agro-Vertimeks.png";
-import shudring from "../../../assets/img/Icons_GreenShudringli.png";
-import gerbli from "../../../assets/img/Icons_GreenGerbli.png";
-import qongiz from "../../../assets/img/Icons_GreenQongiz.png";
-import yaproq from "../../../assets/img/Icons_GreenYaproq.png";
-import yer from "../../../assets/img/Icons_Green.png";
-import yer2 from "../../../assets/img/Icons_Green2.png";
-import green5 from "../../../assets/img/Icons_Green5.png";
 import { useTranslation } from "react-i18next";
 
 const ProductCard = ({
@@ -103,12 +95,6 @@ const ProductCard = ({
       {/* Product Info */}
       <div className="p-4 text-start flex flex-col justify-between w-full md:w-1/2">
         <h3 className={`text-xl xl:text-3xl font-semibold mb-2 ${textColor}`}>{title}</h3>
-        {/* <NavLink
-          to={catalogLink}
-          className={`${textColor} text-sm xl:text-2xl md:text-base font-medium hover:underline transition-all`}
-        >
-          {t("NextCatalog")}→
-        </NavLink> */}
         <NavLink className='relative w-[100%] sm:w-[80%] md:w-[100%] 2xl:w-[80%]  overflow-hidden xs:text-sm md:text-lg 2xl:text-xl 4xl:text-2xl px-5 py-2 3xl:px-10 3xl:py-4 bg-teal-600 text-white rounded-full my-3 group' to={catalogLink}>
           <span className="absolute left-0 top-0 h-full w-0 bg-teal-800 transition-all duration-700 group-hover:w-full"></span>
           <span className="relative z-10">{t("NextCatalog")}</span>
@@ -140,50 +126,6 @@ const Products = () => {
           textColor="text-white"
         />
       </div>
-
-      {/* <div className="flex justify-center flex-wrap gap-6 mt-10">
-        {[
-          {
-            title: "Гербицидлар",
-            icon: shudring
-          },
-          {
-            title: "Фунгицидлар",
-            icon: gerbli
-          },
-          {
-            title: "Инсектоакарацидлар",
-            icon: qongiz
-          },
-          {
-            title: "Дефолиантлар",
-            icon: yer
-          },
-          {
-            title: "Сирт фаол модда",
-            icon: yer2
-          },
-          {
-            title: "Уруғдорилагичлар",
-            icon: yaproq
-          },
-          {
-            title: "Ўсимликларни ўсишини бошқарувчи",
-            icon: green5
-          }
-        ].map((item, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center bg-green-500 text-white p-4 w-36 rounded-md shadow-md">
-            <img
-              src={item.icon}
-              alt={item.title}
-              className="w-16 h-16 mb-2 object-contain"
-            />
-            <p className="text-center text-[12px] font-medium">{item.title}</p>
-          </div>
-        ))}
-      </div> */}
     </div>
   );
 };

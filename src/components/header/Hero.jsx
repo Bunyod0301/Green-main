@@ -73,6 +73,34 @@ const Hero = () => {
         </div>
         <div>
           <img
+            src="/slider/12.jpg"
+            alt="Crop Inspection"
+            className="w-full h-[80vh] object-cover"
+          />
+        </div>
+        <div>
+          <img
+            src="/slider/13.jpg"
+            alt="Crop Inspection"
+            className="w-full h-[80vh] object-cover"
+          />
+        </div>
+        <div>
+          <img
+            src="/slider/14.jpg"
+            alt="Crop Inspection"
+            className="w-full h-[80vh] object-cover object-center"
+          />
+        </div>
+        <div>
+          <img
+            src="/slider/15.jpg"
+            alt="Crop Inspection"
+            className="w-full h-[80vh] object-cover"
+          />
+        </div>
+        <div>
+          <img
             src="/slider/7.jpg"
             alt="Agricultural Management"
             className="w-full h-[80vh] object-cover object-center"
