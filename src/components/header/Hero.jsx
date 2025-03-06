@@ -64,13 +64,13 @@ const Hero = () => {
           />
         </div>
         
-        <div>
+        {/* <div>
           <img
             src="/slider/4.jpg"
             alt="Crop Inspection"
             className="w-full h-[80vh] object-cover"
           />
-        </div>
+        </div> */}
         <div>
           <img
             src="/slider/12.jpg"
