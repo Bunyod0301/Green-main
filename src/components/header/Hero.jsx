@@ -23,11 +23,11 @@ const Hero = () => {
   const settings = {
     dots: false, // Pastki nuqtalarni ko'rsatadi
     infinite: true, // Cheksiz aylanish
-    speed: 1000, // Animatsiya tezligi (ms)
+    speed: 1500, // Animatsiya tezligi (ms)
     slidesToShow: 1, // Har safar bitta slayd
     slidesToScroll: 1, // Har safar bitta slaydni aylantirish
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 2000,
     // nextArrow: <NextArrow />,
     // prevArrow: <PrevArrow />,
   };
