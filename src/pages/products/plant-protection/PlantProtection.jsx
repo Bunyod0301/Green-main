@@ -158,7 +158,7 @@ function PlantProtection() {
             }`}
             onClick={() => setActiveTab(category.id)}
           >
-            <img src={category.icon} alt={category.name} className="w-10 h-10" />
+            <img src={category.icon} alt={category.name} className="w-20 h-20" />
             {t(category.name)}
           </button>
         ))}
