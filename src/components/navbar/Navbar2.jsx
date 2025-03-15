@@ -59,17 +59,18 @@ const Navbar2 = () => {
       <div className="lg:container flex flex-wrap items-center justify-between mx-auto p-8 text-sm 2xl:text-2xl 4xl:text-3xl">
         <NavLink to='/' className="flex items-center space-x-3 rtl:space-x-reverse" end>
           {/* <div className="rounded-sm rounded-tr-[55px] rounded-bl-[30px] bg-white p-1 h-[70px] w-[210px]"> */}
-            <div className="flex items-center justify-between gap-2 bg-green-100 p-3 rounded">
+            <div className="flex items-center justify-between gap-2 bg-green-700 p-3 rounded">
               <img
                 src={logo}
                 alt="logo"
-                className="rounded-[17px] w-[40px] h-[40px] md:w-[80px] md:h-[55px] xl:h-[65px]"
+                className="rounded-[17px] w-[40px] h-[40px] md:w-[90px] md:h-[65px] xl:h-[75px]"
               />
-              <div className="w-full text-end">
-                <h3 className="font-bold text-[#0E644D] text-start text-sm md:text-lg xl:text-2xl 4xl:text-3xl">
-                  Agro<span className="text-green-500">Com</span>
+              <div className="w-full text-end ml-2">
+                {/* <h3 className="font-bold text-[#0E644D] text-start text-sm md:text-lg xl:text-2xl 4xl:text-3xl"> */}
+                <h3 className="font-bold text-white text-start text-xl md:text-2xl xl:text-3xl 4xl:text-4xl">
+                  Agro<span className="text-white">Com</span>
                 </h3>
-                <span className="text-green-600 text-end w-full font-medium text-xs md:text-sm xl:text-xl 4xl:text-2xl">
+                <span className="text-white text-end w-full font-medium text-xs md:text-sm xl:text-sm 4xl:text-xl">
                   Ishonchli himoya
                 </span>
               </div>
