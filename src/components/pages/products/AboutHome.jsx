@@ -6,7 +6,7 @@ const AboutHome = () => {
   const { t, i18n } = useTranslation()
   return (
     <>
-    <div className="container mx-auto relative pt-20">
+    {/* <div className="container mx-auto relative pt-20">
       <div className='flex justify-center'>
         <div className="absolute top-14 lg:top-[5px] w-[150px] h-[150px] lg:w-[300px] lg:h-[300px] 3xl:h-[400px] 3xl:w-[400px] 4xl:h-[500px] 4xl:w-[500px] rounded-full bg-white z-10">
           <img src='/logo/Logo.png' className='rounded-full w-full h-full p-5' alt="" />
@@ -22,17 +22,24 @@ const AboutHome = () => {
           </div>
         </div>
       </div>
+    </div> */}
+    <div className='container mx-auto'>
+      <div className='w-[100%] md:w-[90%] mx-auto bg-green-600 my-10 rounded-2xl min-h-[20vh] p-4 md:p-10'>
+        <p className='xs:text-sm md:text-lg 2xl:text-2xl 3xl:text-3xl text-white text-justify indent-10'>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis beatae voluptate labore vitae esse veniam similique quia necessitatibus, optio architecto obcaecati rerum, quidem, explicabo voluptatum autem provident quam! Sed, perferendis. Facere quidem accusantium obcaecati saepe dignissimos harum ullam aliquid quae voluptatem autem voluptates voluptate quis soluta provident natus itaque id eligendi, error commodi corrupti, hic similique! Magni dolorum, sequi exercitationem animi voluptates cupiditate alias placeat libero minima laudantium mollitia quidem et omnis provident, ab tempora quam velit doloremque, minus in aut harum. Ipsa, ducimus. Nemo mollitia delectus, quam veritatis dolore adipisci soluta nobis voluptatibus excepturi facilis iure temporibus impedit placeat, incidunt ullam deserunt atque ut nihil quos blanditiis. Tempore porro, ipsa libero accusantium voluptates consequatur, harum iure ullam sit soluta, ea a mollitia officiis. Doloribus possimus assumenda ad nemo expedita natus, nulla eum officiis nostrum quas ipsa, facere eaque veniam dignissimos non quo excepturi doloremque eos? Saepe eum fugiat, quis molestiae fugit quo neque eligendi dolor. Et explicabo deserunt sunt voluptate. Sequi aliquam corrupti nobis ea dolorem ducimus unde omnis, amet ratione consectetur illo? Doloremque mollitia eligendi libero tenetur. Blanditiis placeat dolorem itaque rem? Itaque iure saepe eos ea quae, animi nesciunt eius ut? Quas enim doloribus inventore tempore consequatur.
+        </p>
+      </div>
     </div>
     <div className='container mx-auto mt-8'>
       <div className='w-[90%] mx-auto min-h-24'>
-        { i18n.language == 'uz' ?
+        {/* { i18n.language == 'uz' ?
           <p className='xs:text-sm md:text-lg 2xl:text-2xl 3xl:text-3xl'>
             <span className='font-bold'>AgroCom</span> компанияси таркибидаги Agro Aliance Group 2014 йилда ташкил этилган бўлиб, ўсимликларни ҳимоя қилиш воситалари ҳамда органик ва минерал ўғитларни таъминотчиси сифатида фаолият бошлаган бўлса, Agro Aziya Group 2017 йилда ташкил этилиб, ишончли ўсимликларни ҳимоя қилиш воситалари таъминотчиси сифатида танилган. Компания қисқа муддатда кластер ва фермерларнинг ишончли ҳамкорига айланди.
           </p> :
           <p className='xs:text-sm md:text-lg 2xl:text-2xl 3xl:text-3xl'>
             <span className='font-bold'>AgroCom</span> компания в составе Agro Aliance Group была основана в 2014 году и начала свою деятельность в качестве поставщика средств защиты растений, а также органических и минеральных удобрений. В 2017 году была основана Agro Aziya Group, которая зарекомендовала себя как надежный поставщик средств защиты растений. Компания за короткий срок стала надежным партнером для кластеров и фермеров.
           </p>
-        }
+        } */}
         <div className='my-10 flex justify-center items-center'>
 
 {/* <button

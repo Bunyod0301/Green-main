@@ -188,7 +188,7 @@ const Navbar2 = () => {
                   }
                 >
                   {t("Navbar.Menu.Products")}
-                  <svg
+                  {/* <svg
                     className={`w-2.5 h-2.5 ms-2.5 transition-transform duration-200 ${
                       isDropdownOpen2 ? 'rotate-180' : 'rotate-0'
                     }`}
@@ -204,7 +204,7 @@ const Navbar2 = () => {
                       strokeWidth="2"
                       d="m1 1 4 4 4-4"
                     />
-                  </svg>
+                  </svg> */}
                 </button>
 
                 
@@ -276,7 +276,7 @@ const Navbar2 = () => {
                   }
                 >
                   Каталог
-                  <svg
+                  {/* <svg
                     className={`w-2.5 h-2.5 ms-2.5 transition-transform duration-200 ${
                       isDropdownOpen ? 'rotate-180' : 'rotate-0'
                     }`}
@@ -292,7 +292,7 @@ const Navbar2 = () => {
                       strokeWidth="2"
                       d="m1 1 4 4 4-4"
                     />
-                  </svg>
+                  </svg> */}
                 </button>
 
                   <div className={`absolute left-0 mt-2 z-10 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-md w-[100%] md:w-[150%] overflow-hidden transition-all duration-500 ease-in-out ${

@@ -19,10 +19,10 @@ const Footer = () => {
   return (
     <>
     <div className="w-full bg-green-600 text-white py-10 px-5 text-sm 2xl:text-2xl 4xl:text-3xl">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center md:text-left">
+      <div className="container mx-auto grid grid-cols-12 gap-4 text-center md:text-left">
         {/* Logo Section */}
         {/* <div className="rounded-sm rounded-tr-[55px] rounded-bl-[30px] bg-white p-1 h-[70px] w-[210px]"> */}
-            <div>
+            <div className="col-span-12 md:col-span-7 lg:col-span-4">
               <NavLink to="/" className="flex items-center justify-center md:justify-start space-x-3 rtl:space-x-reverse">
               <div className="flex items-center justify-between gap-2 bg-green-700 p-3 rounded">
                 <img
@@ -41,18 +41,18 @@ const Footer = () => {
                 </div>
               </div>
               </NavLink>
-              
+              <p className='font-bold text-sm md:text-sm 3xl:text-lg mt-2 4xl:text-2xl'>СИЗГА ЮҚОРИ ҲОСИЛ ОЛИШИНГИЗДА КЎМАКЛАШАМИЗ</p>
             </div>
           {/* </div> */}
 
         {/* Address Section */}
-        <div>
+        <div className="col-span-12 lg:col-span-3 md:col-span-5">
           <h3 className="text-lg 4xl:text-3xl font-bold">{t("Address")}</h3>
           <p className="max-w-[300px] mt-2">{t("Navbar.Address")}</p>
         </div>
 
         {/* Contact Section */}
-        <div>
+        <div className="col-span-12 md:col-span-7 lg:col-span-2">
           <h3 className="text-lg 4xl:text-3xl font-bold">{t("Navbar.Menu.Contact")}</h3>
           <div className="mt-2 space-y-1">
             <a href="tel:+998998510018" className="block hover:text-green-300">+998 99 851 00 18</a>
@@ -63,8 +63,8 @@ const Footer = () => {
         </div>
 
         {/* Social Media & Modal Button */}
-        <div>
-          <h3 className="text-lg 2xl:text-2xl 4xl:text-3xl font-bold">{t("UsSocial")}</h3>
+        <div className="col-span-12 md:col-span-5 lg:col-span-3">
+          <h3 className="text-lg 4xl:text-3xl font-bold">{t("UsSocial")}</h3>
           <div className="flex justify-center md:justify-start gap-3 mt-2">
             <a target="_blank" href="https://www.facebook.com/100090505449159/" className="p-2 bg-white text-green-600 rounded-md hover:bg-green-500 hover:text-white"><TbBrandFacebook size={24} /></a>
             <a target="_blank" href="https://www.instagram.com/agrocom_uz?igsh=OXRyOTA3YXo5enhq" className="p-2 bg-white text-green-600 rounded-md hover:bg-green-500 hover:text-white"><RxInstagramLogo size={24} /></a>
@@ -79,9 +79,9 @@ const Footer = () => {
       {/* Modal */}
       {isOpen && <ModalForm toggleModal={toggleModal} />} 
     </div>
-    <div className="py-3 bg-green-800 text-center text-white">
+    {/* <div className="py-3 bg-green-800 text-center text-white">
       <p className='font-bold text-sm md:text-lg 2xl:text-xl 4xl:text-2xl mt-2'>СИЗГА ЮҚОРИ ҲОСИЛ ОЛИШИНГИЗДА КЎМАКЛАШАМИЗ</p>
-    </div>
+    </div> */}
   </>
   );
 };

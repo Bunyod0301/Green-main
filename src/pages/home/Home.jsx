@@ -11,8 +11,8 @@ const Home = () => {
   return (
     <div className="">
       <Hero />
-      <OurProducts />
       <AboutHome />
+      <OurProducts />
       {/* <About /> */}
       <div className="container mx-auto">
         <div className="relative w-[90%] mx-auto my-6 h-96 3xl:h-[600px]">
