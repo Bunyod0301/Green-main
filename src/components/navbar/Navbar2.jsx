@@ -161,18 +161,6 @@ const Navbar2 = () => {
                   {t("Navbar.Menu.About")}
                 </NavLink>
               </li>
-              {/* <li>
-                <NavLink
-                  to="/products"
-                  className={({ isActive }) =>
-                    `block py-2 px-3 rounded-sm md:p-0 font-bold hover:text-green-300 ${
-                      isActive ? 'text-green-900' : 'text-white'
-                    }`
-                  }
-                >
-                  {t("Navbar.Menu.Products")}
-                </NavLink>
-              </li> */}
               <li
                 className="relative"
                 onMouseEnter={() => setIsDropdownOpen2(true)}
