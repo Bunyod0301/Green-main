@@ -33,7 +33,7 @@ const Footer = () => {
                 <div className="w-full text-end ml-2">
                   {/* <h3 className="font-bold text-[#0E644D] text-start text-sm md:text-lg xl:text-2xl 4xl:text-3xl"> */}
                   <h3 className="font-bold text-white text-start text-xl md:text-2xl xl:text-3xl 4xl:text-4xl">
-                    Agro<span className="text-white">Com</span>
+                    Agro<span className="text-white">Com®</span>
                   </h3>
                   <span className="text-white text-end w-full font-medium text-xs md:text-sm xl:text-sm 4xl:text-xl">
                     Ishonchli himoya

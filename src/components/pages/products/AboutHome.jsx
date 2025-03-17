@@ -58,7 +58,7 @@ const AboutHome = () => {
             <span className="absolute left-0 top-0 h-full w-0 bg-teal-800 transition-all duration-800 group-hover:w-full"></span>
             <span className="relative z-10">{t("MoreDetail")}</span>
           </NavLink> */}
-          <div className="wrap my-10">
+          <div className="wrap my-0 md:my-8">
             <NavLink to={'about'} className="button">
               {t("MoreDetail")}
             </NavLink>
