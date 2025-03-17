@@ -136,13 +136,13 @@ const Navbar2 = () => {
               </div>
           </div>
           <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} w-full lg:block md:w-auto`} id="navbar-dropdown">
-            <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 rounded-lg bg-green-600 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0">
+            <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 rounded-lg bg-green-600 md:space-x-2 xl:space-x-4 rtl:space-x-reverse md:flex-row md:mt-0">
               <li>
                 <NavLink
                   to="/"
                   className={({ isActive }) =>
-                    `block py-2 px-3 rounded-sm md:p-0 font-bold hover:text-green-300 ${
-                      isActive ? 'text-green-900' : 'text-white'
+                    `lg:bg-green-700 bg-green-600 block py-2 px-3 rounded-full md:p-3 font-bold hover:bg-green-900 text-white ${
+                      isActive ? 'bg-green-900 lg:bg-green-900' : 'bg-green-600'
                     }`
                   }
                 >
@@ -153,8 +153,8 @@ const Navbar2 = () => {
                 <NavLink
                   to="/about"
                   className={({ isActive }) =>
-                    `block py-2 px-3 rounded-sm md:p-0 font-bold hover:text-green-300 ${
-                      isActive ? 'text-green-900' : 'text-white'
+                    `lg:bg-green-700 bg-green-600 block py-2 px-3 rounded-full md:p-3 font-bold hover:bg-green-900 text-white ${
+                      isActive ? 'bg-green-900 lg:bg-green-900' : 'bg-green-600'
                     }`
                   }
                 >
@@ -180,9 +180,9 @@ const Navbar2 = () => {
               >
                 <button
                   onClick={toggleDropdown2}
-                  className={`flex items-center justify-between w-full px-3 rounded-sm font-bold hover:text-green-300 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto
+                  className={`lg:bg-green-700 bg-green-600 md:p-3 flex items-center justify-between w-full py-2 px-3 rounded-full font-bold hover:bg-green-900 text-white md:border-0 md:w-auto
                     ${
-                      (pathName == '/products/plant-protection' || pathName == '/products/plant-nutrition') ? 'text-green-900' : 'text-white'
+                      (pathName == '/products/plant-protection' || pathName == '/products/plant-nutrition') ? 'bg-green-900 lg:bg-green-900' : 'bg-green-600'
                     }
                     `
                   }
@@ -241,8 +241,8 @@ const Navbar2 = () => {
                 <NavLink
                   to="/news"
                   className={({ isActive }) =>
-                    `block py-2 px-3 rounded-sm md:p-0 font-bold hover:text-green-300 ${
-                      isActive ? 'text-green-900' : 'text-white'
+                    `lg:bg-green-700 bg-green-600 block py-2 px-3 rounded-full md:p-3 font-bold hover:bg-green-900 text-white ${
+                      isActive ? 'bg-green-900 lg:bg-green-900' : 'bg-green-600'
                     }`
                   }
                 >
@@ -268,9 +268,9 @@ const Navbar2 = () => {
               >
                 <button
                   onClick={toggleDropdown}
-                  className={`flex items-center justify-between w-full px-3 rounded-sm font-bold hover:text-green-300 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto
+                  className={`lg:bg-green-700 bg-green-600 md:p-3 flex items-center justify-between w-full py-2 px-3 rounded-full font-bold hover:bg-green-900 text-white md:border-0 md:w-auto
                     ${
-                      (pathName == '/catalog' || pathName == '/liflet') ? 'text-green-900' : 'text-white'
+                      (pathName == '/catalog' || pathName == '/liflet') ? 'bg-green-900 lg:bg-green-900' : 'bg-green-600'
                     }
                     `
                   }
@@ -328,8 +328,8 @@ const Navbar2 = () => {
                 <NavLink
                   to="/contact"
                   className={({ isActive }) =>
-                    `block py-2 px-3 rounded-sm md:p-0 font-bold hover:text-green-300 ${
-                      isActive ? 'text-green-900' : 'text-white'
+                    `lg:bg-green-700 bg-green-600 block py-2 px-3 rounded-full md:p-3 font-bold hover:bg-green-900 text-white ${
+                      isActive ? 'bg-green-900 lg:bg-green-900' : 'bg-green-600'
                     }`
                   }
                 >
