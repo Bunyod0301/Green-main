@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import logo from "../../assets/img/Logo final-07.png";
+import logo from "/logo/logo-white.png";
 import { NavLink, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 const Navbar2 = () => {
@@ -59,17 +59,18 @@ const Navbar2 = () => {
       <div className="lg:container flex flex-wrap items-center justify-between mx-auto p-8 text-sm 2xl:text-2xl 4xl:text-3xl">
         <NavLink to='/' className="flex items-center space-x-3 rtl:space-x-reverse" end>
           {/* <div className="rounded-sm rounded-tr-[55px] rounded-bl-[30px] bg-white p-1 h-[70px] w-[210px]"> */}
-            <div className="flex items-center justify-between gap-2 bg-green-100 p-3 rounded">
+            <div className="flex items-center justify-between gap-2 bg-green-700 p-3 rounded">
               <img
                 src={logo}
                 alt="logo"
-                className="rounded-[17px] w-[40px] h-[40px] md:w-[80px] md:h-[55px] xl:h-[65px]"
+                className="rounded-[17px] w-[40px] h-[40px] md:w-[90px] md:h-[65px] xl:h-[75px]"
               />
-              <div className="w-full text-end">
-                <h3 className="font-bold text-[#0E644D] text-start text-sm md:text-lg xl:text-2xl 4xl:text-3xl">
-                  Agro<span className="text-green-500">Com</span>
+              <div className="w-full text-end ml-2">
+                {/* <h3 className="font-bold text-[#0E644D] text-start text-sm md:text-lg xl:text-2xl 4xl:text-3xl"> */}
+                <h3 className="font-bold text-white text-start text-xl md:text-2xl xl:text-3xl 4xl:text-4xl">
+                  Agro<span className="text-white">Com®</span>
                 </h3>
-                <span className="text-green-600 text-end w-full font-medium text-xs md:text-sm xl:text-xl 4xl:text-2xl">
+                <span className="text-white text-end w-full font-medium text-xs md:text-sm xl:text-sm 4xl:text-xl">
                   Ishonchli himoya
                 </span>
               </div>
@@ -112,9 +113,10 @@ const Navbar2 = () => {
             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
           </svg>
         </button>
-        <div className='w-full lg:w-[70%] flex flex-col items-end gap-4'>
-          <div className="hidden lg:flex items-center gap-7">
-              <div className="flex items-center gap-3 font-medium text-white">
+        <div className='w-full lg:w-[70%] flex flex-col gap-4'>
+          <div className='w-full flex flex-col items-end'>
+            <div className="hidden lg:flex items-center gap-7">
+              <div className="flex items-center font-bold gap-3 text-white">
                 <div className="flex-col flex">
                   <a
                     href="tel:+998998510018"
@@ -133,15 +135,16 @@ const Navbar2 = () => {
                   </a>
                 </div>
               </div>
+            </div>
           </div>
           <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} w-full lg:block md:w-auto`} id="navbar-dropdown">
-            <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 rounded-lg bg-green-600 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0">
+            <ul className="w-full md:w-[95%] flex flex-col md:flex-row font-medium p-4 md:p-0 mt-4 rounded-lg bg-green-600 justify-between 3xl:justify-normal 3xl:gap-10">
               <li>
                 <NavLink
                   to="/"
                   className={({ isActive }) =>
-                    `block py-2 px-3 rounded-sm md:p-0 font-bold hover:text-green-300 ${
-                      isActive ? 'text-green-900' : 'text-white'
+                    `lg:bg-green-700 bg-green-600 block py-2 px-3 rounded-full md:p-3 font-bold hover:bg-green-900 text-white ${
+                      isActive ? 'bg-green-900 lg:bg-green-900' : 'bg-green-600'
                     }`
                   }
                 >
@@ -152,26 +155,14 @@ const Navbar2 = () => {
                 <NavLink
                   to="/about"
                   className={({ isActive }) =>
-                    `block py-2 px-3 rounded-sm md:p-0 font-bold hover:text-green-300 ${
-                      isActive ? 'text-green-900' : 'text-white'
+                    `lg:bg-green-700 bg-green-600 block py-2 px-3 rounded-full md:p-3 font-bold hover:bg-green-900 text-white ${
+                      isActive ? 'bg-green-900 lg:bg-green-900' : 'bg-green-600'
                     }`
                   }
                 >
                   {t("Navbar.Menu.About")}
                 </NavLink>
               </li>
-              {/* <li>
-                <NavLink
-                  to="/products"
-                  className={({ isActive }) =>
-                    `block py-2 px-3 rounded-sm md:p-0 font-bold hover:text-green-300 ${
-                      isActive ? 'text-green-900' : 'text-white'
-                    }`
-                  }
-                >
-                  {t("Navbar.Menu.Products")}
-                </NavLink>
-              </li> */}
               <li
                 className="relative"
                 onMouseEnter={() => setIsDropdownOpen2(true)}
@@ -179,15 +170,15 @@ const Navbar2 = () => {
               >
                 <button
                   onClick={toggleDropdown2}
-                  className={`flex items-center justify-between w-full px-3 rounded-sm font-bold hover:text-green-300 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto
+                  className={`lg:bg-green-700 bg-green-600 md:p-3 flex items-center justify-between w-full py-2 px-3 rounded-full font-bold hover:bg-green-900 text-white md:border-0 md:w-auto
                     ${
-                      (pathName == '/products/plant-protection' || pathName == '/products/plant-nutrition') ? 'text-green-900' : 'text-white'
+                      (pathName == '/products/plant-protection' || pathName == '/products/plant-nutrition') ? 'bg-green-900 lg:bg-green-900' : 'bg-green-600'
                     }
                     `
                   }
                 >
                   {t("Navbar.Menu.Products")}
-                  <svg
+                  {/* <svg
                     className={`w-2.5 h-2.5 ms-2.5 transition-transform duration-200 ${
                       isDropdownOpen2 ? 'rotate-180' : 'rotate-0'
                     }`}
@@ -203,7 +194,7 @@ const Navbar2 = () => {
                       strokeWidth="2"
                       d="m1 1 4 4 4-4"
                     />
-                  </svg>
+                  </svg> */}
                 </button>
 
                 
@@ -240,8 +231,8 @@ const Navbar2 = () => {
                 <NavLink
                   to="/news"
                   className={({ isActive }) =>
-                    `block py-2 px-3 rounded-sm md:p-0 font-bold hover:text-green-300 ${
-                      isActive ? 'text-green-900' : 'text-white'
+                    `lg:bg-green-700 bg-green-600 block py-2 px-3 rounded-full md:p-3 font-bold hover:bg-green-900 text-white ${
+                      isActive ? 'bg-green-900 lg:bg-green-900' : 'bg-green-600'
                     }`
                   }
                 >
@@ -267,15 +258,15 @@ const Navbar2 = () => {
               >
                 <button
                   onClick={toggleDropdown}
-                  className={`flex items-center justify-between w-full px-3 rounded-sm font-bold hover:text-green-300 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto
+                  className={`lg:bg-green-700 bg-green-600 md:p-3 flex items-center justify-between w-full py-2 px-3 rounded-full font-bold hover:bg-green-900 text-white md:border-0 md:w-auto
                     ${
-                      (pathName == '/catalog' || pathName == '/liflet') ? 'text-green-900' : 'text-white'
+                      (pathName == '/catalog' || pathName == '/liflet') ? 'bg-green-900 lg:bg-green-900' : 'bg-green-600'
                     }
                     `
                   }
                 >
                   Каталог
-                  <svg
+                  {/* <svg
                     className={`w-2.5 h-2.5 ms-2.5 transition-transform duration-200 ${
                       isDropdownOpen ? 'rotate-180' : 'rotate-0'
                     }`}
@@ -291,7 +282,7 @@ const Navbar2 = () => {
                       strokeWidth="2"
                       d="m1 1 4 4 4-4"
                     />
-                  </svg>
+                  </svg> */}
                 </button>
 
                   <div className={`absolute left-0 mt-2 z-10 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-md w-[100%] md:w-[150%] overflow-hidden transition-all duration-500 ease-in-out ${
@@ -327,8 +318,8 @@ const Navbar2 = () => {
                 <NavLink
                   to="/contact"
                   className={({ isActive }) =>
-                    `block py-2 px-3 rounded-sm md:p-0 font-bold hover:text-green-300 ${
-                      isActive ? 'text-green-900' : 'text-white'
+                    `lg:bg-green-700 bg-green-600 block py-2 px-3 rounded-full md:p-3 font-bold hover:bg-green-900 text-white ${
+                      isActive ? 'bg-green-900 lg:bg-green-900' : 'bg-green-600'
                     }`
                   }
                 >

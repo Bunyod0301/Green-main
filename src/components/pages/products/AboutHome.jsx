@@ -6,7 +6,7 @@ const AboutHome = () => {
   const { t, i18n } = useTranslation()
   return (
     <>
-    <div className="container mx-auto relative pt-20">
+    {/* <div className="container mx-auto relative pt-20">
       <div className='flex justify-center'>
         <div className="absolute top-14 lg:top-[5px] w-[150px] h-[150px] lg:w-[300px] lg:h-[300px] 3xl:h-[400px] 3xl:w-[400px] 4xl:h-[500px] 4xl:w-[500px] rounded-full bg-white z-10">
           <img src='/logo/Logo.png' className='rounded-full w-full h-full p-5' alt="" />
@@ -22,17 +22,28 @@ const AboutHome = () => {
           </div>
         </div>
       </div>
+    </div> */}
+    <div className='container mx-auto'>
+      <div className='w-[100%] md:w-[90%] mx-auto bg-green-600 my-10 rounded-2xl min-h-[20vh] p-4 md:p-10'>
+        <p className='xs:text-lg md:text-xl 2xl:text-3xl 3xl:text-4xl font-bold text-white text-center'>КОМПАНИЯ ҲАҚИДА</p>
+        <p className='xs:text-sm md:text-lg 2xl:text-2xl 3xl:text-3xl text-white text-justify indent-10'>
+          <span className='xs:text-lg md:text-xl 2xl:text-3xl 3xl:text-4xl'>"AgroCom"</span> компанияси қишлоқ хўжалигида замонавий талабларга жавоб берадиган ўсимликларни ҳимоя қилиш воситалари ҳамда органик ва минерал ўғитларни қишлоқ хўжалиги соҳасида ўзининг инновацион усулларда ишлаб чиқарилган маҳсулотлари билан танилган компаниялардан келтиради ва фермер хўжаликларига етказиб бериш билан шуғулланади.
+        </p>
+        <p className='xs:text-sm md:text-lg 2xl:text-2xl 3xl:text-3xl text-white text-justify indent-10'>
+          <span className='xs:text-lg md:text-xl 2xl:text-3xl 3xl:text-4xl'>"AgroCom"</span> компанияси қисқа вақт ичида қишлоқ хўжалиги соҳасида мустаҳкам ўрин эгаллаб, кластер ва фермерларнинг ишончли ҳамкорига айланди. “Agro Alliance Group” ва “Agro Aziya Group” ўсимликларни ҳимоя қилиш воситалари ва ўғитлар билан таъминлаш борасида муваффақиятли фаолият юритиб, ўз ишончлилигини исботлади. Шу билан бирга, “Marvarid Agro Biznes” ва “Kumush Agro Biznes” МЧЖлари иссиқхоналарда етиштирилган сабзавот ва цитрус мева маҳсулотларини нафақат маҳаллий бозорда, балки халқаро миқёсда ҳам муваффақиятли экспорт қилиб, компаниянинг қишлоқ хўжалигидаги ўрнини янада мустаҳкамлади.
+        </p>
+      </div>
     </div>
     <div className='container mx-auto mt-8'>
       <div className='w-[90%] mx-auto min-h-24'>
-        { i18n.language == 'uz' ?
+        {/* { i18n.language == 'uz' ?
           <p className='xs:text-sm md:text-lg 2xl:text-2xl 3xl:text-3xl'>
             <span className='font-bold'>AgroCom</span> компанияси таркибидаги Agro Aliance Group 2014 йилда ташкил этилган бўлиб, ўсимликларни ҳимоя қилиш воситалари ҳамда органик ва минерал ўғитларни таъминотчиси сифатида фаолият бошлаган бўлса, Agro Aziya Group 2017 йилда ташкил этилиб, ишончли ўсимликларни ҳимоя қилиш воситалари таъминотчиси сифатида танилган. Компания қисқа муддатда кластер ва фермерларнинг ишончли ҳамкорига айланди.
           </p> :
           <p className='xs:text-sm md:text-lg 2xl:text-2xl 3xl:text-3xl'>
             <span className='font-bold'>AgroCom</span> компания в составе Agro Aliance Group была основана в 2014 году и начала свою деятельность в качестве поставщика средств защиты растений, а также органических и минеральных удобрений. В 2017 году была основана Agro Aziya Group, которая зарекомендовала себя как надежный поставщик средств защиты растений. Компания за короткий срок стала надежным партнером для кластеров и фермеров.
           </p>
-        }
+        } */}
         <div className='my-10 flex justify-center items-center'>
 
 {/* <button
@@ -47,7 +58,7 @@ const AboutHome = () => {
             <span className="absolute left-0 top-0 h-full w-0 bg-teal-800 transition-all duration-800 group-hover:w-full"></span>
             <span className="relative z-10">{t("MoreDetail")}</span>
           </NavLink> */}
-          <div className="wrap my-10">
+          <div className="wrap my-0 md:my-8">
             <NavLink to={'about'} className="button">
               {t("MoreDetail")}
             </NavLink>

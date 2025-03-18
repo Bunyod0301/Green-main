@@ -4,7 +4,7 @@ import { create } from "zustand";
 // axios instansiyasini yaratish
 export const api = axios.create({
   // baseURL: "https://agro-backkend.vercel.app/api"
-  baseURL: "http://167.172.69.159:8080"
+  baseURL: "http://165.232.173.157"
 });
 
 const useStore = create((set) => ({
