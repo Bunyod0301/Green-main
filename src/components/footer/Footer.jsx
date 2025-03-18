@@ -70,9 +70,9 @@ const Footer = () => {
             <a target="_blank" href="https://www.instagram.com/agrocom_uz?igsh=OXRyOTA3YXo5enhq" className="p-2 bg-white text-green-600 rounded-md hover:bg-green-500 hover:text-white"><RxInstagramLogo size={24} /></a>
             <a target="_blank" href="https://t.me/agrocomguruh" className="p-2 bg-white text-green-600 rounded-md hover:bg-green-500 hover:text-white"><PiTelegramLogo size={24} /></a>
           </div>
-          <button onClick={toggleModal} className="mt-4 font-medium py-2 rounded-lg hover:text-green-200 text-lg 2xl:text-xl 4xl:text-2xl">
+          <p onClick={toggleModal} className="cursor-pointer mt-4 font-medium py-2 rounded-lg hover:text-green-200 text-md 2xl:text-lg 3xl:text-xl 4xl:text-2xl">
             {t("RequestRecons")}
-          </button>
+          </p>
         </div>
       </div>
 
