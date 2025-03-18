@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { RxInstagramLogo } from "react-icons/rx";
 import { TbBrandFacebook } from "react-icons/tb";
 import { PiTelegramLogo } from "react-icons/pi";
-import logo from "../../assets/img/Logo final-07.png";
+import logo from "/logo/logo-white.png";
 import { NavLink } from "react-router-dom";
 import ModalForm from "../modal/ModalForm";
 import { useTranslation } from "react-i18next";

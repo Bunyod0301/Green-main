@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import logo from "../../assets/img/Logo final-07.png";
+import logo from "/logo/logo-white.png";
 import { NavLink, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 const Navbar2 = () => {
