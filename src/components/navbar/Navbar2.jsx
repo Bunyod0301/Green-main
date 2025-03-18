@@ -113,9 +113,10 @@ const Navbar2 = () => {
             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
           </svg>
         </button>
-        <div className='w-full lg:w-[70%] flex flex-col items-end gap-4'>
-          <div className="hidden lg:flex items-center gap-7">
-              <div className="flex items-center gap-3 font-medium text-white">
+        <div className='w-full lg:w-[70%] flex flex-col gap-4'>
+          <div className='w-full flex flex-col items-end'>
+            <div className="hidden lg:flex items-center gap-7">
+              <div className="flex items-center font-bold gap-3 text-white">
                 <div className="flex-col flex">
                   <a
                     href="tel:+998998510018"
@@ -134,9 +135,10 @@ const Navbar2 = () => {
                   </a>
                 </div>
               </div>
+            </div>
           </div>
           <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} w-full lg:block md:w-auto`} id="navbar-dropdown">
-            <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 rounded-lg bg-green-600 md:space-x-2 xl:space-x-4 rtl:space-x-reverse md:flex-row md:mt-0">
+            <ul className="w-full md:w-[95%] flex flex-col md:flex-row font-medium p-4 md:p-0 mt-4 rounded-lg bg-green-600 justify-between 3xl:justify-normal 3xl:gap-10">
               <li>
                 <NavLink
                   to="/"
