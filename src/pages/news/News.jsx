@@ -82,7 +82,7 @@ const News = () => {
                   </div>
                   {/* Modal body */}
                   <div className="p-4 md:p-5">
-                    <img src={selectedNews.newPicture} alt="" className="w-full rounded-md mb-4" />
+                    <img src={transformImageUrl(selectedNews.newPicture)} alt="" className="w-full rounded-md mb-4" />
                     <p className="text-gray-700 ttext-sm 2xl:text-lg font-medium">{getLocalizedKey(selectedNews, "describtion")}</p>
                     <p className="text-green-500 text-sm 2xl:text-lg font-medium mt-2">{dayjs(selectedNews.date).format("DD.MM.YYYY")}</p>
                   </div>
