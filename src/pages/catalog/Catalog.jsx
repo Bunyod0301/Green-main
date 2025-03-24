@@ -37,14 +37,14 @@ const Catalog = () => {
 
   return (
     <div className='min-h-[70vh] container mx-auto'>
-      <h1 className="text-slate-700 text-2xl font-semibold text-center my-6">
+      <h1 className="text-slate-700 text-lg md:text-xl 2xl:text-2xl 3xl:text-3xl 4xl:text-4xl  font-semibold text-center mt-5 mb-10">
         Каталог
       </h1>
 
       <div className='md:w-[70%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-8'>
         {
-          Catalogs?.length ? 
-          Catalogs.map((item, index)=>(
+          Catalogs?.filter((item)=> item.type == 1).length ? 
+          Catalogs.filter((item)=> item.type == 1).map((item, index)=>(
           <div key={index} className="bg-white rounded-lg transform transition duration-300 hover:scale-105 shadow-lg hover:shadow-2xl p-4 w-full space-y-2">
               <div className="flex justify-center items-center mb-4">
                 <img
@@ -54,8 +54,8 @@ const Catalog = () => {
                 />
               </div>
               <div className='flex gap-5 items-center mb-2'>
-                <h3 className="text-xl font-semibold text-start">{item.nameUz}</h3>
-                <p className="">{((item.fileSize / 1024) / 1024).toFixed(1)}MB</p>
+                <h3 className="text-lg 2xl:text-3xl font-semibold text-start">{item.nameUz}</h3>
+                <p className="text-md 2xl:text-xl">{((item.fileSize / 1024) / 1024).toFixed(1)}MB</p>
               </div>
               
               <button
@@ -68,9 +68,10 @@ const Catalog = () => {
                   link.click();
                   document.body.removeChild(link);
                 }}
-                className="w-full bg-teal-500 font-medium text-white py-[6px] rounded-lg hover:bg-teal-600 text-center"
+                className="relative overflow-hidden w-full bg-teal-500 font-medium text-white py-[6px] 2xl:py-[12px] 2xl:text-xl rounded-lg group"
               >
-                {t("download")}
+                <span className="absolute left-0 top-0 h-full w-0 bg-teal-800 transition-all duration-500 group-hover:w-full"></span>
+                <span className="relative z-10">{t("download")}</span>
               </button>
           </div>
           )) : ''
