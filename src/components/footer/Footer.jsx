@@ -8,7 +8,7 @@ import ModalForm from "../modal/ModalForm";
 import { useTranslation } from "react-i18next";
 
 const Footer = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleModal = () => {
@@ -41,7 +41,11 @@ const Footer = () => {
                 </div>
               </div>
               </NavLink>
-              <p className='font-bold text-sm md:text-sm 3xl:text-lg mt-2 4xl:text-2xl'>СИЗГА ЮҚОРИ ҲОСИЛ ОЛИШИНГИЗДА КЎМАКЛАШАМИЗ</p>
+              {
+                i18n.language == 'uz' ?
+                <p className='font-bold text-sm md:text-sm 3xl:text-lg mt-2 4xl:text-2xl'>СИЗГА ЮҚОРИ ҲОСИЛ ОЛИШИНГИЗДА КЎМАКЛАШАМИЗ</p> :
+                <p className='font-bold text-sm md:text-sm 3xl:text-lg mt-2 4xl:text-2xl'>МЫ ПОМОЖЕМ ВАМ ДОСТИЧЬ ВЫСОКОГО УРОЖАЯ</p>
+              }
             </div>
           {/* </div> */}
 
