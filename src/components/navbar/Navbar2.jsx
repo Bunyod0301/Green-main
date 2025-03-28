@@ -39,7 +39,11 @@ const Navbar2 = () => {
     <div className="bg-green-800">
       <div className='lg:container mx-auto text-white py-2 px-6 flex justify-center md:justify-between items-center text-sm 2xl:text-2xl'>
         <div className="hidden md:flex items-center gap-2">
-          <p className='font-bold text-sm 2xl:text-xl 4xl:text-2xl'>СИЗГА ЮҚОРИ ҲОСИЛ ОЛИШИНГИЗДА КЎМАКЛАШАМИЗ</p>
+          {
+            i18n.language == 'uz' ?
+            <p className='font-bold text-sm 2xl:text-xl 4xl:text-2xl'>СИЗГА ЮҚОРИ ҲОСИЛ ОЛИШИНГИЗДА КЎМАКЛАШАМИЗ</p> :
+            <p className='font-bold text-sm 2xl:text-xl 4xl:text-2xl'>МЫ ПОМОЖЕМ ВАМ ДОСТИЧЬ ВЫСОКОГО УРОЖАЯ</p>
+          }
         </div>
 
         <div className="flex items-center gap-8">
