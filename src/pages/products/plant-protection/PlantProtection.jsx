@@ -132,7 +132,8 @@ function PlantProtection() {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1
+          slidesToShow: 1,
+          speed: 200
         }
       }
     ],
