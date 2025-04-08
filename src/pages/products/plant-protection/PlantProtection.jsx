@@ -55,6 +55,7 @@ function PlantProtection() {
 
   let totalPages = null
   let currentProducts = null
+  let allproducts = null
 
   useEffect(() => {
     fetchProductOne();
@@ -98,6 +99,8 @@ function PlantProtection() {
     (currentPage - 1) * ITEMS_PER_PAGE,
     currentPage * ITEMS_PER_PAGE
   );
+
+  allproducts = FilterProduct(activeTab)
 
   if (error) {
     return <div className="text-center min-h-[80vh]">Xatolik yuz berdi: {error}</div>;
@@ -222,9 +225,9 @@ function PlantProtection() {
         </div>
 
           <div className="md:hidden w-full h-full">
-            {currentProducts?.length > 1 ? 
+            {allproducts?.length > 1 ? 
               <Slider {...settings}>
-                {currentProducts?.map((product, index) => (
+                {allproducts?.map((product, index) => (
                   <div className="px-2 my-2 h-full flex" key={index}>
                     <ProductCard
                       key={index}

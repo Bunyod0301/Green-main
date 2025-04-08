@@ -51,6 +51,7 @@ function PlantNutrition() {
 
   let totalPages = null
   let currentProducts = null
+  let allproducts = null
 
   useEffect(() => {
     fetchProductTwo();
@@ -101,7 +102,7 @@ function PlantNutrition() {
     (currentPage - 1) * ITEMS_PER_PAGE,
     currentPage * ITEMS_PER_PAGE
   );
-
+  allproducts = FilterProduct(activeTab)
 
 
   if (error) {
@@ -229,9 +230,9 @@ function PlantNutrition() {
         </div>
 
           <div className="md:hidden w-full h-full">
-            {currentProducts?.length > 1 ? 
+            {allproducts?.length > 1 ? 
               <Slider {...settings}>
-                {currentProducts?.map((product, index) => (
+                {allproducts?.map((product, index) => (
                   <div className="px-2 my-2 h-full flex" key={index}>
                     <ProductCard
                       key={index}
