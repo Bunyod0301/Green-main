@@ -272,7 +272,7 @@ const Navbar2 = () => {
                   onClick={toggleDropdown}
                   className={`lg:bg-green-700 bg-green-600 md:p-3 flex items-center justify-between w-full py-2 px-3 rounded-full font-bold hover:bg-green-900 text-white md:border-0 md:w-auto
                     ${
-                      (pathName == '/catalog' || pathName == '/liflet') ? 'bg-green-900 lg:bg-green-900' : 'bg-green-600'
+                      (['/catalog', '/liflet', '/grain-program', '/cotton-program', '/orchard-program', '/greenhouse-program'].includes(pathName)) ? 'bg-green-900 lg:bg-green-900' : 'bg-green-600'
                     }
                     `
                   }
