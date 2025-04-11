@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import logo from "/logo/logo-white.png";
 import { NavLink, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { RxInstagramLogo } from "react-icons/rx";
+import { TbBrandFacebook } from "react-icons/tb";
+import { PiTelegramLogo } from "react-icons/pi";
 const Navbar2 = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isDropdownOpen2, setIsDropdownOpen2] = useState(false);
@@ -63,7 +66,7 @@ const Navbar2 = () => {
       <div className="lg:container flex flex-wrap items-center justify-between mx-auto p-8 text-sm 2xl:text-2xl 4xl:text-3xl">
         <NavLink to='/' className="flex items-center space-x-3 rtl:space-x-reverse" end>
           {/* <div className="rounded-sm rounded-tr-[55px] rounded-bl-[30px] bg-white p-1 h-[70px] w-[210px]"> */}
-            <div className="flex items-center justify-between gap-2 bg-green-700 p-3 rounded">
+            <div className="flex items-center justify-between gap-2 p-3 rounded">
               <img
                 src={logo}
                 alt="logo"
@@ -120,8 +123,8 @@ const Navbar2 = () => {
         <div className='w-full lg:w-[70%] flex flex-col gap-4'>
           <div className='w-full flex flex-col items-end'>
             <div className="hidden lg:flex items-center gap-7">
-              <div className="flex items-center font-bold gap-3 text-white">
-                <div className="flex-col flex">
+              <div className="flex flex-col items-center font-bold gap-3 text-white">
+                <div className="flex flex-col">
                   <a
                     href="tel:+998998510018"
                     className="text-white hover:underline">
@@ -138,6 +141,11 @@ const Navbar2 = () => {
                     📞: +998 77 299 77 00
                   </a>
                 </div>
+                <div className="flex justify-center md:justify-start gap-3">
+                  <a target="_blank" href="https://www.facebook.com/100090505449159/" className="p-2 bg-white text-green-600 rounded-md hover:bg-green-500 hover:text-white"><TbBrandFacebook size={24} /></a>
+                  <a target="_blank" href="https://www.instagram.com/agrocom_uz?igsh=OXRyOTA3YXo5enhq" className="p-2 bg-white text-green-600 rounded-md hover:bg-green-500 hover:text-white"><RxInstagramLogo size={24} /></a>
+                  <a target="_blank" href="https://t.me/agrocomguruh" className="p-2 bg-white text-green-600 rounded-md hover:bg-green-500 hover:text-white"><PiTelegramLogo size={24} /></a>
+                  </div>
               </div>
             </div>
           </div>

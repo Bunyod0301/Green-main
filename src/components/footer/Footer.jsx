@@ -24,7 +24,7 @@ const Footer = () => {
         {/* <div className="rounded-sm rounded-tr-[55px] rounded-bl-[30px] bg-white p-1 h-[70px] w-[210px]"> */}
             <div className="col-span-12 md:col-span-7 lg:col-span-4">
               <NavLink to="/" className="flex items-center justify-center md:justify-start space-x-3 rtl:space-x-reverse">
-              <div className="flex items-center justify-between gap-2 bg-green-700 p-3 rounded">
+              <div className="flex items-center justify-between gap-2 p-3 rounded">
                 <img
                   src={logo}
                   alt="logo"
