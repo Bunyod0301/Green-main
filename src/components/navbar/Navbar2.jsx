@@ -297,8 +297,8 @@ const Navbar2 = () => {
                   </svg> */}
                 </button>
 
-                  <div className={`absolute left-0 mt-2 z-10 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-md w-[100%] md:w-[150%] overflow-hidden transition-all duration-500 ease-in-out ${
-                    isDropdownOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
+                  <div className={`absolute left-0 mt-2 z-10 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-md w-[100%] md:w-[250%] overflow-hidden transition-all duration-500 ease-in-out ${
+                    isDropdownOpen ? 'max-h-[60vh] opacity-100' : 'max-h-0 opacity-0'
                   }`}>
                     <ul className="py-2 text-sm 2xl:text-2xl 4xl:text-3xl">
                       <li>
@@ -321,6 +321,50 @@ const Navbar2 = () => {
                           }
                         >
                           Лифлет
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink to={'/grain-program'}
+                          className = {({ isActive }) =>
+                            `block px-4 py-2 hover:bg-gray-100 ${
+                              isActive ? 'bg-gray-200 text-green-900' : ''
+                            }`
+                          }
+                        >
+                          {t("grain_program")}
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink to={'/cotton-program'}
+                          className = {({ isActive }) =>
+                            `block px-4 py-2 hover:bg-gray-100 ${
+                              isActive ? 'bg-gray-200 text-green-900' : ''
+                            }`
+                          }
+                        >
+                          {t("cotton_program")}
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink to={'/orchard-program'}
+                          className = {({ isActive }) =>
+                            `block px-4 py-2 hover:bg-gray-100 ${
+                              isActive ? 'bg-gray-200 text-green-900' : ''
+                            }`
+                          }
+                        >
+                          {t("orchard_program")}
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink to={'/greenhouse-program'}
+                          className = {({ isActive }) =>
+                            `block px-4 py-2 hover:bg-gray-100 ${
+                              isActive ? 'bg-gray-200 text-green-900' : ''
+                            }`
+                          }
+                        >
+                          {t("greenhouse_program")}
                         </NavLink>
                       </li>
                     </ul>

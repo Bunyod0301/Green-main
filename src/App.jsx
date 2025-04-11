@@ -15,6 +15,10 @@ import PlantNutritionNpk from "./pages/products/plant-nutrition/view/NpkView";
 import Catalog from "./pages/catalog/Catalog";
 import Liflet from "./pages/liflet/Liflet";
 import ScrollToTop from "./components/scroll-to-top/ScrollToTop";
+import GrainProgram from "./pages/grain-program/GrainProgram";
+import CottonProgram from "./pages/cotton-program/CottonProgram";
+import OrchardProgram from "./pages/orchard-program/OrchardProgram";
+import GreenhouseProgram from "./pages/greenhouse-program/GreenhouseProgram";
 function App() {
 
   return (
@@ -25,6 +29,10 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/catalog" element={<Catalog />} />
         <Route path="/liflet" element={<Liflet />} />
+        <Route path="/grain-program" element={<GrainProgram />} />
+        <Route path="/cotton-program" element={<CottonProgram />} />
+        <Route path="/orchard-program" element={<OrchardProgram />} />
+        <Route path="/greenhouse-program" element={<GreenhouseProgram />} />
         <Route path="/products/*" element={<TabsWithRouter />}>
           <Route path="plant-protection/view/:id" element={<PlantProtectionView />} />
           <Route path="plant-protection" element={<PlantProtection />} />

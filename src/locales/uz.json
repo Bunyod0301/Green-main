@@ -92,6 +92,7 @@
       }
     }
   },
+
   "NextCatalog": "Каталогга ўтиш",
   "MoreDetail": "Батафсил",
   "OurCatalog": "Каталогимизда",
@@ -104,5 +105,9 @@
   "download": "Юклаб олиш",
   "head_office": "Бош офис",
   "back": "Орқага",
-  "ClickToView": "Кўриш учун босинг"
+  "ClickToView": "Кўриш учун босинг",
+  "grain_program": "Ғалла дастури",
+  "cotton_program": "Ғўза дастури",
+  "orchard_program": "Мевали боғ дастури",
+  "greenhouse_program": "Иссиқхона экинлари дастури"
 }
